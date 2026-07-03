@@ -1,0 +1,1195 @@
+{
+  "suit": [
+    {
+      "id": 1,
+      "name": "Bagru Print Cotton Kurta",
+      "Base color": "The cream / off-white base gives a natural and organic feel — a signature element of authentic Bagru prints.",
+      "Motifs": [
+        "The small spiral and dotted booti patterns on the upper section create a soft, graceful texture",
+        "The bold floral and leaf motifs in the lower section add strong traditional character."
+      ],
+      "Border Detailing": [
+        "The red and rust-toned border adds a royal and festive touch.",
+        "The golden zari-style pattern enhances the richness and premium look."
+      ],
+      "Contrast Play": "The black and cream contrast is striking, making the patterns stand out beautifully even from a distance.",
+      "aprice": 1299,
+      "price": 899,
+      "discount": 30,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782571218/1_phhd64.jpg",
+      "category": "Women",
+      "rating": 4.5,
+      "reviews": 35
+    },
+    {
+      "id": 2,
+      "name": "Traditional Bagru Saree",
+      "Base color": "The cream / off-white base gives a soft, earthy foundation that reflects the natural and organic essence of authentic Bagru printing.",
+
+      "Motifs": [
+        "The upper section features delicate floral vine patterns that create an elegant and flowing visual texture.",
+        "The pallu and lower sections showcase bold traditional floral motifs with intricate detailing, adding richness and cultural depth."
+      ],
+
+      "Border Detailing": [
+        "The red border introduces a vibrant festive appeal and enhances the saree’s traditional charm.",
+        "The geometric black border patterns and golden zari-style accents add structure, richness, and a refined handcrafted look."
+      ],
+      "Contrast Play": "The combination of cream, black, and deep red creates a striking visual contrast, allowing the motifs and borders to stand out with bold traditional elegance.",
+      "aprice": 2499,
+      "discount": 24,
+      "price": 1899,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782571221/2_torjom.jpg",
+      "category": "Women",
+      "rating": 4.8,
+      "reviews": 39
+    },
+    {
+      "id": 3,
+      "name": "Bagru Print Cotton Shirt",
+      "Base color": "The cream / off-white base provides a soft earthy backdrop that highlights the authenticity and natural character of traditional Bagru printing.",
+      "Motifs": [
+        "The upper section features delicate floral vine patterns that create a graceful and flowing texture.",
+        "The lower pallu area displays large floral motifs with leafy detailing, adding boldness and traditional richness to the design."
+      ],
+      "Border Detailing": [
+        "The deep red border enhances the saree with a vibrant festive appeal and traditional warmth.",
+        "The geometric black patterns combined with golden zari-style bands add structure, elegance, and a refined handcrafted finish."
+      ],
+      "Contrast Play": "The interplay of cream, black, and rich red creates a striking contrast, allowing the bold floral motifs and borders to stand out with strong traditional elegance.",
+      "aprice": 999,
+      "discount": 20,
+      "price": 799,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782571220/3_uosycq.jpg",
+      "category": "Women",
+      "rating": 4.2,
+      "reviews": 48
+    },
+    {
+      "id": 4,
+      "name": "Bagru Print Cotton Dress",
+      "Base color": "The cream / off-white base provides a warm, earthy foundation that reflects the natural simplicity and authenticity of traditional Bagru printing.",
+      "Motifs": [
+        "The body features vertical wavy line patterns that create a rhythmic and flowing visual movement.",
+        "The lower section highlights stylized leaf and tribal-inspired motifs, while the pallu showcases repeating booti elements that add folk charm and cultural depth."
+      ],
+      "Border Detailing": [
+        "The deep red border adds a vibrant traditional warmth and festive appeal.",
+        "The geometric black patterns and golden zari-style bands provide structure, balance, and a refined handcrafted finish."
+      ],
+      "Contrast Play": "The combination of cream, black, and earthy red creates a bold visual contrast, allowing the tribal motifs and patterned borders to stand out with strong traditional character.",
+      "aprice": 1499,
+      "discount": 25,
+      "price": 1124,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782571221/4_z8ywzq.jpg",
+      "category": "Women",
+      "rating": 4.6,
+      "reviews": 44
+    },
+    {
+      "id": 5,
+      "name": "Bagru Print Cotton Kurta",
+      "Base color": "The cream / off-white base provides a warm earthy canvas that enhances the authenticity and natural appeal of traditional Bagru printing.",
+      "Motifs": [
+        "The body features rhythmic vertical wavy lines that create a flowing and structured visual movement.",
+        "The pallu and blouse section showcase dense floral vine motifs, adding richness, elegance, and traditional charm."
+      ],
+      "Border Detailing": [
+        "The deep red border introduces a vibrant festive warmth and enhances the saree’s traditional appeal.",
+        "The bold black geometric patterns combined with golden zari-style accents add definition, balance, and a refined handcrafted finish."
+      ],
+      "Contrast Play": "The combination of cream, black, and rich red creates a bold and striking contrast, allowing the floral vines and tribal-inspired borders to stand out with strong traditional elegance.",
+      "aprice": 1299,
+      "price": 899,
+      "discount": 30,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782571222/5_uzu1mo.jpg",
+      "category": "Women",
+      "rating": 4.6,
+      "reviews": 40
+    },
+    {
+      "id": 6,
+      "name": "Bagru Print Cotton Kurta",
+      "Base color": "The cream / off-white base offers a warm, earthy backdrop that highlights the natural authenticity of traditional Bagru printing.",
+      "Motifs": [
+        "The body features flowing vertical wavy lines that create a rhythmic and structured visual movement.",
+        "The pallu and blouse section display repeating floral bootis, adding charm, cultural richness, and traditional character."
+      ],
+      "Border Detailing": [
+        "The deep red border adds festive warmth and enhances the saree’s ethnic appeal.",
+        "The black ornamental and geometric patterns combined with golden zari-style bands provide structure, elegance, and a refined handcrafted finish."
+      ],
+      "Contrast Play": "The interplay of cream, black, and rich red creates a bold traditional contrast, allowing the floral bootis and patterned borders to stand out with strong visual impact.",
+      "aprice": 1299,
+      "price": 899,
+      "discount": 30,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782571223/6_ptjypp.jpg",
+      "rating": 4.6,
+      "category": "Women",
+      "reviews": 29
+    },
+    {
+      "id": 7,
+      "name": "Bagru Print Cotton Kurta",
+      "Base color": "The cream / off-white base creates a soft, natural backdrop that reflects the earthy authenticity of traditional Bagru printing.",
+      "Motifs": [
+        "The upper body features delicate spiral and dotted patterns that add subtle texture and visual softness.",
+        "The lower section showcases stylized floral and leaf motifs along with small repeating bootis, enhancing the saree’s traditional richness."
+      ],
+      "Border Detailing": [
+        "The deep red border introduces festive warmth and enhances the saree’s ethnic elegance.",
+        "The bold black ornamental patterns combined with golden zari-style accents provide structure, depth, and a refined handcrafted finish."
+      ],
+      "Contrast Play": "The blend of cream, black, and rich red creates a striking traditional contrast, allowing the intricate motifs and decorative borders to stand out beautifully.",
+      "aprice": 1299,
+      "price": 899,
+      "discount": 30,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782571225/7_glfeph.jpg",
+      "rating": 4.6,
+      "category": "Women",
+      "reviews": 34
+    },
+    {
+      "id": 8,
+      "name": "Bagru Print Cotton Kurta",
+      "Base color": "The cream / off-white base creates a soft, natural backdrop that reflects the earthy authenticity of traditional Bagru printing.",
+      "Motifs": [
+        "The upper body features delicate spiral and dotted patterns that add subtle texture and visual softness.",
+        "The lower section showcases stylized floral and leaf motifs along with small repeating bootis, enhancing the saree’s traditional richness."
+      ],
+      "Border Detailing": [
+        "The deep red border introduces festive warmth and enhances the saree’s ethnic elegance.",
+        "The bold black ornamental patterns combined with golden zari-style accents provide structure, depth, and a refined handcrafted finish."
+      ],
+      "Contrast Play": "The blend of cream, black, and rich red creates a striking traditional contrast, allowing the intricate motifs and decorative borders to stand out beautifully.",
+      "aprice": 1299,
+      "price": 899,
+      "discount": 30,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782797748/IMG-20220518-WA0005_vvp7dr.jpg",
+      "rating": 4.6,
+      "category": "Women",
+      "reviews": 34
+    },
+    {
+      "id": 9,
+      "name": "Bagru Print Cotton Kurta",
+      "Base color": "The cream / off-white base creates a soft, natural backdrop that reflects the earthy authenticity of traditional Bagru printing.",
+      "Motifs": [
+        "The upper body features delicate spiral and dotted patterns that add subtle texture and visual softness.",
+        "The lower section showcases stylized floral and leaf motifs along with small repeating bootis, enhancing the saree’s traditional richness."
+      ],
+      "Border Detailing": [
+        "The deep red border introduces festive warmth and enhances the saree’s ethnic elegance.",
+        "The bold black ornamental patterns combined with golden zari-style accents provide structure, depth, and a refined handcrafted finish."
+      ],
+      "Contrast Play": "The blend of cream, black, and rich red creates a striking traditional contrast, allowing the intricate motifs and decorative borders to stand out beautifully.",
+      "aprice": 1299,
+      "price": 899,
+      "discount": 30,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782797749/IMG-20220518-WA0003_ijw4gk.jpg",
+      "rating": 4.6,
+      "category": "Women",
+      "reviews": 34
+    },
+    
+    {
+      "id": 10,
+      "name": "Bagru Print Cotton Kurta",
+      "Base color": "The cream / off-white base creates a soft, natural backdrop that reflects the earthy authenticity of traditional Bagru printing.",
+      "Motifs": [
+        "The upper body features delicate spiral and dotted patterns that add subtle texture and visual softness.",
+        "The lower section showcases stylized floral and leaf motifs along with small repeating bootis, enhancing the saree’s traditional richness."
+      ],
+      "Border Detailing": [
+        "The deep red border introduces festive warmth and enhances the saree’s ethnic elegance.",
+        "The bold black ornamental patterns combined with golden zari-style accents provide structure, depth, and a refined handcrafted finish."
+      ],
+      "Contrast Play": "The blend of cream, black, and rich red creates a striking traditional contrast, allowing the intricate motifs and decorative borders to stand out beautifully.",
+      "aprice": 1299,
+      "price": 899,
+      "discount": 30,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782797748/IMG-20220518-WA0001_eznenh.jpg",
+      "rating": 4.6,
+      "category": "Women",
+      "reviews": 34
+    },
+    {
+      "id": 11,
+      "name": "Bagru Print Cotton Kurta",
+      "Base color": "The cream / off-white base creates a soft, natural backdrop that reflects the earthy authenticity of traditional Bagru printing.",
+      "Motifs": [
+        "The upper body features delicate spiral and dotted patterns that add subtle texture and visual softness.",
+        "The lower section showcases stylized floral and leaf motifs along with small repeating bootis, enhancing the saree’s traditional richness."
+      ],
+      "Border Detailing": [
+        "The deep red border introduces festive warmth and enhances the saree’s ethnic elegance.",
+        "The bold black ornamental patterns combined with golden zari-style accents provide structure, depth, and a refined handcrafted finish."
+      ],
+      "Contrast Play": "The blend of cream, black, and rich red creates a striking traditional contrast, allowing the intricate motifs and decorative borders to stand out beautifully.",
+      "aprice": 1299,
+      "price": 899,
+      "discount": 30,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782797748/IMG-20220518-WA0002_dhvr8r.jpg",
+      "rating": 4.6,
+      "category": "Women",
+      "reviews": 34
+    }
+  ],
+  "suits": [
+    {
+      "id": 101,
+      "name": "Bagru Print Cotton Kurta",
+      "Base color": "The cream / off-white base gives a natural and organic feel — a signature element of authentic Bagru prints.",
+      "Motifs": [
+        "The small spiral and dotted booti patterns on the upper section create a soft, graceful texture",
+        "The bold floral and leaf motifs in the lower section add strong traditional character."
+      ],
+      "Border Detailing": [
+        "The red and rust-toned border adds a royal and festive touch.",
+        "The golden zari-style pattern enhances the richness and premium look."
+      ],
+      "Contrast Play": "The black and cream contrast is striking, making the patterns stand out beautifully even from a distance.",
+      "aprice": 1299,
+      "price": 899,
+      "discount": 30,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782568325/2_tv1yei.jpg",
+      "rating": 4.6,
+      "category": "Women"
+    },
+    {
+      "id": 102,
+      "name": "Traditional Bagru Saree",
+      "Base color": "The cream / off-white base gives a soft, earthy foundation that reflects the natural and organic essence of authentic Bagru printing.",
+
+      "Motifs": [
+        "The upper section features delicate floral vine patterns that create an elegant and flowing visual texture.",
+        "The pallu and lower sections showcase bold traditional floral motifs with intricate detailing, adding richness and cultural depth."
+      ],
+
+      "Border Detailing": [
+        "The red border introduces a vibrant festive appeal and enhances the saree’s traditional charm.",
+        "The geometric black border patterns and golden zari-style accents add structure, richness, and a refined handcrafted look."
+      ],
+      "Contrast Play": "The combination of cream, black, and deep red creates a striking visual contrast, allowing the motifs and borders to stand out with bold traditional elegance.",
+      "aprice": 2499,
+      "discount": 24,
+      "price": 1899,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782568312/3_cbkxik.jpg",
+      "category": "Women",
+      "rating": 4.8
+    },
+    {
+      "id": 103,
+      "name": "Bagru Print Cotton Shirt",
+      "Base color": "The cream / off-white base provides a soft earthy backdrop that highlights the authenticity and natural character of traditional Bagru printing.",
+      "Motifs": [
+        "The upper section features delicate floral vine patterns that create a graceful and flowing texture.",
+        "The lower pallu area displays large floral motifs with leafy detailing, adding boldness and traditional richness to the design."
+      ],
+      "Border Detailing": [
+        "The deep red border enhances the saree with a vibrant festive appeal and traditional warmth.",
+        "The geometric black patterns combined with golden zari-style bands add structure, elegance, and a refined handcrafted finish."
+      ],
+      "Contrast Play": "The combination of cream, black, and rich red creates a striking contrast, allowing the bold floral motifs and borders to stand out with strong traditional elegance.",
+      "aprice": 999,
+      "discount": 20,
+      "price": 799,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782568295/20_jeltba.jpg",
+      "rating": 4.6,
+      "category": "Women"
+    },
+    {
+      "id": 104,
+      "name": "Bagru Print Cotton Dress",
+      "Base color": "The cream / off-white base provides a warm, earthy foundation that reflects the natural simplicity and authenticity of traditional Bagru printing.",
+      "Motifs": [
+        "The body features vertical wavy line patterns that create a rhythmic and flowing visual movement.",
+        "The lower section highlights stylized leaf and tribal-inspired motifs, while the pallu showcases repeating booti elements that add folk charm and cultural depth."
+      ],
+      "Border Detailing": [
+        "The deep red border adds a vibrant traditional warmth and festive appeal.",
+        "The geometric black patterns and golden zari-style bands provide structure, balance, and a refined handcrafted finish."
+      ],
+      "Contrast Play": "The combination of cream, black, and earthy red creates a bold visual contrast, allowing the tribal motifs and patterned borders to stand out with strong traditional character.",
+      "aprice": 1499,
+      "discount": 25,
+      "price": 1124,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782568290/16_slyxut.jpg",
+      "rating": 4.6,
+      "category": "Women"
+    },
+    {
+      "id": 105,
+      "name": "Bagru Print Cotton Kurta",
+      "Base color": "The cream / off-white base provides a warm earthy canvas that enhances the authenticity and natural appeal of traditional Bagru printing.",
+      "Motifs": [
+        "The body features rhythmic vertical wavy lines that create a flowing and structured visual movement.",
+        "The pallu and blouse section showcase dense floral vine motifs, adding richness, elegance, and traditional charm."
+      ],
+      "Border Detailing": [
+        "The deep red border introduces a vibrant festive warmth and enhances the saree’s traditional appeal.",
+        "The bold black geometric patterns combined with golden zari-style accents add definition, balance, and a refined handcrafted finish."
+      ],
+      "Contrast Play": "The combination of cream, black, and rich red creates a bold and striking contrast, allowing the floral vines and tribal-inspired borders to stand out with strong traditional elegance.",
+      "aprice": 1299,
+      "price": 899,
+      "discount": 30,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782568252/22_tucxyg.jpg",
+      "rating": 4.6,
+      "category": "Women"
+    },
+    {
+      "id": 106,
+      "name": "Bagru Print Cotton Kurta",
+      "Base color": "The cream / off-white base offers a warm, earthy backdrop that highlights the natural authenticity of traditional Bagru printing.",
+      "Motifs": [
+        "The body features flowing vertical wavy lines that create a rhythmic and structured visual movement.",
+        "The pallu and blouse section display repeating floral bootis, adding charm, cultural richness, and traditional character."
+      ],
+      "Border Detailing": [
+        "The deep red border adds festive warmth and enhances the saree’s traditional appeal.",
+        "The geometric black patterns and golden zari-style bands provide structure, balance, and a refined handcrafted finish."
+      ],
+      "Contrast Play": "The combination of cream, black, and rich red creates a bold and striking contrast, allowing the floral bootis and patterned borders to stand out with strong traditional elegance.",
+      "aprice": 1199,
+      "price": 799,
+      "discount": 33,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782568161/11_tx2mv3.jpg",
+      "rating": 4.6,
+      "category": "Women"
+    },
+    {
+      "id": 107,
+      "name": "Bagru Print Cotton Kurta",
+      "Base color": "The cream / off-white base creates a soft, natural backdrop that reflects the earthy authenticity of traditional Bagru printing.",
+      "Motifs": [
+        "The upper body features delicate spiral and dotted patterns that add subtle texture and visual softness.",
+        "The lower section showcases stylized floral and leaf motifs along with small repeating bootis, enhancing the saree’s traditional richness."
+      ],
+      "Border Detailing": [
+        "The deep red border introduces festive warmth and enhances the saree’s traditional appeal.",
+        "The geometric black patterns and golden zari-style bands provide structure, balance, and a refined handcrafted finish."
+      ],
+      "Contrast Play": "The combination of cream, black, and rich red creates a bold and striking contrast, allowing the floral motifs and patterned borders to stand out with strong traditional elegance.",
+      "aprice": 1099,
+      "price": 749,
+      "discount": 32,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782568155/26_ocw2mv.jpg",
+      "rating": 4.6,
+      "category": "Women"
+    },
+    {
+      "id": 108,
+      "name": "Bagru Print Cotton Kurta",
+      "Base color": "The cream / off-white base creates a soft, natural backdrop that reflects the earthy authenticity of traditional Bagru printing.",
+      "Motifs": [
+        "The upper body features delicate spiral and dotted patterns that add subtle texture and visual softness.",
+        "The lower section showcases stylized floral and leaf motifs along with small repeating bootis, enhancing the saree’s traditional richness."
+      ],
+      "Border Detailing": [
+        "The deep red border introduces festive warmth and enhances the saree’s traditional appeal.",
+        "The geometric black patterns and golden zari-style bands provide structure, balance, and a refined handcrafted finish."
+      ],
+      "Contrast Play": "The combination of cream, black, and rich red creates a bold and striking contrast, allowing the floral motifs and patterned borders to stand out with strong traditional elegance.",
+      "aprice": 1099,
+      "price": 749,
+      "discount": 32,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782568151/25_g28bs2.jpg",
+      "rating": 4.6,
+      "category": "Women"
+    },
+    {
+      "id": 109,
+      "name": "Bagru Print Cotton Kurta",
+      "Base color": "The cream / off-white base creates a soft, natural backdrop that reflects the earthy authenticity of traditional Bagru printing.",
+      "Motifs": [
+        "The upper body features delicate spiral and dotted patterns that add subtle texture and visual softness.",
+        "The lower section showcases stylized floral and leaf motifs along with small repeating bootis, enhancing the saree’s traditional richness."
+      ],
+      "Border Detailing": [
+        "The deep red border introduces festive warmth and enhances the saree’s traditional appeal.",
+        "The geometric black patterns and golden zari-style bands provide structure, balance, and a refined handcrafted finish."
+      ],
+      "Contrast Play": "The combination of cream, black, and rich red creates a bold and striking contrast, allowing the floral motifs and patterned borders to stand out with strong traditional elegance.",
+      "aprice": 1099,
+      "price": 749,
+      "discount": 32,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782568147/24_cikfnv.jpg",
+      "rating": 4.6,
+      "category": "Women"
+    },
+    {
+      "id": 110,
+      "name": "Bagru Print Cotton Kurta",
+      "Base color": "The cream / off-white base creates a soft, natural backdrop that reflects the earthy authenticity of traditional Bagru printing.",
+      "Motifs": [
+        "The upper body features delicate spiral and dotted patterns that add subtle texture and visual softness.",
+        "The lower section showcases stylized floral and leaf motifs along with small repeating bootis, enhancing the saree’s traditional richness."
+      ],
+      "Border Detailing": [
+        "The deep red border introduces festive warmth and enhances the saree’s traditional appeal.",
+        "The geometric black patterns and golden zari-style bands provide structure, balance, and a refined handcrafted finish."
+      ],
+      "Contrast Play": "The combination of cream, black, and rich red creates a bold and striking contrast, allowing the floral motifs and patterned borders to stand out with strong traditional elegance.",
+      "aprice": 1099,
+      "price": 749,
+      "discount": 32,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782568142/23_uptd1d.jpg",
+      "rating": 4.6,
+      "category": "Women"
+    },
+    {
+      "id": 111,
+      "name": "Bagru Print Cotton Kurta",
+      "Base color": "The cream / off-white base creates a soft, natural backdrop that reflects the earthy authenticity of traditional Bagru printing.",
+      "Motifs": [
+        "The upper body features delicate spiral and dotted patterns that add subtle texture and visual softness.",
+        "The lower section showcases stylized floral and leaf motifs along with small repeating bootis, enhancing the saree’s traditional richness."
+      ],
+      "Border Detailing": [
+        "The deep red border introduces festive warmth and enhances the saree’s traditional appeal.",
+        "The geometric black patterns and golden zari-style bands provide structure, balance, and a refined handcrafted finish."
+      ],
+      "Contrast Play": "The combination of cream, black, and rich red creates a bold and striking contrast, allowing the floral motifs and patterned borders to stand out with strong traditional elegance.",
+      "aprice": 1099,
+      "price": 749,
+      "discount": 32,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782568099/21_nqbxg0.jpg",
+      "rating": 4.6,
+      "category": "Women"
+    },
+    {
+      "id": 112,
+      "name": "Bagru Print Cotton Kurta",
+      "Base color": "The cream / off-white base creates a soft, natural backdrop that reflects the earthy authenticity of traditional Bagru printing.",
+      "Motifs": [
+        "The upper body features delicate spiral and dotted patterns that add subtle texture and visual softness.",
+        "The lower section showcases stylized floral and leaf motifs along with small repeating bootis, enhancing the saree’s traditional richness."
+      ],
+      "Border Detailing": [
+        "The deep red border introduces festive warmth and enhances the saree’s traditional appeal.",
+        "The geometric black patterns and golden zari-style bands provide structure, balance, and a refined handcrafted finish."
+      ],
+      "Contrast Play": "The combination of cream, black, and rich red creates a bold and striking contrast, allowing the floral motifs and patterned borders to stand out with strong traditional elegance.",
+      "aprice": 1099,
+      "price": 749,
+      "discount": 32,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782568091/6_uuix8c.jpg",
+      "rating": 4.6,
+      "category": "Women"
+    },
+    {
+      "id": 113,
+      "name": "Bagru Print Cotton Kurta",
+      "Base color": "The cream / off-white base creates a soft, natural backdrop that reflects the earthy authenticity of traditional Bagru printing.",
+      "Motifs": [
+        "The upper body features delicate spiral and dotted patterns that add subtle texture and visual softness.",
+        "The lower section showcases stylized floral and leaf motifs along with small repeating bootis, enhancing the saree’s traditional richness."
+      ],
+      "Border Detailing": [
+        "The deep red border introduces festive warmth and enhances the saree’s traditional appeal.",
+        "The geometric black patterns and golden zari-style bands provide structure, balance, and a refined handcrafted finish."
+      ],
+      "Contrast Play": "The combination of cream, black, and rich red creates a bold and striking contrast, allowing the floral motifs and patterned borders to stand out with strong traditional elegance.",
+      "aprice": 1099,
+      "price": 749,
+      "discount": 32,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782568090/19_lyc8yo.jpg",
+      "rating": 4.6,
+      "category": "Women"
+    },
+    {
+      "id": 114,
+      "name": "Bagru Print Cotton Kurta",
+      "Base color": "The cream / off-white base creates a soft, natural backdrop that reflects the earthy authenticity of traditional Bagru printing.",
+      "Motifs": [
+        "The upper body features delicate spiral and dotted patterns that add subtle texture and visual softness.",
+        "The lower section showcases stylized floral and leaf motifs along with small repeating bootis, enhancing the saree’s traditional richness."
+      ],
+      "Border Detailing": [
+        "The deep red border introduces festive warmth and enhances the saree’s traditional appeal.",
+        "The geometric black patterns and golden zari-style bands provide structure, balance, and a refined handcrafted finish."
+      ],
+      "Contrast Play": "The combination of cream, black, and rich red creates a bold and striking contrast, allowing the floral motifs and patterned borders to stand out with strong traditional elegance.",
+      "aprice": 1099,
+      "price": 749,
+      "discount": 32,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782568085/18_p3gj1k.jpg",
+      "rating": 4.6,
+      "category": "Women"
+    },
+    {
+      "id": 115,
+      "name": "Bagru Print Cotton Kurta",
+      "Base color": "The cream / off-white base creates a soft, natural backdrop that reflects the earthy authenticity of traditional Bagru printing.",
+      "Motifs": [
+        "The upper body features delicate spiral and dotted patterns that add subtle texture and visual softness.",
+        "The lower section showcases stylized floral and leaf motifs along with small repeating bootis, enhancing the saree’s traditional richness."
+      ],
+      "Border Detailing": [
+        "The deep red border introduces festive warmth and enhances the saree’s traditional appeal.",
+        "The geometric black patterns and golden zari-style bands provide structure, balance, and a refined handcrafted finish."
+      ],
+      "Contrast Play": "The combination of cream, black, and rich red creates a bold and striking contrast, allowing the floral motifs and patterned borders to stand out with strong traditional elegance.",
+      "aprice": 1099,
+      "price": 749,
+      "discount": 32,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782568078/17_sjlabt.jpg",
+      "rating": 4.6,
+      "category": "Women"
+    },
+    {
+      "id": 116,
+      "name": "Bagru Print Cotton Kurta",
+      "Base color": "The cream / off-white base creates a soft, natural backdrop that reflects the earthy authenticity of traditional Bagru printing.",
+      "Motifs": [
+        "The upper body features delicate spiral and dotted patterns that add subtle texture and visual softness.",
+        "The lower section showcases stylized floral and leaf motifs along with small repeating bootis, enhancing the saree’s traditional richness."
+      ],
+      "Border Detailing": [
+        "The deep red border introduces festive warmth and enhances the saree’s traditional appeal.",
+        "The geometric black patterns and golden zari-style bands provide structure, balance, and a refined handcrafted finish."
+      ],
+      "Contrast Play": "The combination of cream, black, and rich red creates a bold and striking contrast, allowing the floral motifs and patterned borders to stand out with strong traditional elegance.",
+      "aprice": 1099,
+      "price": 749,
+      "discount": 32,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782568073/15_n81oyl.jpg",
+      "rating": 4.6,
+      "category": "Women"
+    },
+    {
+      "id": 117,
+      "name": "Bagru Print Cotton Kurta",
+      "Base color": "The cream / off-white base creates a soft, natural backdrop that reflects the earthy authenticity of traditional Bagru printing.",
+      "Motifs": [
+        "The upper body features delicate spiral and dotted patterns that add subtle texture and visual softness.",
+        "The lower section showcases stylized floral and leaf motifs along with small repeating bootis, enhancing the saree’s traditional richness."
+      ],
+      "Border Detailing": [
+        "The deep red border introduces festive warmth and enhances the saree’s traditional appeal.",
+        "The geometric black patterns and golden zari-style bands provide structure, balance, and a refined handcrafted finish."
+      ],
+      "Contrast Play": "The combination of cream, black, and rich red creates a bold and striking contrast, allowing the floral motifs and patterned borders to stand out with strong traditional elegance.",
+      "aprice": 1099,
+      "price": 749,
+      "discount": 32,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782568073/1_cvvqfs.jpg",
+      "rating": 4.6,
+      "category": "Women"
+    },
+    {
+      "id": 118,
+      "name": "Bagru Print Cotton Kurta",
+      "Base color": "The cream / off-white base creates a soft, natural backdrop that reflects the earthy authenticity of traditional Bagru printing.",
+      "Motifs": [
+        "The upper body features delicate spiral and dotted patterns that add subtle texture and visual softness.",
+        "The lower section showcases stylized floral and leaf motifs along with small repeating bootis, enhancing the saree’s traditional richness."
+      ],
+      "Border Detailing": [
+        "The deep red border introduces festive warmth and enhances the saree’s traditional appeal.",
+        "The geometric black patterns and golden zari-style bands provide structure, balance, and a refined handcrafted finish."
+      ],
+      "Contrast Play": "The combination of cream, black, and rich red creates a bold and striking contrast, allowing the floral motifs and patterned borders to stand out with strong traditional elegance.",
+      "aprice": 1099,
+      "price": 749,
+      "discount": 32,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782568067/14_uw0u3a.jpg",
+      "rating": 4.6,
+      "category": "Women"
+    },
+    {
+      "id": 119,
+      "name": "Bagru Print Cotton Kurta",
+      "Base color": "The cream / off-white base creates a soft, natural backdrop that reflects the earthy authenticity of traditional Bagru printing.",
+      "Motifs": [
+        "The upper body features delicate spiral and dotted patterns that add subtle texture and visual softness.",
+        "The lower section showcases stylized floral and leaf motifs along with small repeating bootis, enhancing the saree’s traditional richness."
+      ],
+      "Border Detailing": [
+        "The deep red border introduces festive warmth and enhances the saree’s traditional appeal.",
+        "The geometric black patterns and golden zari-style bands provide structure, balance, and a refined handcrafted finish."
+      ],
+      "Contrast Play": "The combination of cream, black, and rich red creates a bold and striking contrast, allowing the floral motifs and patterned borders to stand out with strong traditional elegance.",
+      "aprice": 1099,
+      "price": 749,
+      "discount": 32,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782568060/9_c5pyve.jpg",
+      "rating": 4.6,
+      "category": "Women"
+    },
+    {
+      "id": 120,
+      "name": "Bagru Print Cotton Kurta",
+      "Base color": "The cream / off-white base creates a soft, natural backdrop that reflects the earthy authenticity of traditional Bagru printing.",
+      "Motifs": [
+        "The upper body features delicate spiral and dotted patterns that add subtle texture and visual softness.",
+        "The lower section showcases stylized floral and leaf motifs along with small repeating bootis, enhancing the saree’s traditional richness."
+      ],
+      "Border Detailing": [
+        "The deep red border introduces festive warmth and enhances the saree’s traditional appeal.",
+        "The geometric black patterns and golden zari-style bands provide structure, balance, and a refined handcrafted finish."
+      ],
+      "Contrast Play": "The combination of cream, black, and rich red creates a bold and striking contrast, allowing the floral motifs and patterned borders to stand out with strong traditional elegance.",
+      "aprice": 1099,
+      "price": 749,
+      "discount": 32,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782568046/13_nnuowt.jpg",
+      "rating": 4.6,
+      "category": "Women"
+    },
+    {
+      "id": 121,
+      "name": "Bagru Print Cotton Kurta",
+      "Base color": "The cream / off-white base creates a soft, natural backdrop that reflects the earthy authenticity of traditional Bagru printing.",
+      "Motifs": [
+        "The upper body features delicate spiral and dotted patterns that add subtle texture and visual softness.",
+        "The lower section showcases stylized floral and leaf motifs along with small repeating bootis, enhancing the saree’s traditional richness."
+      ],
+      "Border Detailing": [
+        "The deep red border introduces festive warmth and enhances the saree’s traditional appeal.",
+        "The geometric black patterns and golden zari-style bands provide structure, balance, and a refined handcrafted finish."
+      ],
+      "Contrast Play": "The combination of cream, black, and rich red creates a bold and striking contrast, allowing the floral motifs and patterned borders to stand out with strong traditional elegance.",
+      "aprice": 1099,
+      "price": 749,
+      "discount": 32,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782567977/8_fs0ye5.jpg",
+      "rating": 4.6,
+      "category": "Women"
+    },
+    {
+      "id": 122,
+      "name": "Bagru Print Cotton Kurta",
+      "Base color": "The cream / off-white base creates a soft, natural backdrop that reflects the earthy authenticity of traditional Bagru printing.",
+      "Motifs": [
+        "The upper body features delicate spiral and dotted patterns that add subtle texture and visual softness.",
+        "The lower section showcases stylized floral and leaf motifs along with small repeating bootis, enhancing the saree’s traditional richness."
+      ],
+      "Border Detailing": [
+        "The deep red border introduces festive warmth and enhances the saree’s traditional appeal.",
+        "The geometric black patterns and golden zari-style bands provide structure, balance, and a refined handcrafted finish."
+      ],
+      "Contrast Play": "The combination of cream, black, and rich red creates a bold and striking contrast, allowing the floral motifs and patterned borders to stand out with strong traditional elegance.",
+      "aprice": 1099,
+      "price": 749,
+      "discount": 32,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782567971/4_l4xwnn.jpg",
+      "rating": 4.6,
+      "category": "Women"
+    },
+    {
+      "id": 123,
+      "name": "Bagru Print Cotton Kurta",
+      "Base color": "The cream / off-white base creates a soft, natural backdrop that reflects the earthy authenticity of traditional Bagru printing.",
+      "Motifs": [
+        "The upper body features delicate spiral and dotted patterns that add subtle texture and visual softness.",
+        "The lower section showcases stylized floral and leaf motifs along with small repeating bootis, enhancing the saree’s traditional richness."
+      ],
+      "Border Detailing": [
+        "The deep red border introduces festive warmth and enhances the saree’s traditional appeal.",
+        "The geometric black patterns and golden zari-style bands provide structure, balance, and a refined handcrafted finish."
+      ],
+      "Contrast Play": "The combination of cream, black, and rich red creates a bold and striking contrast, allowing the floral motifs and patterned borders to stand out with strong traditional elegance.",
+      "aprice": 1099,
+      "price": 749,
+      "discount": 32,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782567964/12_wxypxw.jpg",
+      "rating": 4.6,
+      "category": "Women"
+    },
+    {
+      "id": 124,
+      "name": "Bagru Print Cotton Kurta",
+      "Base color": "The cream / off-white base creates a soft, natural backdrop that reflects the earthy authenticity of traditional Bagru printing.",
+      "Motifs": [
+        "The upper body features delicate spiral and dotted patterns that add subtle texture and visual softness.",
+        "The lower section showcases stylized floral and leaf motifs along with small repeating bootis, enhancing the saree’s traditional richness."
+      ],
+      "Border Detailing": [
+        "The deep red border introduces festive warmth and enhances the saree’s traditional appeal.",
+        "The geometric black patterns and golden zari-style bands provide structure, balance, and a refined handcrafted finish."
+      ],
+      "Contrast Play": "The combination of cream, black, and rich red creates a bold and striking contrast, allowing the floral motifs and patterned borders to stand out with strong traditional elegance.",
+      "aprice": 1099,
+      "price": 749,
+      "discount": 32,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782567959/5_wqc4e3.jpg",
+      "rating": 4.6,
+      "category": "Women"
+    },
+    {
+      "id": 125,
+      "name": "Bagru Print Cotton Kurta",
+      "Base color": "The cream / off-white base creates a soft, natural backdrop that reflects the earthy authenticity of traditional Bagru printing.",
+      "Motifs": [
+        "The upper body features delicate spiral and dotted patterns that add subtle texture and visual softness.",
+        "The lower section showcases stylized floral and leaf motifs along with small repeating bootis, enhancing the saree’s traditional richness."
+      ],
+      "Border Detailing": [
+        "The deep red border introduces festive warmth and enhances the saree’s traditional appeal.",
+        "The geometric black patterns and golden zari-style bands provide structure, balance, and a refined handcrafted finish."
+      ],
+      "Contrast Play": "The combination of cream, black, and rich red creates a bold and striking contrast, allowing the floral motifs and patterned borders to stand out with strong traditional elegance.",
+      "aprice": 1099,
+      "price": 749,
+      "discount": 32,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782567955/7_zhetfi.jpg",
+      "rating": 4.6,
+      "category": "Women"
+    },
+    {
+      "id": 126,
+      "name": "Bagru Print Cotton Kurta",
+      "Base color": "The cream / off-white base creates a soft, natural backdrop that reflects the earthy authenticity of traditional Bagru printing.",
+      "Motifs": [
+        "The upper body features delicate spiral and dotted patterns that add subtle texture and visual softness.",
+        "The lower section showcases stylized floral and leaf motifs along with small repeating bootis, enhancing the saree’s traditional richness."
+      ],
+      "Border Detailing": [
+        "The deep red border introduces festive warmth and enhances the saree’s traditional appeal.",
+        "The geometric black patterns and golden zari-style bands provide structure, balance, and a refined handcrafted finish."
+      ],
+      "Contrast Play": "The combination of cream, black, and rich red creates a bold and striking contrast, allowing the floral motifs and patterned borders to stand out with strong traditional elegance.",
+      "aprice": 1099,
+      "price": 749,
+      "discount": 32,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782567951/10_aloap0.jpg",
+      "rating": 4.6,
+      "category": "Women"
+    }
+  ],
+  "dupatta": [
+    {
+      "id": 201,
+      "name": "Hand Block Printed Dupatta",
+      "Base color": "The soft cream base provides a versatile canvas that complements both casual and festive wear.",
+      "Motifs": [
+        "Traditional floral jaal patterns spread across the fabric create an elegant rhythm.",
+        "Delicate booti motifs add charm and cultural richness."
+      ],
+      "Border Detailing": [
+        "The intricate red and maroon border adds a vibrant festive touch.",
+        "Golden zari work on the borders enhances the premium festive appeal."
+      ],
+      "Contrast Play": "The combination of cream, red, and gold creates a stunning visual contrast, perfect for festive occasions.",
+      "aprice": 899,
+      "price": 649,
+      "discount": 28,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782571834/10_ki8asj.jpg",
+      "category": "Accessories",
+      "fabric": "Pure Cotton",
+      "length": "2.5 meters",
+      "width": "36 inches",
+      "rating": 4.7,
+      "reviews": 42
+    },
+    {
+      "id": 202,
+      "name": "Chanderi Silk Dupatta",
+      "Base color": "The rich ivory base exudes elegance and sophistication, perfect for special occasions.",
+      "Motifs": [
+        "Intricate floral butis scattered across the fabric create a delicate texture.",
+        "Traditional paisley motifs add a timeless appeal."
+      ],
+      "Border Detailing": [
+        "The zari woven border adds a touch of royalty.",
+        "Intricate temple design patterns on the border enhance the traditional look."
+      ],
+      "Contrast Play": "The interplay of ivory and gold creates a luxurious look, making it perfect for weddings and festive events.",
+      "aprice": 1499,
+      "price": 1124,
+      "discount": 25,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782571835/11_ahx627.jpg",
+      "category": "Accessories",
+      "fabric": "Silk Blend",
+      "length": "2.7 meters",
+      "width": "40 inches",
+      "rating": 4.9,
+      "reviews": 56
+    },
+    {
+      "id": 203,
+      "name": "Bandhani Tie-Dye Dupatta",
+      "Base color": "The vibrant red base captures the essence of traditional Bandhani art from Gujarat.",
+      "Motifs": [
+        "Thousands of tiny dots create the classic Bandhani pattern.",
+        "Traditional diamond and square motifs add geometric charm."
+      ],
+      "Border Detailing": [
+        "The contrast border enhances the vibrant look.",
+        "Mirror work details on the border add a festive sparkle."
+      ],
+      "Contrast Play": "The bold red with yellow and white dot patterns creates an energetic and festive look.",
+      "aprice": 699,
+      "price": 524,
+      "discount": 25,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782571832/9_upgpkm.jpg",
+      "category": "Accessories",
+      "fabric": "Pure Cotton",
+      "length": "2.5 meters",
+      "width": "36 inches",
+      "rating": 4.5,
+      "reviews": 38
+    },
+    {
+      "id": 204,
+      "name": "Banarasi Silk Dupatta",
+      "Base color": "The deep maroon base with gold zari work creates a regal and luxurious look.",
+      "Motifs": [
+        "Traditional Banarasi floral jaal covers the entire fabric.",
+        "Intricate gold brocade work adds texture and richness."
+      ],
+      "Border Detailing": [
+        "The heavy gold zari border with floral patterns adds grandeur.",
+        "Traditional kadhua work on both ends enhances the regal appeal."
+      ],
+      "Contrast Play": "The deep maroon and gold combination creates a royal contrast, perfect for weddings and grand celebrations.",
+      "aprice": 2499,
+      "price": 1874,
+      "discount": 25,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782571831/8_ypbwto.jpg",
+      "category": "Accessories",
+      "fabric": "Banarasi Silk",
+      "length": "2.5 meters",
+      "width": "38 inches",
+      "rating": 4.8,
+      "reviews": 49
+    },
+    {
+      "id": 205,
+      "name": "Ajrakh Print Dupatta",
+      "Base color": "The natural indigo and red base showcases the authentic Ajrakh printing art.",
+      "Motifs": [
+        "Traditional geometric patterns with star motifs create a structured design.",
+        "Intricate floral and leaf patterns add nature-inspired elements."
+      ],
+      "Border Detailing": [
+        "The hand-block printed border with geometric patterns adds authenticity.",
+        "Traditional red and indigo borders complete the ethnic look."
+      ],
+      "Contrast Play": "The bold indigo, red, and white combination creates a striking traditional look.",
+      "aprice": 799,
+      "price": 599,
+      "discount": 25,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782571830/4_hdia5h.jpg",
+      "category": "Accessories",
+      "fabric": "Pure Cotton",
+      "length": "2.5 meters",
+      "width": "36 inches",
+      "rating": 4.6,
+      "reviews": 31
+    },
+    {
+      "id": 206,
+      "name": "Gota Patti Dupatta",
+      "Base color": "The soft pink base with gota patti work creates a dreamy festive look.",
+      "Motifs": [
+        "Gota patti lace work creates a flowing design across the fabric.",
+        "Floral motifs with gota work add texture and shine."
+      ],
+      "Border Detailing": [
+        "Heavy gota patti border with leaf patterns adds a rich look.",
+        "Zari and gota combination on borders enhances the festive appeal."
+      ],
+      "Contrast Play": "The soft pink with gold gota work creates a delicate and feminine contrast.",
+      "aprice": 1299,
+      "price": 974,
+      "discount": 25,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782571830/7_safzlb.jpg",
+      "category": "Accessories",
+      "fabric": "Cotton Silk",
+      "length": "2.5 meters",
+      "width": "36 inches",
+      "rating": 4.4,
+      "reviews": 27
+    },
+    {
+      "id": 207,
+      "name": "Gota Patti Dupatta",
+      "Base color": "The soft pink base with gota patti work creates a dreamy festive look.",
+      "Motifs": [
+        "Gota patti lace work creates a flowing design across the fabric.",
+        "Floral motifs with gota work add texture and shine."
+      ],
+      "Border Detailing": [
+        "Heavy gota patti border with leaf patterns adds a rich look.",
+        "Zari and gota combination on borders enhances the festive appeal."
+      ],
+      "Contrast Play": "The soft pink with gold gota work creates a delicate and feminine contrast.",
+      "aprice": 1299,
+      "price": 974,
+      "discount": 25,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782571829/6_wntxzd.jpg",
+      "category": "Accessories",
+      "fabric": "Cotton Silk",
+      "length": "2.5 meters",
+      "width": "36 inches",
+      "rating": 4.4,
+      "reviews": 27
+    },
+    {
+      "id": 208,
+      "name": "Gota Patti Dupatta",
+      "Base color": "The soft pink base with gota patti work creates a dreamy festive look.",
+      "Motifs": [
+        "Gota patti lace work creates a flowing design across the fabric.",
+        "Floral motifs with gota work add texture and shine."
+      ],
+      "Border Detailing": [
+        "Heavy gota patti border with leaf patterns adds a rich look.",
+        "Zari and gota combination on borders enhances the festive appeal."
+      ],
+      "Contrast Play": "The soft pink with gold gota work creates a delicate and feminine contrast.",
+      "aprice": 1299,
+      "price": 974,
+      "discount": 25,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782571828/3_twurkn.jpg",
+      "category": "Accessories",
+      "fabric": "Cotton Silk",
+      "length": "2.5 meters",
+      "width": "36 inches",
+      "rating": 4.4,
+      "reviews": 27
+    },
+    {
+      "id": 209,
+      "name": "Gota Patti Dupatta",
+      "Base color": "The soft pink base with gota patti work creates a dreamy festive look.",
+      "Motifs": [
+        "Gota patti lace work creates a flowing design across the fabric.",
+        "Floral motifs with gota work add texture and shine."
+      ],
+      "Border Detailing": [
+        "Heavy gota patti border with leaf patterns adds a rich look.",
+        "Zari and gota combination on borders enhances the festive appeal."
+      ],
+      "Contrast Play": "The soft pink with gold gota work creates a delicate and feminine contrast.",
+      "aprice": 1299,
+      "price": 974,
+      "discount": 25,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782571828/5_ogzkxo.jpg",
+      "category": "Accessories",
+      "fabric": "Cotton Silk",
+      "length": "2.5 meters",
+      "width": "36 inches",
+      "rating": 4.4,
+      "reviews": 27
+    },
+    {
+      "id": 210,
+      "name": "Gota Patti Dupatta",
+      "Base color": "The soft pink base with gota patti work creates a dreamy festive look.",
+      "Motifs": [
+        "Gota patti lace work creates a flowing design across the fabric.",
+        "Floral motifs with gota work add texture and shine."
+      ],
+      "Border Detailing": [
+        "Heavy gota patti border with leaf patterns adds a rich look.",
+        "Zari and gota combination on borders enhances the festive appeal."
+      ],
+      "Contrast Play": "The soft pink with gold gota work creates a delicate and feminine contrast.",
+      "aprice": 1299,
+      "price": 974,
+      "discount": 25,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782571827/1_bqqv0e.jpg",
+      "category": "Accessories",
+      "fabric": "Cotton Silk",
+      "length": "2.5 meters",
+      "width": "36 inches",
+      "rating": 4.4,
+      "reviews": 27
+    },
+    {
+      "id": 211,
+      "name": "Gota Patti Dupatta",
+      "Base color": "The soft pink base with gota patti work creates a dreamy festive look.",
+      "Motifs": [
+        "Gota patti lace work creates a flowing design across the fabric.",
+        "Floral motifs with gota work add texture and shine."
+      ],
+      "Border Detailing": [
+        "Heavy gota patti border with leaf patterns adds a rich look.",
+        "Zari and gota combination on borders enhances the festive appeal."
+      ],
+      "Contrast Play": "The soft pink with gold gota work creates a delicate and feminine contrast.",
+      "aprice": 1299,
+      "price": 974,
+      "discount": 25,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782571826/2_loi7ga.jpg",
+      "category": "Accessories",
+      "fabric": "Cotton Silk",
+      "length": "2.5 meters",
+      "width": "36 inches",
+      "rating": 4.4,
+      "reviews": 27
+    }
+  ],
+  "saree": [
+    {
+      "id": 301,
+      "name": "Banarasi Silk Saree",
+      "Base color": "The rich maroon base with golden zari work creates a regal and luxurious look perfect for weddings.",
+      "Motifs": [
+        "Traditional Banarasi floral jaal covers the entire saree.",
+        "Intricate gold brocade work adds texture and richness.",
+        "Delicate butis scattered across the fabric create a elegant rhythm."
+      ],
+      "Border Detailing": [
+        "The heavy gold zari border with floral patterns adds grandeur.",
+        "Traditional kadhua work on both ends enhances the regal appeal.",
+        "Intricate temple design patterns on the border add a traditional touch."
+      ],
+      "Contrast Play": "The deep maroon and gold combination creates a royal contrast, perfect for weddings and grand celebrations.",
+      "aprice": 4999,
+      "price": 3749,
+      "discount": 25,
+      "category": "Women",
+      "fabric": "Banarasi Silk",
+      "length": "5.5 meters",
+      "blouse": "Unstitched",
+      "rating": 4.9,
+      "reviews": 128,
+      "images": [
+        "https://res.cloudinary.com/dzyhjgtji/image/upload/f_auto,q_auto,w_600/v1782715141/bagru_print_6__cotton_set291_sowmyasri_front2_tassels__2023-8-25-18-24-21__2730X4096_qsedj5.jpg",
+        "https://res.cloudinary.com/dzyhjgtji/image/upload/f_auto,q_auto,w_800/v1782715143/bagru_print_6__cotton_set291_sowmyasri_back_tassels__2023-8-25-18-24-5__2730X4096_xlh6z5.jpg",
+        "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782715143/bagru_print_6__cotton_set291_sowmyasri_back_tassels__2023-8-25-18-24-5__2730X4096_xlh6z5.jpg",
+        "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782715143/bagru_print_6__cotton_set291_sowmyasri_side__2023-8-23-16-5-9__2730X4096_fqqok1.jpg",
+        "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782715142/bagru_print_6__cotton_set291_sowmyasri_front1__2023-8-23-16-5-19__2730X4096_wj8jpb.jpg"
+      ],
+      "mainImage": "https://res.cloudinary.com/dzyhjgtji/image/upload/f_auto,q_80/v1782715141/bagru_print_6__cotton_set291_sowmyasri_front2_tassels__2023-8-25-18-24-21__2730X4096_qsedj5.jpg"
+    },
+    {
+      "id": 302,
+      "name": "Kanjeevaram Silk Saree",
+      "Base color": "The vibrant royal blue base with contrasting gold borders is a hallmark of authentic Kanjeevaram silk.",
+      "Motifs": [
+        "Traditional temple motifs and peacock designs adorn the pallu.",
+        "Geometric patterns with zari work create a rich texture.",
+        "Intricate gold checks (korvai) add a classic Kanjeevaram touch."
+      ],
+      "Border Detailing": [
+        "The broad gold border with traditional temple designs adds grandeur.",
+        "Contrasting red and gold border enhances the traditional appeal.",
+        "Intricate zari work on the border creates a luxurious finish."
+      ],
+      "Contrast Play": "The royal blue with gold and red combination creates a stunning traditional contrast, making it perfect for festive occasions.",
+      "aprice": 6999,
+      "price": 5249,
+      "discount": 25,
+      "category": "Women",
+      "fabric": "Kanjeevaram Silk",
+      "length": "5.5 meters",
+      "blouse": "With Blouse",
+      "rating": 4.8,
+      "reviews": 156,
+      "images": [
+        "/Saree/302-1.jpg",
+        "/Saree/302-2.jpg",
+        "/Saree/302-3.jpg",
+        "/Saree/302-4.jpg",
+        "/Saree/302-5.jpg"
+      ],
+      "mainImage": "/Saree/302-1.jpg"
+    },
+    {
+      "id": 303,
+      "name": "Chanderi Silk Saree",
+      "Base color": "The soft ivory base with delicate gold work creates an elegant and sophisticated look.",
+      "Motifs": [
+        "Delicate floral butis scattered across the fabric create a graceful texture.",
+        "Traditional paisley motifs on the pallu add a timeless appeal.",
+        "Subtle geometric patterns add a modern touch to the traditional design."
+      ],
+      "Border Detailing": [
+        "The gold zari border with floral patterns adds a touch of royalty.",
+        "Contrasting colored border enhances the traditional appeal.",
+        "Intricate weave patterns on the border create a luxurious finish."
+      ],
+      "Contrast Play": "The ivory and gold combination creates a subtle yet elegant contrast, perfect for both daytime and evening events.",
+      "aprice": 3499,
+      "price": 2624,
+      "discount": 25,
+      "category": "Women",
+      "fabric": "Chanderi Silk",
+      "length": "5.5 meters",
+      "blouse": "Unstitched",
+      "rating": 4.7,
+      "reviews": 98,
+      "images": [
+        "/Saree/303-1.jpg",
+        "/Saree/303-2.jpg",
+        "/Saree/303-3.jpg",
+        "/Saree/303-4.jpg",
+        "/Saree/303-5.jpg"
+      ],
+      "mainImage": "/Saree/303-1.jpg"
+    },
+    {
+      "id": 304,
+      "name": "Tussar Silk Saree",
+      "Base color": "The natural golden-brown base showcases the authentic texture of Tussar silk.",
+      "Motifs": [
+        "Traditional tribal and nature-inspired motifs adorn the saree.",
+        "Intricate kalamkari-style patterns on the pallu add artistic charm.",
+        "Delicate floral and leaf patterns create a connection with nature."
+      ],
+      "Border Detailing": [
+        "The deep maroon border with traditional motifs adds a festive touch.",
+        "Contrasting colored border enhances the ethnic appeal.",
+        "Hand-woven details on the border create an authentic look."
+      ],
+      "Contrast Play": "The natural golden-brown with maroon and gold creates a warm and earthy contrast, perfect for cultural events.",
+      "aprice": 3999,
+      "price": 2999,
+      "discount": 25,
+      "category": "Women",
+      "fabric": "Tussar Silk",
+      "length": "5.5 meters",
+      "blouse": "Unstitched",
+      "rating": 4.6,
+      "reviews": 87,
+      "images": [
+        "/Saree/304-1.jpg",
+        "/Saree/304-2.jpg",
+        "/Saree/304-3.jpg",
+        "/Saree/304-4.jpg",
+        "/Saree/304-5.jpg"
+      ],
+      "mainImage": "/Saree/304-1.jpg"
+    },
+    {
+      "id": 305,
+      "name": "Patola Silk Saree",
+      "Base color": "The vibrant red base with intricate Patola patterns creates a stunning traditional look.",
+      "Motifs": [
+        "Traditional Patola geometric patterns cover the entire saree.",
+        "Intricate diamond and elephant motifs add cultural richness.",
+        "Repeating patterns in contrasting colors create a rhythmic design."
+      ],
+      "Border Detailing": [
+        "The distinctive Patola-style border with geometric patterns adds authenticity.",
+        "Contrasting colored borders enhance the vibrant look.",
+        "Intricate zari work on the border adds a touch of luxury."
+      ],
+      "Contrast Play": "The bold red with yellow, green, and white patterns creates an energetic and festive contrast, perfect for celebrations.",
+      "aprice": 8999,
+      "price": 6749,
+      "discount": 25,
+      "category": "Women",
+      "fabric": "Patola Silk",
+      "length": "5.5 meters",
+      "blouse": "With Blouse",
+      "rating": 4.9,
+      "reviews": 112,
+      "images": [
+        "/Saree/305-1.jpg",
+        "/Saree/305-2.jpg",
+        "/Saree/305-3.jpg",
+        "/Saree/305-4.jpg",
+        "/Saree/305-5.jpg"
+      ],
+      "mainImage": "/Saree/305-1.jpg"
+    }
+  ]
+}
