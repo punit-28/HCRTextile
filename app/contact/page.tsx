@@ -192,7 +192,7 @@ export default function ContactPage() {
               </a>
             </div>
           </div>
-
+      
           {/* Right Side - Form */}
           <div className="lg:col-span-2">
             <div className="bg-white p-6 md:p-8 rounded-2xl shadow-lg border border-gray-100">

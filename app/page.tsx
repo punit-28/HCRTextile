@@ -1,7 +1,8 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback, useMemo, memo } from "react";
+import { motion } from "framer-motion";
 import {
   ArrowRight,
   Star,
@@ -14,6 +15,11 @@ import {
 import CurrencyPrice from "../component/CurrencyPrice";
 import { useCurrency } from "@/app/context/CurrencyContext";
 
+// Constants
+const SLIDE_INTERVAL = 5000;
+const ANIMATION_DURATION = 0.6;
+
+// Data
 const slides = [
   {
     id: 1,
@@ -47,55 +53,57 @@ const slides = [
   },
 ];
 
-// Featured Products with INR prices
 const featuredProducts = [
   {
     id: 1,
     name: "Banarasi Silk Saree",
+    slug: "saree/333",
     price: 4999,
     originalPrice: 6999,
     rating: 4.8,
     reviews: 124,
-    image: "/product1.jpg",
+    image: "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784286583/ChatGPT_Image_Jul_17_2026_04_39_10_PM_l1utq7.png",
     isNew: true,
     isFeatured: true,
   },
   {
     id: 2,
-    name: "Hand Block Cotton Suit",
-    price: 2499,
-    originalPrice: 3499,
-    rating: 4.6,
-    reviews: 89,
-    image: "/product2.jpg",
-    isNew: false,
-    isFeatured: true,
-  },
-  {
-    id: 3,
     name: "Chanderi Silk Saree",
+    slug: "saree/315",
     price: 3999,
     originalPrice: 5499,
     rating: 4.9,
     reviews: 156,
-    image: "/product3.jpg",
+    image: "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784286243/ChatGPT_Image_Jul_17_2026_04_33_42_PM_frun30.png",
     isNew: true,
+    isFeatured: true,
+  },
+  {
+    id: 3,
+    name: "Hand Block Cotton Suit",
+    slug: "product/119",
+    price: 2499,
+    originalPrice: 3499,
+    rating: 4.6,
+    reviews: 89,
+    image: "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782568060/9_c5pyve.jpg",
+    isNew: false,
     isFeatured: true,
   },
   {
     id: 4,
     name: "Embroidered Suit Set",
+    slug: "product/5",
     price: 3299,
     originalPrice: 4299,
     rating: 4.7,
     reviews: 67,
-    image: "/product4.jpg",
+    image: "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782571222/5_uzu1mo.jpg",
     isNew: false,
     isFeatured: true,
   },
 ];
 
-// Categories
 const categories = [
   {
     name: "Sarees",
@@ -123,7 +131,6 @@ const categories = [
   },
 ];
 
-// Testimonials
 const testimonials = [
   {
     id: 1,
@@ -154,57 +161,333 @@ const testimonials = [
   },
 ];
 
+// Animation variants
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: ANIMATION_DURATION, ease: "easeOut" } }
+};
+
+const fadeIn = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 0.5 } }
+};
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.12,
+      delayChildren: 0.1
+    }
+  }
+};
+
+// Memoized Components
+const FeatureItem = memo(({ icon: Icon, title, desc, index }: any) => (
+  <motion.div
+    variants={fadeInUp}
+    whileHover={{ y: -5, transition: { duration: 0.2 } }}
+    className="flex items-center gap-2 md:gap-3 group"
+  >
+    <motion.div
+      whileHover={{ rotate: 360, scale: 1.1 }}
+      transition={{ duration: 0.5 }}
+      className="p-2 md:p-3 bg-[#f8f3ea] rounded-full group-hover:bg-[#C49B5C]/10 transition-colors"
+    >
+      <Icon className="text-[#8B6B3D] group-hover:scale-110 transition-transform" size={20} />
+    </motion.div>
+    <div>
+      <p className="font-semibold text-[#2C1810] text-xs md:text-sm">{title}</p>
+      <p className="text-[10px] md:text-xs text-gray-500">{desc}</p>
+    </div>
+  </motion.div>
+));
+
+FeatureItem.displayName = 'FeatureItem';
+
+const CategoryCard = memo(({ category }: { category: any }) => (
+  <motion.div
+    variants={fadeInUp}
+    whileHover={{ y: -10, transition: { duration: 0.3 } }}
+  >
+    <Link
+      href={category.link}
+      className="group relative overflow-hidden rounded-2xl bg-white shadow-lg hover:shadow-2xl transition-all duration-500 block"
+    >
+      <motion.div
+        whileHover={{ scale: 1.08 }}
+        transition={{ duration: 0.7 }}
+        className="relative aspect-[12/13] overflow-hidden bg-[#f8f3ea]"
+      >
+        <Image
+          src={category.image}
+          alt={category.name}
+          fill
+          className="object-cover object-center"
+          sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+          loading="lazy"
+        />
+      </motion.div>
+      
+      {/* Content always visible - no hover animation */}
+      <div className="absolute bottom-0 left-0 right-0 p-3 md:p-4 bg-gradient-to-t from-black/70 to-transparent">
+        <h3 className="text-sm md:text-xl font-bold text-white">
+          {category.name}
+        </h3>
+        <p className="text-xs md:text-sm text-white/80">{category.count}</p>
+      </div>
+    </Link>
+  </motion.div>
+));
+
+CategoryCard.displayName = 'CategoryCard';
+
+const ProductCard = memo(({ product }: { product: any }) => {
+  const discount = Math.round((1 - product.price / product.originalPrice) * 100);
+
+  return (
+    <motion.div
+      variants={fadeInUp}
+      whileHover={{ y: -8, transition: { duration: 0.3 } }}
+      className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
+    >
+      <Link href={`/${product.slug}`}>
+        <div className="relative aspect-square overflow-hidden bg-[#f8f3ea]">
+          <motion.div
+            whileHover={{ scale: 1.1 }}
+            transition={{ duration: 0.7 }}
+            className="w-full h-full"
+          >
+            <Image
+              src={product.image || "/placeholder.jpg"}
+              alt={product.name || "Product Image"}
+              fill
+              className="object-cover"
+              sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+              loading="lazy"
+            />
+          </motion.div>
+          {product.isNew && (
+            <motion.span
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.3 }}
+              className="absolute top-2 left-2 md:top-3 md:left-3 px-2 md:px-3 py-0.5 md:py-1 bg-[#C49B5C] text-white text-[10px] md:text-xs font-semibold rounded-full"
+            >
+              New
+            </motion.span>
+          )}
+          
+          <motion.button
+            whileHover={{ scale: 1.15 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              // Add to wishlist logic
+            }}
+            className="absolute top-2 right-2 md:top-3 md:right-3 p-1.5 md:p-2 bg-white/90 hover:bg-white rounded-full shadow-lg transition-all"
+            aria-label="Add to wishlist"
+          >
+            <Heart className="text-[#2C1810] hover:text-red-500 transition-colors" size={16} />
+          </motion.button>
+          
+          <motion.button
+            initial={{ opacity: 0, y: 20 }}
+            whileHover={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3 }}
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              // Add to cart logic
+            }}
+            className="absolute bottom-2 left-1/2 -translate-x-1/2 px-3 md:px-4 py-1.5 md:py-2 bg-white/95 hover:bg-[#C49B5C] text-[#2C1810] hover:text-white rounded-full text-[10px] md:text-sm font-semibold transition-all duration-300 whitespace-nowrap"
+          >
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="flex items-center gap-1 md:gap-2"
+            >
+              <ShoppingBag size={14} />
+              Add to Cart
+            </motion.div>
+          </motion.button>
+        </div>
+      </Link>
+
+      <div className="p-2 md:p-4">
+        <Link href={`/product/${product.slug}`}>
+          <motion.h3
+            whileHover={{ x: 3 }}
+            className="font-semibold text-[#2C1810] hover:text-[#8B6B3D] transition-colors mb-0.5 md:mb-1 text-xs md:text-base truncate"
+          >
+            {product.name}
+          </motion.h3>
+        </Link>
+        
+        <div className="flex items-center gap-1 md:gap-2 mb-1 md:mb-2">
+          <div className="flex items-center">
+            <Star className="fill-[#C49B5C] text-[#C49B5C]" size={12} />
+            <span className="text-xs md:text-sm font-medium text-[#2C1810] ml-0.5 md:ml-1">
+              {product.rating}
+            </span>
+          </div>
+          <span className="text-[10px] md:text-xs text-gray-500">
+            ({product.reviews})
+          </span>
+        </div>
+        
+        <div className="flex items-center gap-1 md:gap-2 flex-wrap">
+          <CurrencyPrice 
+            priceINR={product.price} 
+            className="text-sm md:text-lg font-bold text-[#2C1810]"
+            size="sm"
+          />
+          <CurrencyPrice 
+            priceINR={product.originalPrice} 
+            className="text-[10px] md:text-sm text-gray-400 line-through"
+            size="xs"
+          />
+          <motion.span
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="text-[9px] md:text-xs text-green-600 font-semibold"
+          >
+            {discount}% off
+          </motion.span>
+        </div>
+      </div>
+    </motion.div>
+  );
+});
+
+ProductCard.displayName = 'ProductCard';
+
+const TestimonialCard = memo(({ testimonial }: { testimonial: any }) => (
+  <motion.div
+    variants={fadeInUp}
+    whileHover={{ 
+      y: -5, 
+      boxShadow: "0 20px 40px -12px rgba(0,0,0,0.15)",
+      transition: { duration: 0.3 }
+    }}
+    className="bg-white p-4 md:p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
+  >
+    <div className="flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
+      <motion.div
+        whileHover={{ scale: 1.1, rotate: 5 }}
+        transition={{ duration: 0.3 }}
+        className="relative w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden flex-shrink-0"
+      >
+        <Image
+          src={testimonial.image}
+          alt={testimonial.name}
+          fill
+          className="object-cover"
+          loading="lazy"
+        />
+      </motion.div>
+      <div>
+        <h4 className="font-semibold text-[#2C1810] text-sm md:text-base">
+          {testimonial.name}
+        </h4>
+        <p className="text-xs md:text-sm text-gray-500">
+          {testimonial.location}
+        </p>
+      </div>
+    </div>
+    <div className="flex gap-0.5 mb-2 md:mb-3">
+      {[...Array(5)].map((_, i) => (
+        <motion.div
+          key={i}
+          initial={{ opacity: 0, scale: 0, rotate: -30 }}
+          animate={{ opacity: 1, scale: 1, rotate: 0 }}
+          transition={{ delay: 0.1 * i, duration: 0.3 }}
+        >
+          <Star
+            className={`${
+              i < testimonial.rating
+                ? "fill-[#C49B5C] text-[#C49B5C]"
+                : "text-gray-300"
+            }`}
+            size={14}
+          />
+        </motion.div>
+      ))}
+    </div>
+    <motion.p
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.3 }}
+      className="text-gray-700 text-xs md:text-sm leading-relaxed"
+    >
+      {testimonial.comment}
+    </motion.p>
+  </motion.div>
+));
+
+TestimonialCard.displayName = 'TestimonialCard';
+
+// Main Component
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
   const { isLoading: currencyLoading } = useCurrency();
 
-  // Auto-slide carousel
+  // Auto-slide carousel with cleanup
   useEffect(() => {
-    if (isHovered) return;
-
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 3000);
+    }, SLIDE_INTERVAL);
 
     return () => clearInterval(interval);
-  }, [isHovered]);
+  }, []);
+
+  // Memoized features data
+  const features = useMemo(() => [
+    { icon: Truck, title: "Free Shipping", desc: "On orders above ₹999" },
+    { icon: RefreshCw, title: "Easy Returns", desc: "7-day return policy" },
+    { icon: Shield, title: "Authentic Quality", desc: "100% handcrafted" },
+    { icon: Heart, title: "Satisfaction", desc: "Happy customers" }
+  ], []);
 
   return (
     <main className="min-h-screen bg-[#faf6ef]">
       {/* Hero Section */}
-      <section
-        className="relative w-full mt-16 md:mt-20 h-[calc(120vh-64px)] md:h-[calc(140vh-80px)] overflow-hidden"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >
-        {slides.map((slide, index) => (
-          <div
-            key={slide.id}
-            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-              index === currentSlide ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            <div className="relative h-full w-full bg-[#f8f3ea]">
-              <Image
-                src={slide.image}
-                alt={slide.title}
-                fill
-                priority={index === 0}
-                className="object-cover object-top brightness-110 contrast-105 saturate-110"
-                sizes="100vw"
-                quality={95}
-              />
-
-              <div className="absolute inset-0 bg-gradient-to-r from-black/45 via-black/20 to-transparent" />
+      <section className="relative w-full mt-16 md:mt-20 overflow-hidden">
+        <div className="h-[50vh] sm:h-[60vh] md:h-[85vh] lg:h-[calc(140vh-80px)] w-full relative">
+          {slides.map((slide, index) => (
+            <div
+              key={slide.id}
+              className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+                index === currentSlide ? "opacity-100" : "opacity-0"
+              }`}
+              aria-hidden={index !== currentSlide}
+            >
+              <div className="relative h-full w-full bg-[#f8f3ea]">
+                <Image
+                  src={slide.image || "/placeholder.jpg"}
+                  alt={slide.title}
+                  fill
+                  priority={index === 0}
+                  className="object-cover brightness-110 contrast-105 saturate-110"
+                  sizes="100vw"
+                  quality={85}
+                  style={{
+                    objectPosition: 'center',
+                  }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-black/45 via-black/20 to-transparent md:from-black/45 md:via-black/20 md:to-transparent" />
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
 
         {/* Hero Content */}
         <div className="absolute inset-0 flex items-center">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <div className="max-w-2xl">
+            <div className="max-w-2xl mx-auto md:mx-0 text-center md:text-left">
               {slides.map((slide, index) => (
                 <div
                   key={slide.id}
@@ -216,24 +499,21 @@ export default function Home() {
                 >
                   {index === currentSlide && (
                     <>
-                      <span className="inline-block px-4 py-1.5 bg-[#C49B5C]/90 text-white text-xs font-medium tracking-widest uppercase rounded-full mb-4">
+                      <span className="inline-block px-3 md:px-4 py-1 md:py-1.5 bg-[#C49B5C]/90 text-white text-[10px] md:text-xs font-medium tracking-widest uppercase rounded-full mb-3 md:mb-4">
                         {slide.subtitle}
                       </span>
-                      <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-4">
+                      <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-bold text-white leading-tight mb-2 md:mb-4">
                         {slide.title}
                       </h1>
-                      <p className="text-lg md:text-xl text-white/90 mb-8 max-w-lg">
+                      <p className="text-sm sm:text-base md:text-xl text-white/90 mb-4 md:mb-8 max-w-lg mx-auto md:mx-0">
                         {slide.description}
                       </p>
                       <Link
                         href={slide.link}
-                        className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#C49B5C] to-[#8B6B3D] text-white font-semibold rounded-full hover:shadow-xl transition-all duration-300 hover:scale-105 group"
+                        className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-[#C49B5C] to-[#8B6B3D] text-white font-semibold rounded-full hover:shadow-xl transition-all duration-300 hover:scale-105 group text-sm sm:text-base"
                       >
                         {slide.cta}
-                        <ArrowRight
-                          className="group-hover:translate-x-1 transition-transform"
-                          size={20}
-                        />
+                        <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
                       </Link>
                     </>
                   )}
@@ -242,17 +522,19 @@ export default function Home() {
             </div>
           </div>
         </div>
+
         {/* Slide Indicators */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+        <div className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 flex gap-2 z-10">
           {slides.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
               className={`transition-all duration-300 ${
                 index === currentSlide
-                  ? "w-12 h-1.5 bg-[#C49B5C]"
-                  : "w-8 h-1.5 bg-white/50 hover:bg-white/80"
+                  ? "w-8 sm:w-12 h-1.5 bg-[#C49B5C]"
+                  : "w-6 sm:w-8 h-1.5 bg-white/50 hover:bg-white/80"
               } rounded-full`}
+              aria-label={`Go to slide ${index + 1}`}
             />
           ))}
         </div>
@@ -260,302 +542,183 @@ export default function Home() {
 
       {/* Currency Loading Indicator */}
       {currencyLoading && (
-        <div className="fixed top-24 right-4 z-50 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg flex items-center gap-2">
-          <div className="w-3 h-3 border-2 border-[#C49B5C] border-t-transparent rounded-full animate-spin" />
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          className="fixed top-24 right-4 z-50 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg flex items-center gap-2"
+          role="status"
+          aria-live="polite"
+        >
+          <motion.div
+            animate={{ rotate: 360 }}
+            transition={{ repeat: Infinity, duration: 1, ease: "linear" }}
+            className="w-3 h-3 border-2 border-[#C49B5C] border-t-transparent rounded-full"
+          />
           <span className="text-xs text-gray-600">Updating rates...</span>
-        </div>
+        </motion.div>
       )}
 
       {/* Features Bar */}
-      <section className="py-8 bg-white border-y border-[#d4c5a9]/30">
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 0.6 }}
+        className="py-6 md:py-8 bg-white border-y border-[#d4c5a9]/30"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="flex items-center gap-3 group">
-              <div className="p-3 bg-[#f8f3ea] rounded-full group-hover:bg-[#C49B5C]/10 transition-colors">
-                <Truck
-                  className="text-[#8B6B3D] group-hover:scale-110 transition-transform"
-                  size={24}
-                />
-              </div>
-              <div>
-                <p className="font-semibold text-[#2C1810] text-sm">
-                  Free Shipping
-                </p>
-                <p className="text-xs text-gray-500">On orders above ₹999</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-3 group">
-              <div className="p-3 bg-[#f8f3ea] rounded-full group-hover:bg-[#C49B5C]/10 transition-colors">
-                <RefreshCw
-                  className="text-[#8B6B3D] group-hover:scale-110 transition-transform"
-                  size={24}
-                />
-              </div>
-              <div>
-                <p className="font-semibold text-[#2C1810] text-sm">
-                  Easy Returns
-                </p>
-                <p className="text-xs text-gray-500">7-day return policy</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-3 group">
-              <div className="p-3 bg-[#f8f3ea] rounded-full group-hover:bg-[#C49B5C]/10 transition-colors">
-                <Shield
-                  className="text-[#8B6B3D] group-hover:scale-110 transition-transform"
-                  size={24}
-                />
-              </div>
-              <div>
-                <p className="font-semibold text-[#2C1810] text-sm">
-                  Authentic Quality
-                </p>
-                <p className="text-xs text-gray-500">100% handcrafted</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-3 group">
-              <div className="p-3 bg-[#f8f3ea] rounded-full group-hover:bg-[#C49B5C]/10 transition-colors">
-                <Heart
-                  className="text-[#8B6B3D] group-hover:scale-110 transition-transform"
-                  size={24}
-                />
-              </div>
-              <div>
-                <p className="font-semibold text-[#2C1810] text-sm">
-                  Satisfaction
-                </p>
-                <p className="text-xs text-gray-500">Happy customers</p>
-              </div>
-            </div>
-          </div>
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6"
+          >
+            {features.map((feature, index) => (
+              <FeatureItem key={index} {...feature} index={index} />
+            ))}
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Categories Section */}
-      <section className="py-16 md:py-20">
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
+        className="py-12 md:py-20"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#2C1810] mb-3">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-8 md:mb-12"
+          >
+            <h2 className="text-2xl md:text-4xl font-bold text-[#2C1810] mb-2 md:mb-3">
               Shop by Category
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="text-sm md:text-base text-gray-600 max-w-2xl mx-auto">
               Explore our curated collection of handcrafted ethnic wear
             </p>
-            <div className="w-20 h-1 bg-gradient-to-r from-[#C49B5C] to-[#8B6B3D] mx-auto mt-4 rounded-full" />
-          </div>
+            <motion.div
+              initial={{ width: 0 }}
+              whileInView={{ width: "5rem" }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="h-1 bg-gradient-to-r from-[#C49B5C] to-[#8B6B3D] mx-auto mt-3 md:mt-4 rounded-full"
+            />
+          </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6"
+          >
             {categories.map((category) => (
-              <Link
-                key={category.name}
-                href={category.link}
-                className="group relative overflow-hidden rounded-2xl bg-white shadow-lg hover:shadow-2xl transition-all duration-500"
-              >
-                <div className="relative aspect-[12/13] overflow-hidden bg-[#f8f3ea]">
-                  <Image
-                    src={category.image}
-                    alt={category.name}
-                    fill
-                    className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
-                    sizes="(max-width:768px) 50vw, (max-width:1024px) 33vw, 25vw"
-                    unoptimized
-                  />
-                </div>
-                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
-                  <h3 className="text-lg md:text-xl font-bold text-white">
-                    {category.name}
-                  </h3>
-                  <p className="text-sm text-white/80">{category.count}</p>
-                </div>
-              </Link>
+              <CategoryCard key={category.name} category={category} />
             ))}
-          </div>
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Featured Products */}
-      <section className="py-16 md:py-20 bg-white">
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="py-12 md:py-20 bg-white"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center mb-12">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#2C1810] mb-2">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="flex flex-col sm:flex-row justify-between items-center mb-8 md:mb-12 gap-4"
+          >
+            <div className="text-center sm:text-left">
+              <h2 className="text-2xl md:text-4xl font-bold text-[#2C1810] mb-1 md:mb-2">
                 Featured Collection
               </h2>
-              <p className="text-gray-600">Handpicked just for you</p>
+              <p className="text-sm md:text-base text-gray-600">Handpicked just for you</p>
             </div>
-            <Link
-              href="/saree"
-              className="text-[#8B6B3D] hover:text-[#C49B5C] font-semibold flex items-center gap-1 group"
+            <motion.div
+              whileHover={{ x: 5 }}
+              transition={{ duration: 0.2 }}
             >
-              View All
-              <ArrowRight
-                className="group-hover:translate-x-1 transition-transform"
-                size={18}
-              />
-            </Link>
-          </div>
+              <Link
+                href="/saree"
+                className="text-[#8B6B3D] hover:text-[#C49B5C] font-semibold flex items-center gap-1 group text-sm md:text-base"
+              >
+                View All
+                <ArrowRight className="group-hover:translate-x-1 transition-transform" size={18} />
+              </Link>
+            </motion.div>
+          </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredProducts.map((product) => {
-              const discount = Math.round(
-                (1 - product.price / product.originalPrice) * 100
-              );
-              
-              return (
-                <div
-                  key={product.id}
-                  className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
-                >
-                  <Link href={`/product/${product.id}`}>
-                    <div className="relative aspect-square overflow-hidden bg-[#f8f3ea]">
-                      <Image
-                        src={product.image}
-                        alt={product.name}
-                        fill
-                        className="object-cover group-hover:scale-110 transition-transform duration-700"
-                      />
-                      {product.isNew && (
-                        <span className="absolute top-3 left-3 px-3 py-1 bg-[#C49B5C] text-white text-xs font-semibold rounded-full">
-                          New
-                        </span>
-                      )}
-                      <button title="heart" className="absolute top-3 right-3 p-2 bg-white/90 hover:bg-white rounded-full shadow-lg transition-all hover:scale-110">
-                        <Heart
-                          className="text-[#2C1810] hover:text-red-500 transition-colors"
-                          size={18}
-                        />
-                      </button>
-                      <button className="absolute bottom-3 left-1/2 -translate-x-1/2 px-4 py-2 bg-white/95 hover:bg-[#C49B5C] text-[#2C1810] hover:text-white rounded-full text-sm font-semibold transition-all duration-300 opacity-0 group-hover:opacity-100 -translate-y-2 group-hover:translate-y-0">
-                        <div className="flex items-center gap-2">
-                          <ShoppingBag size={16} />
-                          Add to Cart
-                        </div>
-                      </button>
-                    </div>
-                  </Link>
-                  <div className="p-4">
-                    <Link href={`/product/${product.id}`}>
-                      <h3 className="font-semibold text-[#2C1810] hover:text-[#8B6B3D] transition-colors mb-1">
-                        {product.name}
-                      </h3>
-                    </Link>
-                    <div className="flex items-center gap-2 mb-2">
-                      <div className="flex items-center">
-                        <Star
-                          className="fill-[#C49B5C] text-[#C49B5C]"
-                          size={14}
-                        />
-                        <span className="text-sm font-medium text-[#2C1810] ml-1">
-                          {product.rating}
-                        </span>
-                      </div>
-                      <span className="text-xs text-gray-500">
-                        ({product.reviews} reviews)
-                      </span>
-                    </div>
-                    
-                    {/* Price Section - Updated with Currency */}
-                    <div className="flex items-center gap-2 flex-wrap">
-                      {/* Main Price */}
-                      <CurrencyPrice 
-                        priceINR={product.price} 
-                        className="text-lg font-bold text-[#2C1810]"
-                        size="md"
-                      />
-                      
-                      {/* Original Price */}
-                      <CurrencyPrice 
-                        priceINR={product.originalPrice} 
-                        className="text-sm text-gray-400 line-through"
-                        size="sm"
-                      />
-                      
-                      <span className="text-xs text-green-600 font-semibold">
-                        {discount}% off
-                      </span>
-                    </div>
-                    
-                    {/* Original INR Price Hint */}
-                    {/* <OriginalPriceHint priceINR={product.price} /> */}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6"
+          >
+            {featuredProducts.map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Testimonials */}
-      <section className="py-16 md:py-20 bg-[#f8f3ea]">
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="py-12 md:py-20 bg-[#f8f3ea]"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#2C1810] mb-3">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-8 md:mb-12"
+          >
+            <h2 className="text-2xl md:text-4xl font-bold text-[#2C1810] mb-2 md:mb-3">
               What Our Customers Say
             </h2>
-            <p className="text-gray-600">Real reviews from real people</p>
-            <div className="w-20 h-1 bg-gradient-to-r from-[#C49B5C] to-[#8B6B3D] mx-auto mt-4 rounded-full" />
-          </div>
+            <p className="text-sm md:text-base text-gray-600">Real reviews from real people</p>
+            <motion.div
+              initial={{ width: 0 }}
+              whileInView={{ width: "5rem" }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="h-1 bg-gradient-to-r from-[#C49B5C] to-[#8B6B3D] mx-auto mt-3 md:mt-4 rounded-full"
+            />
+          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6"
+          >
             {testimonials.map((testimonial) => (
-              <div
-                key={testimonial.id}
-                className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
-              >
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="relative w-12 h-12 rounded-full overflow-hidden">
-                    <Image
-                      src={testimonial.image}
-                      alt={testimonial.name}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-[#2C1810]">
-                      {testimonial.name}
-                    </h4>
-                    <p className="text-sm text-gray-500">
-                      {testimonial.location}
-                    </p>
-                  </div>
-                </div>
-                <div className="flex gap-0.5 mb-3">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className={`${
-                        i < testimonial.rating
-                          ? "fill-[#C49B5C] text-[#C49B5C]"
-                          : "text-gray-300"
-                      }`}
-                      size={16}
-                    />
-                  ))}
-                </div>
-                <p className="text-gray-700 text-sm leading-relaxed">
-                  {testimonial.comment}
-                </p>
-              </div>
+              <TestimonialCard key={testimonial.id} testimonial={testimonial} />
             ))}
-          </div>
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
     </main>
   );
 }
-
-// Helper component to show original INR price
-// function OriginalPriceHint({ priceINR }: { priceINR: number }) {
-//   const { currency } = useCurrency();
-  
-//   // Only show hint if currency is not INR
-//   if (currency === 'INR') return null;
-  
-//   return (
-//     <div className="text-[10px] text-gray-400 mt-0.5 flex items-center gap-1">
-//       <span>≈</span>
-//       <span>₹{priceINR.toLocaleString('en-IN')}</span>
-//       <span className="text-[10px]">(INR)</span>
-//     </div>
-//   );
-// }

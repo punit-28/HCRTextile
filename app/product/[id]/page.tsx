@@ -38,39 +38,40 @@ type SuitData = {
 export default function ProductDetailPage() {
   const params = useParams();
   const router = useRouter();
-  const { convertPrice, currency, symbol, isLoading: currencyLoading } = useCurrency();
+  const {
+    convertPrice,
+    currency,
+    symbol,
+    isLoading: currencyLoading,
+  } = useCurrency();
   const [showPopup, setShowPopup] = useState(false);
   const [popupMessage, setPopupMessage] = useState("");
   const [product, setProduct] = useState<SuitData | null>(null);
   const [loading, setLoading] = useState(true);
   const [wishlist, setWishlist] = useState<number[]>([]);
+
+  // Refs for zoom effect — no state, no re-renders, no getComputedStyle in render
   const imageContainerRef = useRef<HTMLDivElement>(null);
+  const zoomImageRef = useRef<HTMLDivElement>(null);
+  const [isHovering, setIsHovering] = useState(false);
 
   // Parse suits data - merge both suit and suits arrays
   const suits = useMemo(() => {
     let allSuits: SuitData[] = [];
-    
+
     try {
-      console.log("Raw suitsData:", suitsData);
-      
-      // Check if suitsData has 'suit' array
-      if (suitsData && typeof suitsData === 'object') {
-        // Get 'suit' array
+      if (suitsData && typeof suitsData === "object") {
         if (Array.isArray(suitsData.suit)) {
           allSuits = [...allSuits, ...suitsData.suit];
         }
-        
-        // Get 'suits' array
         if (Array.isArray(suitsData.suits)) {
           allSuits = [...allSuits, ...suitsData.suits];
         }
-        
-        console.log("All suits merged:", allSuits);
       }
     } catch (error) {
       console.error("Error loading suits data:", error);
     }
-    
+
     return allSuits;
   }, []);
 
@@ -95,12 +96,8 @@ export default function ProductDetailPage() {
   useEffect(() => {
     if (params.id && suits.length > 0) {
       const id = parseInt(params.id as string);
-      console.log("Looking for product with ID:", id);
-      console.log("Available suits:", suits.map(s => ({ id: s.id, name: s.name })));
-      
       const foundProduct = suits.find((s) => s.id === id);
-      console.log("Found product:", foundProduct);
-      
+
       if (foundProduct) {
         setProduct(foundProduct);
       } else {
@@ -120,9 +117,11 @@ export default function ProductDetailPage() {
   const toggleWishlist = (id: number) => {
     const isInWishlist = wishlist.includes(id);
     setWishlist((prev) =>
-      isInWishlist ? prev.filter((item) => item !== id) : [...prev, id]
+      isInWishlist ? prev.filter((item) => item !== id) : [...prev, id],
     );
-    setPopupMessage(isInWishlist ? "Removed from Wishlist ❤️" : "Added to Wishlist ❤️");
+    setPopupMessage(
+      isInWishlist ? "Removed from Wishlist ❤️" : "Added to Wishlist ❤️",
+    );
     setShowPopup(true);
   };
 
@@ -132,17 +131,22 @@ export default function ProductDetailPage() {
     setShowPopup(true);
   };
 
-  // Handle mouse move for zoom effect
+  // Smooth cursor-following zoom — updates transform-origin directly via ref.
+  // No state update per mousemove => no re-render, no lag, no DOM reads during render.
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const container = imageContainerRef.current;
-    if (!container) return;
-    
+    const zoomImg = zoomImageRef.current;
+    if (!container || !zoomImg) return;
+
     const rect = container.getBoundingClientRect();
     const x = ((e.clientX - rect.left) / rect.width) * 100;
     const y = ((e.clientY - rect.top) / rect.height) * 100;
-    
-    container.style.setProperty("--mouse-x", x + "%");
-    container.style.setProperty("--mouse-y", y + "%");
+
+    // Clamp so the origin never sits exactly at the edge (keeps zoom feeling natural)
+    const clampedX = Math.min(100, Math.max(0, x));
+    const clampedY = Math.min(100, Math.max(0, y));
+
+    zoomImg.style.transformOrigin = `${clampedX}% ${clampedY}%`;
   };
 
   if (loading || currencyLoading) {
@@ -151,7 +155,9 @@ export default function ProductDetailPage() {
         <div className="text-center">
           <div className="inline-block animate-spin rounded-full h-12 w-12 border-4 border-[#C49B5C] border-t-transparent"></div>
           <p className="mt-4 text-[#2C1810] font-medium">
-            {currencyLoading ? "Loading currency rates..." : "Loading product details..."}
+            {currencyLoading
+              ? "Loading currency rates..."
+              : "Loading product details..."}
           </p>
         </div>
       </div>
@@ -163,8 +169,12 @@ export default function ProductDetailPage() {
       <div className="min-h-screen bg-[#faf6ef] flex items-center justify-center">
         <div className="text-center">
           <div className="text-6xl mb-4">😕</div>
-          <h2 className="text-2xl font-bold text-[#2C1810] mb-2">Product Not Found</h2>
-          <p className="text-gray-500 mb-6">The suit you{`'`}re looking for doesn{`'`}t exist.</p>
+          <h2 className="text-2xl font-bold text-[#2C1810] mb-2">
+            Product Not Found
+          </h2>
+          <p className="text-gray-500 mb-6">
+            The suit you{`'`}re looking for doesn{`'`}t exist.
+          </p>
           <Link
             href="/suits"
             className="inline-flex items-center gap-2 px-6 py-3 bg-[#C49B5C] text-white rounded-full hover:bg-[#8B6B3D] transition-colors"
@@ -187,7 +197,10 @@ export default function ProductDetailPage() {
           onClick={() => router.back()}
           className="inline-flex items-center gap-2 text-[#2C1810] hover:text-[#C49B5C] transition-colors group"
         >
-          <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" />
+          <ArrowLeft
+            size={20}
+            className="group-hover:-translate-x-1 transition-transform"
+          />
           Back to Collection
         </button>
       </div>
@@ -197,56 +210,35 @@ export default function ProductDetailPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Left - Image with Zoom */}
           <div className="space-y-4">
-            <div 
+            <div
               ref={imageContainerRef}
-              className="relative aspect-square bg-white rounded-2xl overflow-hidden shadow-xl group"
+              className="relative aspect-square bg-white rounded-2xl overflow-hidden shadow-xl group cursor-zoom-in"
               onMouseMove={handleMouseMove}
+              onMouseEnter={() => setIsHovering(true)}
+              onMouseLeave={() => setIsHovering(false)}
             >
               {product.image ? (
                 <>
-                  {/* Main Image */}
-                  <Image
-                    src={product.image}
-                    alt={product.name || "Suit"}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    priority
-                  />
-
-                  {/* Zoom Lens Effect */}
-                  <div 
-                    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-                    style={{
-                      background: `radial-gradient(circle 120px at var(--mouse-x, 50%) var(--mouse-y, 50%), 
-                        transparent 0%, 
-                        transparent 35%, 
-                        rgba(0,0,0,0.2) 40%,
-                        rgba(0,0,0,0.2) 100%)`,
-                    }}
-                  />
-
-                  {/* Zoomed Image */}
+                  {/* Single image that scales from cursor position - smooth, no duplicate DOM, no layout thrash */}
                   <div
-                    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                    ref={zoomImageRef}
+                    className="absolute inset-0 transition-transform duration-200 ease-out"
                     style={{
-                      clipPath: `circle(120px at var(--mouse-x, 50%) var(--mouse-y, 50%))`,
+                      transform: isHovering ? "scale(2.2)" : "scale(1)",
                     }}
                   >
                     <Image
                       src={product.image}
                       alt={product.name || "Suit"}
                       fill
-                      className="object-cover scale-[2.5]"
+                      className="object-cover brightness-120"
                       sizes="(max-width: 768px) 100vw, 50vw"
-                      style={{
-                        objectPosition: `${100 - parseFloat(getComputedStyle(imageContainerRef.current || document.createElement('div')).getPropertyValue('--mouse-x') || '50')}% ${100 - parseFloat(getComputedStyle(imageContainerRef.current || document.createElement('div')).getPropertyValue('--mouse-y') || '50')}%`,
-                      }}
+                      priority
                     />
                   </div>
 
                   {/* Zoom Hint */}
-                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/50 backdrop-blur-sm text-white px-4 py-2 rounded-full text-xs flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
+                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/50 backdrop-blur-sm text-white px-4 py-2 rounded-full text-xs flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 pointer-events-none">
                     <span>🔍</span>
                     Hover to zoom
                   </div>
@@ -278,7 +270,9 @@ export default function ProductDetailPage() {
                 >
                   <Heart
                     className={`transition-colors ${
-                      isInWishlist ? "fill-red-500 text-red-500" : "text-[#2C1810] group-hover:text-red-500"
+                      isInWishlist
+                        ? "fill-red-500 text-red-500"
+                        : "text-[#2C1810] group-hover:text-red-500"
                     }`}
                     size={20}
                   />
@@ -305,8 +299,13 @@ export default function ProductDetailPage() {
                 className="w-full px-4 py-3 bg-[#2C1810] hover:bg-[#1a0f0a] text-white rounded-xl transition-all group flex items-center justify-center gap-2"
               >
                 <MessageCircle size={18} />
-                <span className="text-sm font-medium">Contact for Customization</span>
-                <ArrowLeft size={16} className="rotate-180 group-hover:translate-x-1 transition-transform" />
+                <span className="text-sm font-medium">
+                  Contact for Customization
+                </span>
+                <ArrowLeft
+                  size={16}
+                  className="rotate-180 group-hover:translate-x-1 transition-transform"
+                />
               </Link>
             </div>
           </div>
@@ -342,25 +341,26 @@ export default function ProductDetailPage() {
             {/* Price - Updated with Currency */}
             <div className="flex flex-wrap items-center gap-4">
               {/* Main Price */}
-              <CurrencyPrice 
-                priceINR={product.price || product.aprice || 0} 
+              <CurrencyPrice
+                priceINR={product.price || product.aprice || 0}
                 className="text-4xl font-bold text-[#2C1810]"
                 size="xl"
               />
-              
+
               {/* Original Price (MRP) */}
               {product.aprice && product.aprice > (product.price || 0) && (
                 <>
-                  <CurrencyPrice 
-                    priceINR={product.aprice} 
+                  <CurrencyPrice
+                    priceINR={product.aprice}
                     className="text-lg text-gray-400 line-through"
                     size="md"
                   />
                   <span className="px-3 py-1 bg-green-100 text-green-700 text-sm font-semibold rounded-full">
                     Save{" "}
                     {Math.round(
-                      ((product.aprice - (product.price || 0)) / product.aprice) *
-                        100
+                      ((product.aprice - (product.price || 0)) /
+                        product.aprice) *
+                        100,
                     )}
                     %
                   </span>
@@ -369,11 +369,18 @@ export default function ProductDetailPage() {
             </div>
 
             {/* Currency Info - Show original INR when in different currency */}
-            {currency !== 'INR' && (
+            {currency !== "INR" && (
               <div className="flex items-center gap-2 text-sm text-gray-500 bg-gray-50 px-4 py-2 rounded-xl">
                 <span>≈</span>
-                <span>₹{((product.price || product.aprice || 0)).toLocaleString('en-IN')}</span>
-                <span className="text-xs text-gray-400">(Original Price in INR)</span>
+                <span>
+                  ₹
+                  {(product.price || product.aprice || 0).toLocaleString(
+                    "en-IN",
+                  )}
+                </span>
+                <span className="text-xs text-gray-400">
+                  (Original Price in INR)
+                </span>
               </div>
             )}
 
@@ -425,7 +432,7 @@ export default function ProductDetailPage() {
                             <span className="text-[#C49B5C] mt-1">◆</span>
                             <span>{detail}</span>
                           </li>
-                        )
+                        ),
                       )}
                     </ul>
                   </div>
@@ -449,14 +456,18 @@ export default function ProductDetailPage() {
                 <div className="w-10 h-10 bg-[#C49B5C]/10 rounded-full flex items-center justify-center mx-auto mb-2">
                   <Truck className="text-[#C49B5C]" size={20} />
                 </div>
-                <p className="text-xs font-medium text-[#2C1810]">Free Shipping</p>
+                <p className="text-xs font-medium text-[#2C1810]">
+                  Free Shipping
+                </p>
                 <p className="text-[10px] text-gray-500">Above ₹999</p>
               </div>
               <div className="text-center p-3 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
                 <div className="w-10 h-10 bg-[#C49B5C]/10 rounded-full flex items-center justify-center mx-auto mb-2">
                   <RefreshCw className="text-[#C49B5C]" size={20} />
                 </div>
-                <p className="text-xs font-medium text-[#2C1810]">Easy Returns</p>
+                <p className="text-xs font-medium text-[#2C1810]">
+                  Easy Returns
+                </p>
                 <p className="text-[10px] text-gray-500">7 days policy</p>
               </div>
               <div className="text-center p-3 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
@@ -472,8 +483,8 @@ export default function ProductDetailPage() {
       </div>
 
       {/* Popup */}
-      <Popup 
-        isOpen={showPopup} 
+      <Popup
+        isOpen={showPopup}
         onClose={() => setShowPopup(false)}
         message={popupMessage}
       />

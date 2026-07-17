@@ -1,156 +1,32 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React from "react";
 import {
   Calendar,
   Clock,
   User,
   Tag,
-  Search,
-  ArrowRight,
   Heart,
   Bookmark,
   Eye,
   MessageCircle,
-  ChevronRight,
 } from "lucide-react";
 import Image from "next/image";
 
-// Types
-interface BlogPost {
-  id: number;
-  title: string;
-  excerpt: string;
-  category: string;
-  author: string;
-  date: string;
-  readTime: string;
-  views: number;
-  comments: number;
-  image: string;
-  featured: boolean;
-}
-
 const BlogPage = () => {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [activeCategory, setActiveCategory] = useState("All");
-
-  const categories = useMemo(
-    () => [
-      "All",
-      "Saree Guide",
-      "Fashion Tips",
-      "Wedding",
-      "Festivals",
-      "Care & Maintenance",
-      "Weaving Stories",
-    ],
-    []
-  );
-
-  const blogPosts: BlogPost[] = useMemo(
-    () => [
-      {
-        id: 1,
-        title:
-          "The Ultimate Guide to Banarasi Sarees: Everything You Need to Know",
-        excerpt:
-          "Discover the rich history, intricate weaving techniques, and timeless beauty of Banarasi sarees. From Mughal era to modern fashion...",
-        category: "Saree Guide",
-        author: "Priya Sharma",
-        date: "June 25, 2026",
-        readTime: "8 min read",
-        views: 2543,
-        comments: 42,
-        image: "/images/blog/1.png",
-        featured: true,
-      },
-      {
-        id: 2,
-        title: "6 Ways to Style Your Saree for a Modern Look",
-        excerpt:
-          "Break the traditional barriers and style your saree with contemporary twists. Here are 6 stunning ways to look modern yet elegant...",
-        category: "Fashion Tips",
-        author: "Ananya Patel",
-        date: "June 23, 2026",
-        readTime: "6 min read",
-        views: 1892,
-        comments: 28,
-        image: "/images/blog/2.png",
-        featured: false,
-      },
-      {
-        id: 3,
-        title: "Wedding Saree Guide: Colors That Will Make You Look Radiant",
-        excerpt:
-          "Choosing the perfect wedding saree can be overwhelming. From classic reds to pastel pinks, here's what works best for different skin tones...",
-        category: "Wedding",
-        author: "Meera Reddy",
-        date: "June 20, 2026",
-        readTime: "10 min read",
-        views: 3120,
-        comments: 56,
-        image: "/images/blog/3.png",
-        featured: false,
-      },
-      {
-        id: 4,
-        title: "Festival Saree Trends: What's In This Season",
-        excerpt:
-          "From Durga Puja to Diwali, discover the hottest saree trends for festival season. Traditional weaves with modern designs are taking over...",
-        category: "Festivals",
-        author: "Vikram Singh",
-        date: "June 18, 2026",
-        readTime: "5 min read",
-        views: 1567,
-        comments: 19,
-        image: "/images/blog/4.png",
-        featured: false,
-      },
-      {
-        id: 5,
-        title: "How to Care for Your Silk Sarees: Expert Tips",
-        excerpt:
-          "Silk sarees are precious investments. Learn proper storage, cleaning, and maintenance techniques to keep them beautiful for generations...",
-        category: "Care & Maintenance",
-        author: "Priya Sharma",
-        date: "June 15, 2026",
-        readTime: "7 min read",
-        views: 2108,
-        comments: 35,
-        image: "/images/blog/5.png",
-        featured: false,
-      },
-      {
-        id: 6,
-        title: "The Art of Saree Weaving: Stories from Master Weavers",
-        excerpt:
-          "Meet the talented artisans behind your favorite sarees. Learn about their craft, struggles, and the beautiful stories woven into each saree...",
-        category: "Weaving Stories",
-        author: "Ananya Patel",
-        date: "June 12, 2026",
-        readTime: "9 min read",
-        views: 2845,
-        comments: 47,
-        image: "/images/blog/6.png",
-        featured: false,
-      },
-    ],
-    []
-  );
-
-  const featuredPost = useMemo(
-    () => blogPosts.find((post) => post.featured),
-    [blogPosts]
-  );
-
-  const filteredPosts = useMemo(() => {
-    return blogPosts.filter(
-      (post) =>
-        (activeCategory === "All" || post.category === activeCategory) &&
-        post.title.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-  }, [blogPosts, activeCategory, searchTerm]);
+  const blogPost = {
+    id: 1,
+    title: "Our Journey: From 2 Tables to 4 Tables",
+    excerpt:
+      "From working as artisans in others' homes to building our own karkhana in 2012. A story of small beginnings, big losses, and steady growth.",
+    category: "Our Story",
+    author: "Founder's Team",
+    date: "July 16, 2026",
+    readTime: "5 min read",
+    views: 15243,
+    comments: 328,
+    image: "/images/blog/1.png",
+  };
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -173,248 +49,129 @@ const BlogPage = () => {
         </div>
       </header>
 
-      {/* Search & Categories */}
-      <section className="bg-white border-b border-gray-100 sticky top-0 z-10 shadow-sm">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
-            {/* Search Bar */}
-            <div className="w-full md:w-72 relative">
-              <label htmlFor="search-articles" className="sr-only">
-                Search articles
-              </label>
-              <input
-                id="search-articles"
-                type="text"
-                placeholder="Search articles..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-[#C49B5C] focus:ring-2 focus:ring-[#C49B5C]/20 text-sm text-gray-800 placeholder:text-gray-400"
-                aria-label="Search articles"
-              />
-              <Search
-                className="absolute left-3 top-2.5 w-4 h-4 text-gray-400"
-                aria-hidden="true"
-              />
-            </div>
-
-            {/* Categories */}
-            <nav
-              className="flex flex-wrap gap-2 justify-center"
-              aria-label="Blog categories"
-            >
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  onClick={() => setActiveCategory(category)}
-                  className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all ${
-                    activeCategory === category
-                      ? "bg-[#C49B5C] text-white shadow-lg shadow-[#C49B5C]/25"
-                      : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-                  }`}
-                  aria-current={activeCategory === category ? "page" : undefined}
-                >
-                  {category}
-                </button>
-              ))}
-            </nav>
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Post */}
-      {featuredPost && (
-        <section className="container mx-auto px-4 py-10">
-          <article className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow">
-            <div className="grid md:grid-cols-2 gap-0">
-              <div className="relative h-64 md:h-auto">
-                <Image
-                  src={featuredPost.image}
-                  alt={featuredPost.title}
-                  fill
-                  className="object-cover"
-                  priority
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-                <span className="absolute top-4 left-4 bg-[#C49B5C] text-white text-xs font-bold px-3 py-1 rounded-full">
-                  Featured
-                </span>
-              </div>
-              <div className="p-8 flex flex-col justify-center">
-                <div className="flex items-center gap-2 text-xs text-[#C49B5C] font-medium mb-3">
-                  <Tag className="w-3 h-3" aria-hidden="true" />
-                  {featuredPost.category}
-                </div>
-                <h2 className="text-2xl font-bold text-[#2C1810] mb-3 hover:text-[#C49B5C] transition-colors cursor-pointer">
-                  {featuredPost.title}
-                </h2>
-                <p className="text-gray-600 text-sm mb-4 line-clamp-3">
-                  {featuredPost.excerpt}
-                </p>
-                <div className="flex flex-wrap items-center gap-4 text-xs text-gray-500 mb-4">
-                  <span className="flex items-center gap-1">
-                    <User className="w-3 h-3" aria-hidden="true" />
-                    {featuredPost.author}
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <Calendar className="w-3 h-3" aria-hidden="true" />
-                    {featuredPost.date}
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <Clock className="w-3 h-3" aria-hidden="true" />
-                    {featuredPost.readTime}
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <Eye className="w-3 h-3" aria-hidden="true" />
-                    {featuredPost.views} views
-                  </span>
-                </div>
-                <button
-                  className="inline-flex items-center gap-2 text-[#C49B5C] font-semibold text-sm hover:gap-3 transition-all"
-                  aria-label={`Read full article: ${featuredPost.title}`}
-                >
-                  Read Full Article <ChevronRight className="w-4 h-4" />
-                </button>
-              </div>
-            </div>
-          </article>
-        </section>
-      )}
-
-      {/* Blog Grid */}
-      <section className="container mx-auto px-4 pb-20">
-        {filteredPosts.length === 0 ? (
-          <div className="text-center py-20">
-            <p className="text-gray-500 text-lg">
-              No posts found matching your criteria
-            </p>
-          </div>
-        ) : (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredPosts.map((post) => (
-              <article
-                key={post.id}
-                className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-all group"
-              >
-                <div className="relative">
-                  <div className="relative w-full h-48">
-                    <Image
-                      src={post.image}
-                      alt={post.title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    />
-                  </div>
-                  <span className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-[#2C1810] text-xs font-medium px-3 py-1 rounded-full">
-                    {post.category}
-                  </span>
-                  <div className="absolute top-3 right-3 flex gap-2">
-                    <button
-                      className="bg-white/90 backdrop-blur-sm p-2 rounded-full hover:bg-white transition-colors"
-                      aria-label="Save to favorites"
-                    >
-                      <Heart className="w-4 h-4 text-gray-600 hover:text-red-500 transition-colors" />
-                    </button>
-                    <button
-                      className="bg-white/90 backdrop-blur-sm p-2 rounded-full hover:bg-white transition-colors"
-                      aria-label="Bookmark article"
-                    >
-                      <Bookmark className="w-4 h-4 text-gray-600 hover:text-[#C49B5C] transition-colors" />
-                    </button>
-                  </div>
-                </div>
-
-                <div className="p-5">
-                  <h3 className="text-lg font-bold text-[#2C1810] mb-2 group-hover:text-[#C49B5C] transition-colors cursor-pointer line-clamp-2">
-                    {post.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm mb-3 line-clamp-2">
-                    {post.excerpt}
-                  </p>
-
-                  <div className="flex flex-wrap items-center gap-3 text-xs text-gray-500 mb-3">
-                    <span className="flex items-center gap-1">
-                      <User className="w-3 h-3" aria-hidden="true" />
-                      {post.author}
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <Calendar className="w-3 h-3" aria-hidden="true" />
-                      {post.date}
-                    </span>
-                  </div>
-
-                  <div className="flex items-center justify-between pt-3 border-t border-gray-100">
-                    <div className="flex items-center gap-3 text-xs text-gray-500">
-                      <span className="flex items-center gap-1">
-                        <Eye className="w-3 h-3" aria-hidden="true" />
-                        {post.views}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <MessageCircle className="w-3 h-3" aria-hidden="true" />
-                        {post.comments}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <Clock className="w-3 h-3" aria-hidden="true" />
-                        {post.readTime}
-                      </span>
-                    </div>
-                    <button
-                      className="text-[#C49B5C] hover:gap-2 transition-all flex items-center gap-1 text-sm font-medium"
-                      aria-label={`Read article: ${post.title}`}
-                    >
-                      Read <ArrowRight className="w-3 h-3" />
-                    </button>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
-        )}
-
-        {/* Load More */}
-        {filteredPosts.length > 0 && (
-          <div className="text-center mt-10">
-            <button className="px-8 py-3 bg-white border-2 border-[#C49B5C] text-[#C49B5C] font-semibold rounded-xl hover:bg-[#C49B5C] hover:text-white transition-all hover:shadow-lg hover:shadow-[#C49B5C]/25">
-              Load More Articles
-            </button>
-          </div>
-        )}
-      </section>
-
-      {/* Newsletter Section */}
-      <section className="bg-[#2C1810] text-white py-16" aria-label="Newsletter">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-3">
-              Never Miss a <span className="text-[#C49B5C]">Story</span>
-            </h2>
-            <p className="text-gray-400 mb-6">
-              Subscribe to our newsletter and get the latest saree stories
-              delivered to your inbox
-            </p>
-            <form
-              className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
-              onSubmit={(e) => e.preventDefault()}
-            >
-              <label htmlFor="newsletter-email" className="sr-only">
-                Email address
-              </label>
-              <input
-                id="newsletter-email"
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:border-[#C49B5C] text-sm text-white placeholder:text-gray-500"
-                required
-              />
+      {/* Single Blog Post */}
+      <section className="container mx-auto px-4 py-10">
+        <article className="max-w-4xl mx-auto bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow">
+          <div className="relative w-full h-96">
+            <Image
+              src={blogPost.image}
+              alt={blogPost.title}
+              fill
+              className="object-cover"
+              priority
+              sizes="100vw"
+            />
+            <span className="absolute top-4 left-4 bg-[#C49B5C] text-white text-xs font-bold px-3 py-1 rounded-full">
+              Featured Story
+            </span>
+            <div className="absolute top-4 right-4 flex gap-2">
               <button
-                type="submit"
-                className="px-6 py-3 bg-[#C49B5C] text-white font-semibold rounded-xl hover:bg-[#B08B4C] transition-all hover:shadow-lg hover:shadow-[#C49B5C]/25 whitespace-nowrap"
+                className="bg-white/90 backdrop-blur-sm p-2 rounded-full hover:bg-white transition-colors"
+                aria-label="Save to favorites"
               >
-                Subscribe
+                <Heart className="w-4 h-4 text-gray-600 hover:text-red-500 transition-colors" />
               </button>
-            </form>
+              <button
+                className="bg-white/90 backdrop-blur-sm p-2 rounded-full hover:bg-white transition-colors"
+                aria-label="Bookmark article"
+              >
+                <Bookmark className="w-4 h-4 text-gray-600 hover:text-[#C49B5C] transition-colors" />
+              </button>
+            </div>
           </div>
-        </div>
+
+          <div className="p-8 md:p-12">
+            <div className="flex items-center gap-2 text-sm text-[#C49B5C] font-medium mb-4">
+              <Tag className="w-4 h-4" aria-hidden="true" />
+              {blogPost.category}
+            </div>
+
+            <h2 className="text-3xl md:text-4xl font-bold text-[#2C1810] mb-4">
+              {blogPost.title}
+            </h2>
+
+            <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-6 pb-6 border-b border-gray-100">
+              <span className="flex items-center gap-2">
+                <User className="w-4 h-4" aria-hidden="true" />
+                {blogPost.author}
+              </span>
+              <span className="flex items-center gap-2">
+                <Calendar className="w-4 h-4" aria-hidden="true" />
+                {blogPost.date}
+              </span>
+              <span className="flex items-center gap-2">
+                <Clock className="w-4 h-4" aria-hidden="true" />
+                {blogPost.readTime}
+              </span>
+              <span className="flex items-center gap-2">
+                <Eye className="w-4 h-4" aria-hidden="true" />
+                {blogPost.views.toLocaleString()} views
+              </span>
+              <span className="flex items-center gap-2">
+                <MessageCircle className="w-4 h-4" aria-hidden="true" />
+                {blogPost.comments} comments
+              </span>
+            </div>
+
+            <div className="prose prose-lg max-w-none text-gray-700">
+              <p className="text-lg leading-relaxed mb-6">
+                <strong>Before 2012,</strong> we worked as artisans in others' homes. 
+                We used to make suits and sarees for other brands and retailers. 
+                It was good work, but we always wanted to build something of our own.
+              </p>
+
+              <p className="text-lg leading-relaxed mb-6">
+                <strong>In 2012,</strong> we started our own small karkhana at home. 
+                We had just <span className="text-[#C49B5C] font-semibold">2 tables</span> 
+                to begin with. We bought fabric with our own money, did everything 
+                from cutting to stitching to finishing, and started selling ready-made 
+                suits and sarees.
+              </p>
+
+              <p className="text-lg leading-relaxed mb-6">
+                Finding new customers was difficult in the beginning. But slowly, 
+                through word of mouth and consistent quality, we started building 
+                a small customer base.
+              </p>
+
+              <div className="bg-[#FDF8F4] border-l-4 border-[#C49B5C] p-6 my-8 rounded-r-lg">
+                <p className="text-[#2C1810] font-medium text-lg">
+                  "Started with 2 tables in 2012. Today we have 4 tables."
+                </p>
+              </div>
+
+              <p className="text-lg leading-relaxed mb-6">
+                <strong>However, things didn't always go smoothly.</strong> 
+                At one point, many of our ready-made products got damaged. 
+                It took us <span className="font-semibold">2-3 years</span> 
+                to recover from that loss and get back on track.
+              </p>
+
+              <p className="text-lg leading-relaxed mb-6">
+                After that setback, we focused on improving our quality control 
+                and processes. <strong>Slowly and steadily,</strong> we became stable again. 
+                We moved from 2 tables to 3 tables, and then from 3 to 4 tables.
+              </p>
+
+              <p className="text-lg leading-relaxed mb-6">
+                With every new table, we did renovation work at home to create 
+                more space. <strong>By 2022,</strong> we had a proper setup with 4 tables 
+                and a smooth workflow.
+              </p>
+
+              <p className="text-lg leading-relaxed mb-6">
+                <span className="text-[#C49B5C] font-semibold">Since 2022,</span> we've been consistently manufacturing suits, sarees, and 
+                fabrics — preparing them from A to Z and selling to our customers.
+              </p>
+
+              <p className="text-lg leading-relaxed">
+                Today, we're proud of how far we've come. From working in others' 
+                homes to running our own karkhana — <strong>it's been a journey of 
+                hard work, patience, and steady growth.</strong>
+              </p>
+            </div>
+          </div>
+        </article>
       </section>
     </div>
   );

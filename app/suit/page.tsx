@@ -2,12 +2,13 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Star, Heart, ShoppingBag } from "lucide-react";
 import suitsData from "@/component/data/data.json";
 import Popup from "@/component/pop_up";
 import CurrencyPrice from "../../component/CurrencyPrice";
 import { useCurrency } from "@/app/context/CurrencyContext";
+import Loader from "@/component/Loader";
 
 interface SuitData {
   id: number;
@@ -25,7 +26,7 @@ interface SuitData {
   reviews?: number;
 }
 
-// Function to render product grid - accepts suits array as parameter
+// Function to render product grid
 const renderProductGrid = (
   suits: SuitData[],
   wishlist: number[],
@@ -35,14 +36,31 @@ const renderProductGrid = (
 ) => {
   if (!suits || suits.length === 0) {
     return (
-      <div className="text-center py-12 bg-white rounded-3xl shadow-lg">
-        <div className="text-6xl mb-4">👗</div>
-        <h3 className="text-xl font-semibold text-[#2C1810] mb-2">
+      <div className="text-center py-12 px-6 bg-white rounded-2xl shadow-lg max-w-sm mx-auto">
+        {/* Simple Icon */}
+        <div className="w-16 h-16 mx-auto bg-[#C49B5C]/10 rounded-full flex items-center justify-center mb-3">
+          <ShoppingBag className="text-[#C49B5C]" size={28} />
+        </div>
+        <h3 className="text-xl font-bold text-[#2C1810] mb-1">
           No Products Available
         </h3>
-        <p className="text-gray-500 text-sm">
+        <p className="text-gray-500 text-sm mb-5">
           Check back soon for our new collection
         </p>
+        <div className="flex gap-2 justify-center">
+          <button
+            onClick={() => window.location.reload()}
+            className="px-4 py-2 bg-[#C49B5C] text-white rounded-lg hover:bg-[#8B6B3D] transition-colors text-sm"
+          >
+            Refresh
+          </button>
+          <Link
+            href="/"
+            className="px-4 py-2 bg-gray-100 text-[#2C1810] rounded-lg hover:bg-gray-200 transition-colors text-sm"
+          >
+            Home
+          </Link>
+        </div>
       </div>
     );
   }
@@ -55,8 +73,11 @@ const renderProductGrid = (
           className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
           style={{ animationDelay: `${index * 50}ms` }}
         >
-          {/* Image Container */}
-          <div className="relative overflow-hidden bg-[#f8f3ea] aspect-square">
+          {/* Image Container - Now wrapped with Link */}
+          <Link
+            href={`/product/${suit.id}`}
+            className="block relative overflow-hidden bg-[#f8f3ea] aspect-square"
+          >
             {suit.image ? (
               <Image
                 src={suit.image}
@@ -77,12 +98,13 @@ const renderProductGrid = (
                 {suit.discount}% OFF
               </span>
             )}
-
-            {/* Wishlist Button */}
             <button
               title="Add to wishlist"
-              onClick={() => toggleWishlist(suit.id)}
-              className="absolute top-3 right-3 p-2 bg-white/90 hover:bg-white rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+              onClick={(e) => {
+                e.preventDefault(); // Prevent link navigation
+                toggleWishlist(suit.id);
+              }}
+              className="absolute top-3 right-3 p-2 bg-white/90 hover:bg-white rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-10"
             >
               <Heart
                 className={`transition-colors ${
@@ -94,17 +116,20 @@ const renderProductGrid = (
               />
             </button>
 
-            {/* Quick Add Button - Appears on Hover */}
+            {/* Quick Add Button */}
             <button
-              onClick={() => setShowPopup(true)}
-              className="absolute bottom-4 left-1/2 -translate-x-1/2 px-6 py-2.5 bg-white/95 hover:bg-[#C49B5C] text-[#2C1810] hover:text-white rounded-full text-sm font-medium transition-all duration-300 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 shadow-lg"
+              onClick={(e) => {
+                e.preventDefault(); // Prevent link navigation
+                setShowPopup(true);
+              }}
+              className="absolute bottom-4 left-1/2 -translate-x-1/2 px-6 py-2.5 bg-white/95 hover:bg-[#C49B5C] text-[#2C1810] hover:text-white rounded-full text-sm font-medium transition-all duration-300 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 shadow-lg z-10"
             >
               <div className="flex items-center gap-2">
                 <ShoppingBag size={16} />
                 Add to Cart
               </div>
             </button>
-          </div>
+          </Link>
 
           {/* Product Info */}
           <div className="p-4 space-y-2">
@@ -114,14 +139,12 @@ const renderProductGrid = (
               </h3>
             </Link>
 
-            {/* Category Tag */}
             {suit.category && (
               <span className="inline-block text-xs text-gray-400 bg-gray-50 px-2 py-0.5 rounded-full">
                 {suit.category}
               </span>
             )}
 
-            {/* Rating */}
             <div className="flex items-center gap-2">
               <div className="flex items-center">
                 <Star className="fill-[#C49B5C] text-[#C49B5C]" size={14} />
@@ -134,20 +157,17 @@ const renderProductGrid = (
               </span>
             </div>
 
-            {/* Price - Updated with Currency Component */}
             <div className="flex items-center gap-2 pt-1">
-              {/* Main Price with Currency Conversion */}
-              <CurrencyPrice 
-                priceINR={suit.price || suit.aprice || 0} 
+              <CurrencyPrice
+                priceINR={suit.price || suit.aprice || 0}
                 className="text-xl font-bold text-[#2C1810]"
                 size="lg"
               />
-              
-              {/* Original Price (MRP) */}
+
               {suit.aprice && suit.aprice > (suit.price || 0) && (
                 <>
-                  <CurrencyPrice 
-                    priceINR={suit.aprice} 
+                  <CurrencyPrice
+                    priceINR={suit.aprice}
                     className="text-sm text-gray-400 line-through"
                     size="sm"
                   />
@@ -161,8 +181,6 @@ const renderProductGrid = (
                 </>
               )}
             </div>
-
-            {/* Optional: Show original INR price when in different currency */}
             <PriceWithCurrencyHint priceINR={suit.price || suit.aprice || 0} />
           </div>
         </div>
@@ -173,18 +191,15 @@ const renderProductGrid = (
 
 // Helper component to show currency hint
 function PriceWithCurrencyHint({ priceINR }: { priceINR: number }) {
-  const { currency, symbol, getConvertedValue } = useCurrency();
-  
-  // Only show hint if currency is not INR
-  if (currency === 'INR') return null;
-  
-  const convertedValue = getConvertedValue(priceINR);
-  
+  const { currency, getConvertedValue } = useCurrency();
+
+  if (currency === "INR") return null;
+
   return (
     <div className="text-xs text-gray-400 mt-0.5 flex items-center gap-1">
       <span>≈</span>
-      <span>₹{priceINR.toLocaleString('en-IN')}</span>
-      <span className="text-[10px">(Original Price)</span>
+      <span>₹{priceINR.toLocaleString("en-IN")}</span>
+      <span className="text-[10px]">(Original Price)</span>
     </div>
   );
 }
@@ -193,6 +208,17 @@ export default function SuitPage() {
   const [showPopup, setShowPopup] = useState(false);
   const [wishlist, setWishlist] = useState<number[]>([]);
   const { isLoading } = useCurrency();
+
+  // Initialize loading based on presence of data to avoid synchronous setState in effect
+  const hasDataInitially =
+    Array.isArray(suitsData.suit) && suitsData.suit.length > 0;
+  const [loading, setLoading] = useState(() => !hasDataInitially);
+
+  useEffect(() => {
+    if (hasDataInitially) return; // wait only 1 sec
+    const timer = setTimeout(() => setLoading(false), 1000);
+    return () => clearTimeout(timer);
+  }, [hasDataInitially]);
 
   // Parse data from JSON
   const chanderiSuits: SuitData[] = Array.isArray(suitsData.suit)
@@ -209,15 +235,20 @@ export default function SuitPage() {
     );
   };
 
+  if (loading) {
+    return <Loader />;
+  }
+
   return (
     <main className="min-h-screen bg-gradient-to-b from-[#faf6ef] via-white to-[#faf6ef]">
-      {/* Hero Section - Premium Minimal */}
-      <section className="relative w-full mt-20 h-[100vh] md:h-[90vh] overflow-hidden">
+      {/* Hero Section - Mobile me hidden, desktop me visible */}
+      <section className="relative w-full mt-16 md:mt-20 min-h-[40vh] md:min-h-[120vh] overflow-hidden hidden md:block">
         <div className="absolute inset-0 overflow-hidden">
           <div
             className="absolute inset-0 bg-no-repeat bg-center"
             style={{
-              backgroundImage: "url('/Suit_Page.png')",
+              backgroundImage:
+                "url('https://res.cloudinary.com/dzyhjgtji/image/upload/v1784207209/Suit_Page_sffixj.png')",
               backgroundSize: "cover",
               backgroundPosition: "center center",
               backgroundAttachment: "scroll",
@@ -240,23 +271,23 @@ export default function SuitPage() {
           <div className="absolute inset-0 bg-gradient-to-r from-[#2C1810]/60 via-[#2C1810]/30 to-transparent" />
         </div>
 
-        <div className="absolute inset-0 flex items-center">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <div className="max-w-3xl">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="h-px w-12 bg-[#C49B5C]"></div>
-                <span className="text-[#C49B5C] text-xs font-medium tracking-[0.3em] uppercase">
+        <div className="relative z-10 flex items-center min-h-[40vh] md:min-h-[120vh]">
+          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 md:pt-28 pb-12 md:pb-16">
+            <div className="max-w-2xl lg:max-w-3xl">
+              <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-6">
+                <div className="h-px w-8 md:w-12 bg-[#C49B5C]"></div>
+                <span className="text-[#C49B5C] text-[10px] sm:text-xs font-medium tracking-[0.2em] md:tracking-[0.3em] uppercase">
                   Luxury Collection
                 </span>
               </div>
 
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-light text-white leading-[1.1] mb-6">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light text-white leading-[1.1] mb-3 md:mb-6">
                 <span className="font-serif italic">Timeless</span>
                 <br />
                 <span className="font-bold">Elegance</span>
               </h1>
 
-              <p className="text-lg md:text-xl text-white/80 mb-10 max-w-xl leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl text-white/80 mb-6 md:mb-10 max-w-xl leading-relaxed">
                 Exquisitely crafted suits where Indian heritage meets
                 contemporary design.
               </p>
@@ -264,23 +295,28 @@ export default function SuitPage() {
           </div>
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0 h-15 bg-gradient-to-t from-[#faf6ef] to-transparent"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-16 md:h-20 bg-gradient-to-t from-[#faf6ef] to-transparent pointer-events-none"></div>
       </section>
 
+      {/* Mobile Spacer - Sirf mobile pe top margin */}
+      <div className="block md:hidden h-16"></div>
+
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Loading State */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-12">
+        {/* Currency Loading */}
         {isLoading && (
           <div className="text-center py-8">
-            <div className="inline-flex items-center gap-3 text-[#8B6B3D]">
-              <div className="w-5 h-5 border-2 border-[#C49B5C] border-t-transparent rounded-full animate-spin" />
-              <span className="text-sm">Loading currency rates...</span>
+            <div className="flex flex-col items-center gap-4">
+              <Loader />
+              <span className="text-sm text-[#8B6B3D]">
+                Loading currency rates...
+              </span>
             </div>
           </div>
         )}
 
         {/* Section 1 - Chanderi Suit Collection */}
-        {chanderiSuits.length > 0 && (
+        {!isLoading && chanderiSuits.length > 0 && (
           <>
             <div className="text-center mb-12">
               <div className="flex items-center justify-center gap-3 mb-3">
@@ -296,7 +332,7 @@ export default function SuitPage() {
                 Chanderi Dupatta
               </h2>
 
-              <p className="text-gray-500 mt-2">
+              <p className="text-gray-500 mt-2 hidden md:block">
                 Gracefully handcrafted for timeless elegance
               </p>
             </div>
@@ -307,14 +343,14 @@ export default function SuitPage() {
                 wishlist,
                 toggleWishlist,
                 setShowPopup,
-                "chanderi"
+                "chanderi",
               )}
             </section>
           </>
         )}
 
         {/* Decorative Divider */}
-        {chanderiSuits.length > 0 && cottonSuits.length > 0 && (
+        {!isLoading && chanderiSuits.length > 0 && cottonSuits.length > 0 && (
           <div className="my-16 flex items-center justify-center">
             <div className="h-px flex-1 bg-gradient-to-r from-transparent via-[#C49B5C] to-transparent"></div>
             <span className="px-6 text-[#C49B5C] text-xs font-medium tracking-[0.3em] uppercase flex items-center gap-2">
@@ -327,7 +363,7 @@ export default function SuitPage() {
         )}
 
         {/* Section 2 - Cotton Suit Collection */}
-        {cottonSuits.length > 0 && (
+        {!isLoading && cottonSuits.length > 0 && (
           <>
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-light text-[#2C1810]">
@@ -335,7 +371,7 @@ export default function SuitPage() {
                 Jorjat Dupatta
               </h2>
 
-              <p className="text-gray-500 mt-2">
+              <p className="text-gray-500 mt-2 hidden md:block">
                 Lightweight and comfortable for everyday elegance
               </p>
             </div>
@@ -352,25 +388,23 @@ export default function SuitPage() {
           </>
         )}
 
-        {/* Fallback when no data is available */}
-        {chanderiSuits.length === 0 && cottonSuits.length === 0 && (
-          <div className="text-center py-20 bg-white rounded-3xl shadow-lg">
-            <div className="text-7xl mb-4">👗</div>
-            <h3 className="text-2xl font-semibold text-[#2C1810] mb-2">
-              No Suits Available
-            </h3>
-            <p className="text-gray-500">
-              Check back soon for our new collection
-            </p>
-          </div>
-        )}
+        {/* Fallback */}
+        {!isLoading &&
+          chanderiSuits.length === 0 &&
+          cottonSuits.length === 0 && (
+            <div className="text-center py-20 bg-white rounded-3xl shadow-lg">
+              <div className="text-7xl mb-4">👗</div>
+              <h3 className="text-2xl font-semibold text-[#2C1810] mb-2">
+                No Suits Available
+              </h3>
+              <p className="text-gray-500">
+                Check back soon for our new collection
+              </p>
+            </div>
+          )}
       </div>
 
-      {/* Popup Component - Render here */}
-      <Popup 
-        isOpen={showPopup} 
-        onClose={() => setShowPopup(false)} 
-      />
+      <Popup isOpen={showPopup} onClose={() => setShowPopup(false)} />
     </main>
   );
 }
