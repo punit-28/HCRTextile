@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { ArrowLeft, Home, Clock, Sparkles, ShoppingBag, ChevronRight } from "lucide-react";
+import {  Home, Sparkles, ShoppingBag, ChevronRight } from "lucide-react";
 
 export default function KurtiPage() {
   return (

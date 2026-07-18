@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { useSession, signOut } from "next-auth/react";
 import Link from "next/link";
 import Image from "next/image";
@@ -20,19 +20,35 @@ import {
   FiBox,
   FiCheckCircle,
 } from "react-icons/fi";
-import {
-  FaShoppingCart,
-  FaShieldAlt,
-  FaGoogle,
-  FaRegHeart,
-} from "react-icons/fa";
+import { FaShoppingCart, FaShieldAlt, FaGoogle } from "react-icons/fa";
 
 export default function DashboardPage() {
   const { data: session, status } = useSession();
   const [currentTime, setCurrentTime] = useState("");
   const [greeting, setGreeting] = useState("Good Morning");
   const [lastActive, setLastActive] = useState("Just now");
-  const [memberSince, setMemberSince] = useState("");
+
+  const memberSince = useMemo(() => {
+    if (session?.user?.email) {
+      const date = new Date();
+      const months = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+      ];
+      return `${months[date.getMonth()]} ${date.getFullYear()}`;
+    }
+    return "";
+  }, [session]);
 
   useEffect(() => {
     const updateTime = () => {
@@ -52,17 +68,6 @@ export default function DashboardPage() {
     const interval = setInterval(updateTime, 60000);
     return () => clearInterval(interval);
   }, []);
-
-  useEffect(() => {
-    if (session?.user?.email) {
-      const date = new Date();
-      const months = [
-        "January", "February", "March", "April", "May", "June",
-        "July", "August", "September", "October", "November", "December",
-      ];
-      setMemberSince(`${months[date.getMonth()]} ${date.getFullYear()}`);
-    }
-  }, [session]);
 
   useEffect(() => {
     const updateLastActive = () => {
@@ -94,8 +99,12 @@ export default function DashboardPage() {
           <div className="bg-gradient-to-r from-[#C49B5C] to-[#8B6B3D] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
             <FiUser className="text-white text-3xl" />
           </div>
-          <h2 className="text-2xl font-bold text-[#2C1810] mb-2">Welcome Back!</h2>
-          <p className="text-gray-600 mb-6">Please sign in to access your dashboard</p>
+          <h2 className="text-2xl font-bold text-[#2C1810] mb-2">
+            Welcome Back!
+          </h2>
+          <p className="text-gray-600 mb-6">
+            Please sign in to access your dashboard
+          </p>
           <Link
             href="/api/auth/signin"
             className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-[#C49B5C] to-[#8B6B3D] text-white rounded-xl font-medium hover:shadow-lg transition-all duration-300 hover:scale-105"
@@ -109,10 +118,15 @@ export default function DashboardPage() {
   }
 
   const user = {
-    id: session.user?.id || session.user?.email?.split("@")[0]?.toUpperCase() || "GUEST",
+    id:
+      session.user?.id ||
+      session.user?.email?.split("@")[0]?.toUpperCase() ||
+      "GUEST",
     name: session.user?.name || "Guest User",
     email: session.user?.email || "guest@example.com",
-    image: session.user?.image || `https://ui-avatars.com/api/?name=${session.user?.name || "User"}&background=C49B5C&color=fff&size=128`,
+    image:
+      session.user?.image ||
+      `https://ui-avatars.com/api/?name=${session.user?.name || "User"}&background=C49B5C&color=fff&size=128`,
     provider: "Google",
     isVerified: true,
     totalOrders: 0,
@@ -128,13 +142,13 @@ export default function DashboardPage() {
   // Get current date and time for last active
   const getCurrentDateTime = () => {
     const now = new Date();
-    return now.toLocaleString('en-IN', {
-      day: 'numeric',
-      month: 'short',
-      year: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit',
-      hour12: true
+    return now.toLocaleString("en-IN", {
+      day: "numeric",
+      month: "short",
+      year: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: true,
     });
   };
 
@@ -210,9 +224,6 @@ export default function DashboardPage() {
                   <FiCheckCircle className="text-white text-sm" />
                 </div>
               )}
-              {/* <div className="absolute -top-1 -right-1 bg-blue-500 rounded-full p-1 border-2 border-white">
-                <FaGoogle className="text-white text-xs" />
-              </div> */}
             </div>
 
             <div className="flex-1">
@@ -284,143 +295,145 @@ export default function DashboardPage() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-  <div className="lg:col-span-2 space-y-6">
-    {/* Order History */}
-    <div className="bg-white rounded-xl border border-[#d4c5a9]/30 p-6 hover:shadow-lg transition-all duration-300">
-      <div className="flex items-center justify-between mb-4">
-        <div className="flex items-center gap-3">
-          <div className="bg-gradient-to-r from-[#C49B5C] to-[#8B6B3D] p-2 rounded-lg">
-            <FiShoppingCart className="text-white text-lg" />
-          </div>
-          <h2 className="text-lg font-semibold text-[#2C1810]">
-            Order History
-          </h2>
-          <span className="bg-[#f8f3ea] px-2 py-0.5 rounded-full text-sm font-medium text-[#8B6B3D] border border-[#d4c5a9]/30">
-            0 orders
-          </span>
-        </div>
-      </div>
-      <div className="text-center py-12">
-        <div className="bg-gradient-to-r from-[#C49B5C]/10 to-[#8B6B3D]/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 border border-[#C49B5C]/30">
-          <FiBox className="text-4xl text-[#C49B5C]" />
-        </div>
-        <h3 className="text-lg font-medium text-[#2C1810] mb-2">No orders yet</h3>
-        <p className="text-sm text-gray-500 mb-4">
-          Start shopping to see your orders here
-        </p>
-        <Link
-          href="/saree"
-          className="inline-flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-[#C49B5C] to-[#8B6B3D] text-white rounded-full text-sm font-medium hover:shadow-lg transition-all duration-300 hover:scale-105"
-        >
-          Start Shopping
-          <FiArrowUp className="rotate-45" />
-        </Link>
-      </div>
-    </div>
+          <div className="lg:col-span-2 space-y-6">
+            {/* Order History */}
+            <div className="bg-white rounded-xl border border-[#d4c5a9]/30 p-6 hover:shadow-lg transition-all duration-300">
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center gap-3">
+                  <div className="bg-gradient-to-r from-[#C49B5C] to-[#8B6B3D] p-2 rounded-lg">
+                    <FiShoppingCart className="text-white text-lg" />
+                  </div>
+                  <h2 className="text-lg font-semibold text-[#2C1810]">
+                    Order History
+                  </h2>
+                  <span className="bg-[#f8f3ea] px-2 py-0.5 rounded-full text-sm font-medium text-[#8B6B3D] border border-[#d4c5a9]/30">
+                    0 orders
+                  </span>
+                </div>
+              </div>
+              <div className="text-center py-12">
+                <div className="bg-gradient-to-r from-[#C49B5C]/10 to-[#8B6B3D]/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 border border-[#C49B5C]/30">
+                  <FiBox className="text-4xl text-[#C49B5C]" />
+                </div>
+                <h3 className="text-lg font-medium text-[#2C1810] mb-2">
+                  No orders yet
+                </h3>
+                <p className="text-sm text-gray-500 mb-4">
+                  Start shopping to see your orders here
+                </p>
+                <Link
+                  href="/saree"
+                  className="inline-flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-[#C49B5C] to-[#8B6B3D] text-white rounded-full text-sm font-medium hover:shadow-lg transition-all duration-300 hover:scale-105"
+                >
+                  Start Shopping
+                  <FiArrowUp className="rotate-45" />
+                </Link>
+              </div>
+            </div>
 
-    {/* Wishlist */}
-    <div className="bg-white rounded-xl border border-[#d4c5a9]/30 p-6 hover:shadow-lg transition-all duration-300">
-      <div className="flex items-center justify-between mb-4">
-        <div className="flex items-center gap-3">
-          <div className="bg-gradient-to-r from-[#C49B5C] to-[#8B6B3D] p-2 rounded-lg">
-            <FiHeart className="text-white text-lg" />
+            {/* Wishlist */}
+            <div className="bg-white rounded-xl border border-[#d4c5a9]/30 p-6 hover:shadow-lg transition-all duration-300">
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center gap-3">
+                  <div className="bg-gradient-to-r from-[#C49B5C] to-[#8B6B3D] p-2 rounded-lg">
+                    <FiHeart className="text-white text-lg" />
+                  </div>
+                  <h2 className="text-lg font-semibold text-[#2C1810]">
+                    Wishlist
+                  </h2>
+                  <span className="bg-[#f8f3ea] px-2 py-0.5 rounded-full text-sm font-medium text-[#8B6B3D] border border-[#d4c5a9]/30">
+                    0 items
+                  </span>
+                </div>
+              </div>
+              <div className="text-center py-12">
+                <div className="bg-gradient-to-r from-[#C49B5C]/10 to-[#8B6B3D]/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 border border-[#C49B5C]/30">
+                  <FiHeart className="text-4xl text-[#C49B5C]" />
+                </div>
+                <h3 className="text-lg font-medium text-[#2C1810] mb-2">
+                  Wishlist is empty
+                </h3>
+                <p className="text-sm text-gray-500 mb-4">
+                  Save your favorite items here
+                </p>
+                <Link
+                  href="/saree"
+                  className="inline-flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-[#C49B5C] to-[#8B6B3D] text-white rounded-full text-sm font-medium hover:shadow-lg transition-all duration-300 hover:scale-105"
+                >
+                  Explore Products
+                  <FiArrowUp className="rotate-45" />
+                </Link>
+              </div>
+            </div>
           </div>
-          <h2 className="text-lg font-semibold text-[#2C1810]">
-            Wishlist
-          </h2>
-          <span className="bg-[#f8f3ea] px-2 py-0.5 rounded-full text-sm font-medium text-[#8B6B3D] border border-[#d4c5a9]/30">
-            0 items
-          </span>
-        </div>
-      </div>
-      <div className="text-center py-12">
-        <div className="bg-gradient-to-r from-[#C49B5C]/10 to-[#8B6B3D]/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 border border-[#C49B5C]/30">
-          <FiHeart className="text-4xl text-[#C49B5C]" />
-        </div>
-        <h3 className="text-lg font-medium text-[#2C1810] mb-2">
-          Wishlist is empty
-        </h3>
-        <p className="text-sm text-gray-500 mb-4">
-          Save your favorite items here
-        </p>
-        <Link
-          href="/saree"
-          className="inline-flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-[#C49B5C] to-[#8B6B3D] text-white rounded-full text-sm font-medium hover:shadow-lg transition-all duration-300 hover:scale-105"
-        >
-          Explore Products
-          <FiArrowUp className="rotate-45" />
-        </Link>
-      </div>
-    </div>
-  </div>
 
-  <div className="lg:col-span-1 space-y-6">
-    {/* Shopping Cart */}
-    <div className="bg-white rounded-xl border border-[#d4c5a9]/30 p-6 hover:shadow-lg transition-all duration-300">
-      <div className="flex items-center justify-between mb-4">
-        <div className="flex items-center gap-3">
-          <div className="bg-gradient-to-r from-[#C49B5C] to-[#8B6B3D] p-2 rounded-lg">
-            <FaShoppingCart className="text-white text-lg" />
+          <div className="lg:col-span-1 space-y-6">
+            {/* Shopping Cart */}
+            <div className="bg-white rounded-xl border border-[#d4c5a9]/30 p-6 hover:shadow-lg transition-all duration-300">
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center gap-3">
+                  <div className="bg-gradient-to-r from-[#C49B5C] to-[#8B6B3D] p-2 rounded-lg">
+                    <FaShoppingCart className="text-white text-lg" />
+                  </div>
+                  <h2 className="text-lg font-semibold text-[#2C1810]">
+                    Shopping Cart
+                  </h2>
+                  <span className="bg-[#f8f3ea] px-2 py-0.5 rounded-full text-sm font-medium text-[#8B6B3D] border border-[#d4c5a9]/30">
+                    0 items
+                  </span>
+                </div>
+              </div>
+              <div className="text-center py-12">
+                <div className="bg-gradient-to-r from-[#C49B5C]/10 to-[#8B6B3D]/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 border border-[#C49B5C]/30">
+                  <FaShoppingCart className="text-4xl text-[#C49B5C]" />
+                </div>
+                <h3 className="text-lg font-medium text-[#2C1810] mb-2">
+                  Cart is empty
+                </h3>
+                <p className="text-sm text-gray-500 mb-4">
+                  Add items to your cart
+                </p>
+                <Link
+                  href="/saree"
+                  className="inline-flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-[#C49B5C] to-[#8B6B3D] text-white rounded-full text-sm font-medium hover:shadow-lg transition-all duration-300 hover:scale-105"
+                >
+                  Start Shopping
+                  <FiArrowUp className="rotate-45" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Activity Summary */}
+            <div className="bg-white rounded-xl border border-[#d4c5a9]/30 p-6 hover:shadow-lg transition-all duration-300">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="bg-gradient-to-r from-[#C49B5C] to-[#8B6B3D] p-2 rounded-lg">
+                  <FiAward className="text-white text-lg" />
+                </div>
+                <h2 className="text-lg font-semibold text-[#2C1810]">
+                  Activity Summary
+                </h2>
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                <div className="bg-gradient-to-r from-[#C49B5C]/5 to-[#8B6B3D]/5 p-3 rounded-lg text-center border border-[#C49B5C]/20 hover:border-[#C49B5C]/50 transition-colors">
+                  <div className="text-2xl font-bold text-[#8B6B3D]">0</div>
+                  <div className="text-xs text-gray-500">Total Orders</div>
+                </div>
+                <div className="bg-gradient-to-r from-[#C49B5C]/5 to-[#8B6B3D]/5 p-3 rounded-lg text-center border border-[#C49B5C]/20 hover:border-[#C49B5C]/50 transition-colors">
+                  <div className="text-2xl font-bold text-[#8B6B3D]">0</div>
+                  <div className="text-xs text-gray-500">Wishlist Items</div>
+                </div>
+                <div className="bg-gradient-to-r from-[#C49B5C]/5 to-[#8B6B3D]/5 p-3 rounded-lg text-center border border-[#C49B5C]/20 hover:border-[#C49B5C]/50 transition-colors">
+                  <div className="text-2xl font-bold text-[#8B6B3D]">0</div>
+                  <div className="text-xs text-gray-500">Cart Items</div>
+                </div>
+                <div className="bg-gradient-to-r from-[#C49B5C]/5 to-[#8B6B3D]/5 p-3 rounded-lg text-center border border-[#C49B5C]/20 hover:border-[#C49B5C]/50 transition-colors">
+                  <div className="text-2xl font-bold text-[#8B6B3D]">0</div>
+                  <div className="text-xs text-gray-500">Reviews Given</div>
+                </div>
+              </div>
+            </div>
           </div>
-          <h2 className="text-lg font-semibold text-[#2C1810]">
-            Shopping Cart
-          </h2>
-          <span className="bg-[#f8f3ea] px-2 py-0.5 rounded-full text-sm font-medium text-[#8B6B3D] border border-[#d4c5a9]/30">
-            0 items
-          </span>
         </div>
-      </div>
-      <div className="text-center py-12">
-        <div className="bg-gradient-to-r from-[#C49B5C]/10 to-[#8B6B3D]/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 border border-[#C49B5C]/30">
-          <FaShoppingCart className="text-4xl text-[#C49B5C]" />
-        </div>
-        <h3 className="text-lg font-medium text-[#2C1810] mb-2">
-          Cart is empty
-        </h3>
-        <p className="text-sm text-gray-500 mb-4">
-          Add items to your cart
-        </p>
-        <Link
-          href="/saree"
-          className="inline-flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-[#C49B5C] to-[#8B6B3D] text-white rounded-full text-sm font-medium hover:shadow-lg transition-all duration-300 hover:scale-105"
-        >
-          Start Shopping
-          <FiArrowUp className="rotate-45" />
-        </Link>
-      </div>
-    </div>
-
-    {/* Activity Summary */}
-    <div className="bg-white rounded-xl border border-[#d4c5a9]/30 p-6 hover:shadow-lg transition-all duration-300">
-      <div className="flex items-center gap-3 mb-4">
-        <div className="bg-gradient-to-r from-[#C49B5C] to-[#8B6B3D] p-2 rounded-lg">
-          <FiAward className="text-white text-lg" />
-        </div>
-        <h2 className="text-lg font-semibold text-[#2C1810]">
-          Activity Summary
-        </h2>
-      </div>
-      <div className="grid grid-cols-2 gap-3">
-        <div className="bg-gradient-to-r from-[#C49B5C]/5 to-[#8B6B3D]/5 p-3 rounded-lg text-center border border-[#C49B5C]/20 hover:border-[#C49B5C]/50 transition-colors">
-          <div className="text-2xl font-bold text-[#8B6B3D]">0</div>
-          <div className="text-xs text-gray-500">Total Orders</div>
-        </div>
-        <div className="bg-gradient-to-r from-[#C49B5C]/5 to-[#8B6B3D]/5 p-3 rounded-lg text-center border border-[#C49B5C]/20 hover:border-[#C49B5C]/50 transition-colors">
-          <div className="text-2xl font-bold text-[#8B6B3D]">0</div>
-          <div className="text-xs text-gray-500">Wishlist Items</div>
-        </div>
-        <div className="bg-gradient-to-r from-[#C49B5C]/5 to-[#8B6B3D]/5 p-3 rounded-lg text-center border border-[#C49B5C]/20 hover:border-[#C49B5C]/50 transition-colors">
-          <div className="text-2xl font-bold text-[#8B6B3D]">0</div>
-          <div className="text-xs text-gray-500">Cart Items</div>
-        </div>
-        <div className="bg-gradient-to-r from-[#C49B5C]/5 to-[#8B6B3D]/5 p-3 rounded-lg text-center border border-[#C49B5C]/20 hover:border-[#C49B5C]/50 transition-colors">
-          <div className="text-2xl font-bold text-[#8B6B3D]">0</div>
-          <div className="text-xs text-gray-500">Reviews Given</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
         <div className="mt-8 pt-6 border-t border-[#d4c5a9]/30 flex justify-between items-center text-sm text-gray-500">
           <div className="flex items-center gap-2">

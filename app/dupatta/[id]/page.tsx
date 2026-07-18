@@ -1,9 +1,8 @@
 "use client";
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, useCallback } from "react";
 import { useParams, useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import Popup from "@/component/pop_up";
 import CurrencyPrice from "../../../component/CurrencyPrice";
 import { useCurrency } from "@/app/context/CurrencyContext";
 import {
@@ -21,7 +20,7 @@ import {
 import suitsData from "@/component/data/data.json";
 
 type DupattaData = {
-  id: number;
+  id: string;
   name?: string;
   image?: string;
   discount?: number;
@@ -40,6 +39,96 @@ type DupattaData = {
   [key: string]: unknown;
 };
 
+// Memoized Popup Component
+const SuccessPopup = ({ 
+  message, 
+  onClose 
+}: { 
+  message: string; 
+  onClose: () => void;
+}) => {
+  useEffect(() => {
+    const timer = setTimeout(onClose, 3000);
+    return () => clearTimeout(timer);
+  }, [onClose]);
+
+  return (
+    <div className="fixed inset-0 flex items-center justify-center z-50 bg-black/50 backdrop-blur-sm animate-in fade-in duration-200">
+      <div className="bg-white rounded-2xl p-8 max-w-sm w-full mx-4 shadow-2xl transform animate-in zoom-in-95 duration-200">
+        <div className="flex flex-col items-center gap-4">
+          <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center animate-bounce">
+            <svg
+              className="w-8 h-8 text-green-500"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M5 13l4 4L19 7"
+              />
+            </svg>
+          </div>
+          
+          <p className="text-lg font-semibold text-[#2C1810] text-center">
+            {message}
+          </p>
+          
+          <button
+            onClick={onClose}
+            className="w-full mt-2 px-6 py-2.5 bg-[#C49B5C] hover:bg-[#8B6B3D] text-white rounded-full transition-colors text-sm font-medium"
+          >
+            Continue Shopping
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// Memoized Feature Card Component
+const FeatureCard = ({ icon: Icon, title, subtitle }: { 
+  icon: React.ElementType; 
+  title: string; 
+  subtitle: string;
+}) => (
+  <div className="text-center p-3 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+    <div className="w-10 h-10 bg-[#C49B5C]/10 rounded-full flex items-center justify-center mx-auto mb-2">
+      <Icon className="text-[#C49B5C]" size={20} />
+    </div>
+    <p className="text-xs font-medium text-[#2C1810]">{title}</p>
+    <p className="text-[10px] text-gray-500">{subtitle}</p>
+  </div>
+);
+
+// Memoized Detail Item Component
+const DetailItem = ({ label, value }: { label: string; value: string | string[] }) => {
+  if (Array.isArray(value)) {
+    return (
+      <div>
+        <h3 className="text-sm font-semibold text-[#2C1810] mb-2">{label}</h3>
+        <ul className="space-y-2">
+          {value.map((item, index) => (
+            <li key={index} className="flex items-start gap-2 text-sm text-gray-600">
+              <span className="text-[#C49B5C] mt-1">✦</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  }
+  
+  return (
+    <div>
+      <h3 className="text-sm font-semibold text-[#2C1810] mb-1">{label}</h3>
+      <p className="text-gray-600 leading-relaxed text-sm">{value}</p>
+    </div>
+  );
+};
+
 export default function DupattaDetailPage() {
   const params = useParams();
   const router = useRouter();
@@ -49,85 +138,65 @@ export default function DupattaDetailPage() {
   const [product, setProduct] = useState<DupattaData | null>(null);
   const [loading, setLoading] = useState(true);
 
-  // Parse dupatta data from JSON
+  // Memoized data
   const dupattas = useMemo(() => {
-    let allDupattas: DupattaData[] = [];
-    
-    try {
-      console.log("Raw suitsData:", suitsData);
-      
-      // Check if suitsData has 'dupatta' array
-      if (suitsData && typeof suitsData === 'object') {
-        if (Array.isArray(suitsData.dupatta)) {
-          allDupattas = suitsData.dupatta;
-          console.log("Dupattas found:", allDupattas);
-        } else {
-          console.warn("No dupatta array found in data");
-        }
-      }
-    } catch (error) {
-      console.error("Error loading dupatta data:", error);
-    }
-    
-    return allDupattas;
+    return Array.isArray(suitsData?.dupatta) ? suitsData.dupatta : [];
   }, []);
 
   // Find product
   useEffect(() => {
-    if (params.id && dupattas.length > 0) {
-      const id = parseInt(params.id as string);
-      console.log("Looking for dupatta with ID:", id);
-      console.log("Available dupattas:", dupattas.map(d => ({ id: d.id, name: d.name })));
-      
-      const foundProduct = dupattas.find((d) => d.id === id);
-      console.log("Found product:", foundProduct);
-      
-      if (foundProduct) {
-        setProduct(foundProduct);
-      } else {
-        console.warn(`Dupatta with ID ${id} not found`);
-        setProduct(null);
-      }
+    if (!params.id || !dupattas.length) {
       setLoading(false);
-    } else if (params.id && dupattas.length === 0) {
-      setLoading(false);
-      setProduct(null);
-    } else {
-      setLoading(false);
+      return;
     }
+
+    const id = params.id as string;
+    const foundProduct = dupattas.find((d) => d.id === id);
+    setProduct(foundProduct || null);
+    setLoading(false);
   }, [params.id, dupattas]);
 
-  // Handle button clicks - just show popup
-  const handleWishlistClick = () => {
+  // Popup handlers with useCallback
+  const handleWishlistClick = useCallback(() => {
     setPopupMessage("Added to Wishlist ❤️");
     setShowPopup(true);
-  };
+  }, []);
 
-  const handleAddToCart = () => {
+  const handleAddToCart = useCallback(() => {
     setPopupMessage("Added to Cart 🛍️");
     setShowPopup(true);
-  };
+  }, []);
 
+  const handleClosePopup = useCallback(() => {
+    setShowPopup(false);
+  }, []);
+
+  // Loading state
   if (loading || currencyLoading) {
     return (
       <div className="min-h-screen bg-[#faf6ef] flex items-center justify-center">
         <div className="text-center">
           <div className="inline-block animate-spin rounded-full h-12 w-12 border-4 border-[#C49B5C] border-t-transparent"></div>
           <p className="mt-4 text-[#2C1810] font-medium">
-            {currencyLoading ? "Loading currency rates..." : "Loading dupatta details..."}
+            {currencyLoading ? "Loading..." : "Loading details..."}
           </p>
         </div>
       </div>
     );
   }
 
+  // Not found state
   if (!product) {
     return (
-      <div className="min-h-screen bg-[#faf6ef] flex items-center justify-center">
+      <div className="min-h-screen bg-[#faf6ef] flex items-center justify-center px-4">
         <div className="text-center">
           <div className="text-6xl mb-4">😕</div>
-          <h2 className="text-2xl font-bold text-[#2C1810] mb-2">Dupatta Not Found</h2>
-          <p className="text-gray-500 mb-6">The dupatta you{`'`}re looking for doesn{`'`}t exist.</p>
+          <h2 className="text-2xl font-bold text-[#2C1810] mb-2">
+            Dupatta Not Found
+          </h2>
+          <p className="text-gray-500 mb-6">
+            The dupatta you&apos;re looking for doesn&apos;t exist.
+          </p>
           <Link
             href="/dupatta"
             className="inline-flex items-center gap-2 px-6 py-3 bg-[#C49B5C] text-white rounded-full hover:bg-[#8B6B3D] transition-colors"
@@ -140,6 +209,11 @@ export default function DupattaDetailPage() {
     );
   }
 
+  // Calculate discount percentage
+  const discountPercentage = product.aprice && product.price 
+    ? Math.round(((product.aprice - product.price) / product.aprice) * 100)
+    : 0;
+
   return (
     <main className="min-h-screen bg-gradient-to-b from-[#faf6ef] via-white to-[#faf6ef] pt-20">
       {/* Back Button */}
@@ -147,39 +221,47 @@ export default function DupattaDetailPage() {
         <button
           onClick={() => router.back()}
           className="inline-flex items-center gap-2 text-[#2C1810] hover:text-[#C49B5C] transition-colors group"
+          aria-label="Go back"
         >
-          <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" />
+          <ArrowLeft
+            size={20}
+            className="group-hover:-translate-x-1 transition-transform"
+          />
           Back to Collection
         </button>
       </div>
 
       {/* Product Details */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Left - Image */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+          {/* Left - Image Section */}
           <div className="space-y-4">
-            <div className="relative aspect-[3/4] bg-white rounded-2xl overflow-hidden shadow-xl">
-              {product.image ? (
-                <Image
-                  src={product.image}
-                  alt={product.name || "Dupatta"}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  priority
-                />
-              ) : (
-                <div className="w-full h-full flex items-center justify-center bg-gray-100">
-                  <span className="text-gray-400">No Image</span>
-                </div>
-              )}
+            <div className="relative bg-white rounded-2xl overflow-hidden shadow-xl">
+              {/* Fixed aspect ratio for 640x941 */}
+              <div className="relative w-full" style={{ aspectRatio: "640/941" }}>
+                {product.image ? (
+                  <Image
+                    src={product.image}
+                    alt={product.name || "Dupatta"}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    priority
+                    quality={85}
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center bg-gray-100">
+                    <span className="text-gray-400">No Image</span>
+                  </div>
+                )}
 
-              {/* Discount Badge */}
-              {product.discount && product.discount > 0 && (
-                <span className="absolute top-4 left-4 px-4 py-2 bg-gradient-to-r from-[#C49B5C] to-[#8B6B3D] text-white text-sm font-semibold rounded-full shadow-lg z-20">
-                  {product.discount}% OFF
-                </span>
-              )}
+                {/* Discount Badge */}
+                {product.discount && product.discount > 0 && (
+                  <span className="absolute top-4 left-4 px-4 py-2 bg-gradient-to-r from-[#C49B5C] to-[#8B6B3D] text-white text-sm font-semibold rounded-full shadow-lg z-20">
+                    {product.discount}% OFF
+                  </span>
+                )}
+              </div>
             </div>
 
             {/* Action Buttons */}
@@ -188,16 +270,21 @@ export default function DupattaDetailPage() {
                 <button
                   onClick={handleWishlistClick}
                   className="flex-1 px-4 py-3 bg-white hover:bg-gray-50 rounded-xl transition-all group flex items-center justify-center gap-2 border-2 border-gray-200 hover:border-[#C49B5C]"
+                  aria-label="Add to wishlist"
                 >
-                  <Heart className="text-[#2C1810] group-hover:text-red-500 transition-colors" size={20} />
+                  <Heart
+                    className="text-[#2C1810] group-hover:text-red-500 transition-colors"
+                    size={20}
+                  />
                   <span className="text-sm font-medium text-[#2C1810] group-hover:text-red-500 transition-colors">
-                    Add to Wishlist
+                    Wishlist
                   </span>
                 </button>
 
                 <button
                   onClick={handleAddToCart}
                   className="flex-1 px-4 py-3 bg-gradient-to-r from-[#C49B5C] to-[#8B6B3D] hover:from-[#8B6B3D] hover:to-[#6B4F2E] text-white rounded-xl transition-all group flex items-center justify-center gap-2 shadow-md hover:shadow-xl"
+                  aria-label="Add to cart"
                 >
                   <ShoppingBag size={20} />
                   <span className="text-sm font-medium">Add to Cart</span>
@@ -209,8 +296,11 @@ export default function DupattaDetailPage() {
                 className="w-full px-4 py-3 bg-[#2C1810] hover:bg-[#1a0f0a] text-white rounded-xl transition-all group flex items-center justify-center gap-2"
               >
                 <MessageCircle size={18} />
-                <span className="text-sm font-medium">Contact for Customization</span>
-                <ArrowLeft size={16} className="rotate-180 group-hover:translate-x-1 transition-transform" />
+                <span className="text-sm font-medium">Customize</span>
+                <ArrowLeft
+                  size={16}
+                  className="rotate-180 group-hover:translate-x-1 transition-transform"
+                />
               </Link>
             </div>
           </div>
@@ -243,41 +333,36 @@ export default function DupattaDetailPage() {
               </span>
             </div>
 
-            {/* Price - Updated with Currency */}
+            {/* Price */}
             <div className="flex flex-wrap items-center gap-4">
-              {/* Main Price */}
-              <CurrencyPrice 
-                priceINR={product.price || product.aprice || 0} 
+              <CurrencyPrice
+                priceINR={product.price || product.aprice || 0}
                 className="text-4xl font-bold text-[#2C1810]"
                 size="xl"
               />
-              
-              {/* Original Price (MRP) */}
+
               {product.aprice && product.aprice > (product.price || 0) && (
                 <>
-                  <CurrencyPrice 
-                    priceINR={product.aprice} 
+                  <CurrencyPrice
+                    priceINR={product.aprice}
                     className="text-lg text-gray-400 line-through"
                     size="md"
                   />
                   <span className="px-3 py-1 bg-green-100 text-green-700 text-sm font-semibold rounded-full">
-                    Save{" "}
-                    {Math.round(
-                      ((product.aprice - (product.price || 0)) / product.aprice) *
-                        100
-                    )}
-                    %
+                    Save {discountPercentage}%
                   </span>
                 </>
               )}
             </div>
 
-            {/* Currency Info - Show original INR when in different currency */}
-            {currency !== 'INR' && (
+            {/* Currency Info */}
+            {currency !== "INR" && (
               <div className="flex items-center gap-2 text-sm text-gray-500 bg-gray-50 px-4 py-2 rounded-xl">
                 <span>≈</span>
-                <span>₹{((product.price || product.aprice || 0)).toLocaleString('en-IN')}</span>
-                <span className="text-xs text-gray-400">(Original Price in INR)</span>
+                <span>
+                  ₹{(product.price || product.aprice || 0).toLocaleString("en-IN")}
+                </span>
+                <span className="text-xs text-gray-400">(Original Price)</span>
               </div>
             )}
 
@@ -315,103 +400,48 @@ export default function DupattaDetailPage() {
             {/* Product Details */}
             <div className="bg-white p-5 rounded-2xl shadow-sm space-y-4">
               {product["Base color"] && (
-                <div>
-                  <h3 className="text-sm font-semibold text-[#2C1810] mb-1">
-                    Base Color
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed text-sm">
-                    {product["Base color"]}
-                  </p>
-                </div>
+                <DetailItem label="Base Color" value={product["Base color"]} />
               )}
-
+              
               {product.Motifs && product.Motifs.length > 0 && (
-                <div>
-                  <h3 className="text-sm font-semibold text-[#2C1810] mb-2">
-                    Motifs & Design
-                  </h3>
-                  <ul className="space-y-2">
-                    {product.Motifs.map((motif: string, index: number) => (
-                      <li
-                        key={index}
-                        className="flex items-start gap-2 text-sm text-gray-600"
-                      >
-                        <span className="text-[#C49B5C] mt-1">✦</span>
-                        <span>{motif}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                <DetailItem label="Motifs & Design" value={product.Motifs} />
               )}
-
-              {product["Border Detailing"] &&
-                product["Border Detailing"].length > 0 && (
-                  <div>
-                    <h3 className="text-sm font-semibold text-[#2C1810] mb-2">
-                      Border Detailing
-                    </h3>
-                    <ul className="space-y-2">
-                      {product["Border Detailing"].map(
-                        (detail: string, index: number) => (
-                          <li
-                            key={index}
-                            className="flex items-start gap-2 text-sm text-gray-600"
-                          >
-                            <span className="text-[#C49B5C] mt-1">◆</span>
-                            <span>{detail}</span>
-                          </li>
-                        )
-                      )}
-                    </ul>
-                  </div>
-                )}
-
+              
+              {product["Border Detailing"] && product["Border Detailing"].length > 0 && (
+                <DetailItem label="Border Detailing" value={product["Border Detailing"]} />
+              )}
+              
               {product["Contrast Play"] && (
-                <div>
-                  <h3 className="text-sm font-semibold text-[#2C1810] mb-1">
-                    Contrast Play
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed text-sm">
-                    {product["Contrast Play"]}
-                  </p>
-                </div>
+                <DetailItem label="Contrast Play" value={product["Contrast Play"]} />
               )}
             </div>
 
             {/* Features */}
             <div className="grid grid-cols-3 gap-4 pt-2">
-              <div className="text-center p-3 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                <div className="w-10 h-10 bg-[#C49B5C]/10 rounded-full flex items-center justify-center mx-auto mb-2">
-                  <Truck className="text-[#C49B5C]" size={20} />
-                </div>
-                <p className="text-xs font-medium text-[#2C1810]">Free Shipping</p>
-                <p className="text-[10px] text-gray-500">Above ₹999</p>
-              </div>
-              <div className="text-center p-3 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                <div className="w-10 h-10 bg-[#C49B5C]/10 rounded-full flex items-center justify-center mx-auto mb-2">
-                  <RefreshCw className="text-[#C49B5C]" size={20} />
-                </div>
-                <p className="text-xs font-medium text-[#2C1810]">Easy Returns</p>
-                <p className="text-[10px] text-gray-500">7 days policy</p>
-              </div>
-              <div className="text-center p-3 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                <div className="w-10 h-10 bg-[#C49B5C]/10 rounded-full flex items-center justify-center mx-auto mb-2">
-                  <Shield className="text-[#C49B5C]" size={20} />
-                </div>
-                <p className="text-xs font-medium text-[#C49B5C]">Authentic</p>
-                <p className="text-[10px] text-gray-500">100% genuine</p>
-              </div>
+              <FeatureCard 
+                icon={Truck} 
+                title="Free Shipping" 
+                subtitle="Above ₹999" 
+              />
+              <FeatureCard 
+                icon={RefreshCw} 
+                title="Easy Returns" 
+                subtitle="7 days policy" 
+              />
+              <FeatureCard 
+                icon={Shield} 
+                title="Authentic" 
+                subtitle="100% genuine" 
+              />
             </div>
           </div>
         </div>
       </div>
 
       {/* Popup */}
-      <Popup 
-        isOpen={showPopup} 
-        onClose={() => setShowPopup(false)}
-        message={popupMessage}
-      />
+      {showPopup && (
+        <SuccessPopup message={popupMessage} onClose={handleClosePopup} />
+      )}
     </main>
   );
 }

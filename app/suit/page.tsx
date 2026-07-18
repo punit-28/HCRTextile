@@ -10,8 +10,12 @@ import CurrencyPrice from "../../component/CurrencyPrice";
 import { useCurrency } from "@/app/context/CurrencyContext";
 import Loader from "@/component/Loader";
 
+// Add blur data URL at top
+const BLUR_DATA_URL =
+  "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Crect width='100%25' height='100%25' fill='%23f8f3ea'/%3E%3C/svg%3E";
+
 interface SuitData {
-  id: number;
+  id: string;
   name: string;
   "Base color": string;
   Motifs: string[];
@@ -32,6 +36,8 @@ const renderProductGrid = (
   wishlist: number[],
   toggleWishlist: (id: number) => void,
   setShowPopup: React.Dispatch<React.SetStateAction<boolean>>,
+  loadedImages: Set<number>,
+  handleImageLoad: (id: number) => void,
   collectionType?: string,
 ) => {
   if (!suits || suits.length === 0) {
@@ -67,124 +73,144 @@ const renderProductGrid = (
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-      {suits.map((suit, index) => (
-        <div
-          key={`${collectionType || "suit"}-${suit.id}`}
-          className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
-          style={{ animationDelay: `${index * 50}ms` }}
-        >
-          {/* Image Container - Now wrapped with Link */}
-          <Link
-            href={`/product/${suit.id}`}
-            className="block relative overflow-hidden bg-[#f8f3ea] aspect-square"
+      {suits.map((suit, index) => {
+        const isLoaded = loadedImages.has(parseInt(suit.id));
+        return (
+          <div
+            key={`${collectionType || "suit"}-${suit.id}`}
+            className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+            style={{ animationDelay: `${index * 50}ms` }}
           >
-            {suit.image ? (
-              <Image
-                src={suit.image}
-                alt={suit.name || "Suit"}
-                fill
-                className="object-cover group-hover:scale-110 transition-transform duration-700 brightness-110"
-                sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-              />
-            ) : (
-              <div className="w-full h-full flex items-center justify-center bg-gray-100">
-                <span className="text-gray-400">No Image</span>
-              </div>
-            )}
-
-            {/* Discount Badge */}
-            {suit.discount && suit.discount > 0 && (
-              <span className="absolute top-3 left-3 px-3 py-1 bg-gradient-to-r from-[#C49B5C] to-[#8B6B3D] text-white text-xs font-semibold rounded-full shadow-lg">
-                {suit.discount}% OFF
-              </span>
-            )}
-            <button
-              title="Add to wishlist"
-              onClick={(e) => {
-                e.preventDefault(); // Prevent link navigation
-                toggleWishlist(suit.id);
-              }}
-              className="absolute top-3 right-3 p-2 bg-white/90 hover:bg-white rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-10"
+            {/* Image Container - Now wrapped with Link */}
+            <Link
+              href={`/product/${suit.id}`}
+              className="block relative overflow-hidden bg-[#f8f3ea] aspect-square"
             >
-              <Heart
-                className={`transition-colors ${
-                  wishlist.includes(suit.id)
-                    ? "fill-red-500 text-red-500"
-                    : "text-[#2C1810] hover:text-red-500"
-                }`}
-                size={18}
-              />
-            </button>
+              {/* Skeleton Loader */}
+              {!isLoaded && (
+                <div className="absolute inset-0 bg-[#f8f3ea] animate-pulse z-10">
+                  <div className="w-full h-full bg-gradient-to-r from-[#f8f3ea] via-[#ede5d8] to-[#f8f3ea] bg-[length:200%_100%] animate-shimmer"></div>
+                </div>
+              )}
 
-            {/* Quick Add Button */}
-            <button
-              onClick={(e) => {
-                e.preventDefault(); // Prevent link navigation
-                setShowPopup(true);
-              }}
-              className="absolute bottom-4 left-1/2 -translate-x-1/2 px-6 py-2.5 bg-white/95 hover:bg-[#C49B5C] text-[#2C1810] hover:text-white rounded-full text-sm font-medium transition-all duration-300 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 shadow-lg z-10"
-            >
-              <div className="flex items-center gap-2">
-                <ShoppingBag size={16} />
-                Add to Cart
-              </div>
-            </button>
-          </Link>
+              {suit.image ? (
+                <Image
+                  src={suit.image || "/placeholder.png"}
+                  alt={suit.name || "Suit"}
+                  fill
+                  placeholder="blur"
+                  blurDataURL={BLUR_DATA_URL}
+                  className={`object-cover group-hover:scale-110 transition-all duration-700 brightness-110 ${
+                    isLoaded ? "opacity-100" : "opacity-0"
+                  }`}
+                  onLoad={() => handleImageLoad(parseInt(suit.id))}
+                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                />
+              ) : (
+                <div className="w-full h-full flex items-center justify-center bg-gray-100">
+                  <span className="text-gray-400">No Image</span>
+                </div>
+              )}
 
-          {/* Product Info */}
-          <div className="p-4 space-y-2">
-            <Link href={`/product/${suit.id}`}>
-              <h3 className="font-semibold text-[#2C1810] hover:text-[#8B6B3D] transition-colors text-base leading-tight line-clamp-1">
-                {suit.name || "Unnamed Suit"}
-              </h3>
+              {/* Discount Badge */}
+              {suit.discount && suit.discount > 0 && (
+                <span className="absolute top-3 left-3 px-3 py-1 bg-gradient-to-r from-[#C49B5C] to-[#8B6B3D] text-white text-xs font-semibold rounded-full shadow-lg z-20">
+                  {suit.discount}% OFF
+                </span>
+              )}
+
+              {/* Wishlist Button - Fixed */}
+              <button
+                title="Add to wishlist"
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  toggleWishlist(parseInt(suit.id));
+                }}
+                className="absolute top-3 right-3 p-2 bg-white/90 hover:bg-white rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-20"
+              >
+                <Heart
+                  className={`transition-colors w-5 h-5 ${
+                    wishlist.includes(parseInt(suit.id))
+                      ? "fill-red-500 text-red-500"
+                      : "text-[#2C1810] hover:text-red-500"
+                  }`}
+                />
+              </button>
+
+              {/* Quick Add Button */}
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  setShowPopup(true);
+                }}
+                className="absolute bottom-4 left-1/2 -translate-x-1/2 px-6 py-2.5 bg-white/95 hover:bg-[#C49B5C] text-[#2C1810] hover:text-white rounded-full text-sm font-medium transition-all duration-300 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 shadow-lg z-20"
+              >
+                <div className="flex items-center gap-2">
+                  <ShoppingBag size={16} />
+                  Add to Cart
+                </div>
+              </button>
             </Link>
 
-            {suit.category && (
-              <span className="inline-block text-xs text-gray-400 bg-gray-50 px-2 py-0.5 rounded-full">
-                {suit.category}
-              </span>
-            )}
+            {/* Product Info */}
+            <div className="p-4 space-y-2">
+              <Link href={`/product/${suit.id}`}>
+                <h3 className="font-semibold text-[#2C1810] hover:text-[#8B6B3D] transition-colors text-base leading-tight line-clamp-1">
+                  {suit.name || "Unnamed Suit"}
+                </h3>
+              </Link>
 
-            <div className="flex items-center gap-2">
-              <div className="flex items-center">
-                <Star className="fill-[#C49B5C] text-[#C49B5C]" size={14} />
-                <span className="text-sm font-medium text-[#2C1810] ml-1">
-                  {suit.rating || 4.5}
+              {suit.category && (
+                <span className="inline-block text-xs text-gray-400 bg-gray-50 px-2 py-0.5 rounded-full">
+                  {suit.category}
+                </span>
+              )}
+
+              <div className="flex items-center gap-2">
+                <div className="flex items-center">
+                  <Star className="fill-[#C49B5C] text-[#C49B5C]" size={14} />
+                  <span className="text-sm font-medium text-[#2C1810] ml-1">
+                    {suit.rating || 4.5}
+                  </span>
+                </div>
+                <span className="text-xs text-gray-400">
+                  {suit.reviews || 0} Reviews
                 </span>
               </div>
-              <span className="text-xs text-gray-400">
-                {suit.reviews || 0} Reviews
-              </span>
-            </div>
 
-            <div className="flex items-center gap-2 pt-1">
-              <CurrencyPrice
+              <div className="flex items-center gap-2 pt-1">
+                <CurrencyPrice
+                  priceINR={suit.price || suit.aprice || 0}
+                  className="text-xl font-bold text-[#2C1810]"
+                  size="lg"
+                />
+
+                {suit.aprice && suit.aprice > (suit.price || 0) && (
+                  <>
+                    <CurrencyPrice
+                      priceINR={suit.aprice}
+                      className="text-sm text-gray-400 line-through"
+                      size="sm"
+                    />
+                    <span className="text-xs text-green-600 font-semibold">
+                      Save{" "}
+                      {Math.round(
+                        ((suit.aprice - (suit.price || 0)) / suit.aprice) * 100,
+                      )}
+                      %
+                    </span>
+                  </>
+                )}
+              </div>
+              <PriceWithCurrencyHint
                 priceINR={suit.price || suit.aprice || 0}
-                className="text-xl font-bold text-[#2C1810]"
-                size="lg"
               />
-
-              {suit.aprice && suit.aprice > (suit.price || 0) && (
-                <>
-                  <CurrencyPrice
-                    priceINR={suit.aprice}
-                    className="text-sm text-gray-400 line-through"
-                    size="sm"
-                  />
-                  <span className="text-xs text-green-600 font-semibold">
-                    Save{" "}
-                    {Math.round(
-                      ((suit.aprice - (suit.price || 0)) / suit.aprice) * 100,
-                    )}
-                    %
-                  </span>
-                </>
-              )}
             </div>
-            <PriceWithCurrencyHint priceINR={suit.price || suit.aprice || 0} />
           </div>
-        </div>
-      ))}
+        );
+      })}
     </div>
   );
 };
@@ -208,6 +234,8 @@ export default function SuitPage() {
   const [showPopup, setShowPopup] = useState(false);
   const [wishlist, setWishlist] = useState<number[]>([]);
   const { isLoading } = useCurrency();
+  // Add state for image loading
+  const [loadedImages, setLoadedImages] = useState<Set<number>>(new Set());
 
   // Initialize loading based on presence of data to avoid synchronous setState in effect
   const hasDataInitially =
@@ -228,7 +256,12 @@ export default function SuitPage() {
     ? suitsData.suits
     : [];
 
-  // Toggle wishlist
+  // Handle image load
+  const handleImageLoad = (id: number) => {
+    setLoadedImages((prev) => new Set(prev).add(id));
+  };
+
+  // Toggle wishlist - Fixed with proper type handling
   const toggleWishlist = (id: number) => {
     setWishlist((prev) =>
       prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id],
@@ -343,6 +376,8 @@ export default function SuitPage() {
                 wishlist,
                 toggleWishlist,
                 setShowPopup,
+                loadedImages,
+                handleImageLoad,
                 "chanderi",
               )}
             </section>
@@ -368,7 +403,7 @@ export default function SuitPage() {
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-light text-[#2C1810]">
                 <span className="font-serif italic">Cotton Suit</span> with
-                Jorjat Dupatta
+                Georgette Dupatta
               </h2>
 
               <p className="text-gray-500 mt-2 hidden md:block">
@@ -382,6 +417,8 @@ export default function SuitPage() {
                 wishlist,
                 toggleWishlist,
                 setShowPopup,
+                loadedImages,
+                handleImageLoad,
                 "cotton",
               )}
             </section>
@@ -393,7 +430,7 @@ export default function SuitPage() {
           chanderiSuits.length === 0 &&
           cottonSuits.length === 0 && (
             <div className="text-center py-20 bg-white rounded-3xl shadow-lg">
-              <div className="text-7xl mb-4">👗</div>
+              <div className="text-7xl mb-4">😕</div>
               <h3 className="text-2xl font-semibold text-[#2C1810] mb-2">
                 No Suits Available
               </h3>

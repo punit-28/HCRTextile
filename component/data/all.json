@@ -1,7 +1,7 @@
 {
   "suit": [
     {
-      "id": "432ce2ab-c7f9-471e-bd10-22e2bd68d521",
+      "id": 1,
       "name": "Bagru Print Chanderi Suit",
       "Base color": "The elegant cream / off-white base gives the suit a soft, earthy appearance that beautifully reflects the timeless charm of traditional Bagru hand block printing.",
       "Motifs": [
@@ -13,50 +13,58 @@
         "The decorative black printed borders enhance the handcrafted Bagru aesthetic while giving the design a well-balanced look."
       ],
       "Contrast Play": "The striking combination of cream, black, rust red, and subtle golden accents creates a bold yet elegant contrast, making the traditional motifs stand out beautifully.",
-      "aprice": 1750,
-      "price": 1400,
-      "discount": 20,
+      "aprice": 1299,
+      "price": 899,
+      "discount": 30,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782571218/1_phhd64.jpg",
       "category": "Women",
       "rating": 4.5,
       "reviews": 13
     },
     {
-      "id": "cbe8b592-e09b-4afd-9d9f-4f6d33455980",
+      "id": 2,
       "name": "Bagru Print Chanderi Suit",
       "Base color": "The elegant cream / off-white base offers a soft, earthy canvas that beautifully highlights the timeless artistry of traditional Bagru hand block printing.",
+
       "Motifs": [
         "The body features delicate black floral vine patterns that create a graceful and sophisticated all-over design.",
         "The pallu and lower border showcase bold rust-red floral block prints inspired by traditional Bagru craftsmanship, adding depth and cultural richness."
       ],
+
       "Border Detailing": [
         "The vibrant rust-red border with golden zari-style woven detailing lends a festive and premium finish.",
         "The geometric black diamond borders and layered striped patterns frame the saree beautifully, enhancing its handcrafted appeal."
       ],
+
       "Contrast Play": "The harmonious blend of cream, black, rust red, and subtle golden accents creates a timeless contrast that highlights every traditional motif with elegance.",
-      "aprice": 1750,
-      "price": 1400,
-      "discount": 20,
+
+      "aprice": 2499,
+      "price": 1899,
+      "discount": 24,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782571221/2_torjom.jpg",
       "category": "Women",
       "rating": 4.8,
       "reviews": 8
     },
     {
-      "id": "baf60679-60f6-49ae-9fd1-deb4b7605406",
+      "id": 3,
       "name": "Bagru Print Chanderi Suit",
       "Base color": "The elegant cream / off-white base creates a soft, earthy canvas that beautifully showcases the timeless beauty of traditional Bagru hand block printing.",
+
       "Motifs": [
         "The body features delicate black floral vine motifs that add a graceful and sophisticated all-over texture.",
         "The pallu and lower section are adorned with large beige floral block prints on a rich rust-red background, creating a bold traditional statement."
       ],
+
       "Border Detailing": [
         "The vibrant rust-red border with golden zari-style woven detailing lends a festive and premium finish.",
         "The geometric black diamond borders and layered striped patterns frame the saree beautifully, enhancing its handcrafted appeal."
       ],
+
       "Contrast Play": "The harmonious combination of cream, black, rust red, beige floral motifs, and subtle golden accents creates a striking traditional contrast with timeless elegance.",
-      "aprice": 1750,
-      "price": 1400,
+
+      "aprice": 999,
+      "price": 799,
       "discount": 20,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782571220/3_uosycq.jpg",
       "category": "Women",
@@ -64,178 +72,211 @@
       "reviews": 13
     },
     {
-      "id": "fa3ca72f-4acd-4f1c-9395-14abd0ce45fa",
+      "id": 4,
       "name": "Bagru Print Chanderi Suit",
       "Base color": "The elegant cream / off-white base offers a soft, earthy backdrop that beautifully reflects the timeless appeal of traditional Bagru hand block printing.",
+
       "Motifs": [
         "The body features vertical wavy stripe patterns that create a clean, graceful, and elongated visual effect.",
         "The pallu and lower section showcase repeating leaf-inspired block motifs in rust red, complemented by bold black botanical patterns for a rich handcrafted look."
       ],
+
       "Border Detailing": [
         "The vibrant rust-red border with golden zari-style woven detailing adds a festive and premium finish.",
         "The geometric black diamond borders and bold botanical bands beautifully frame the saree, enhancing its authentic handcrafted character."
       ],
+
       "Contrast Play": "The harmonious blend of cream, black, rust red, and subtle golden accents creates a bold yet elegant contrast, allowing every traditional motif to stand out beautifully.",
-      "aprice": 1750,
-      "price": 1400,
-      "discount": 20,
+
+      "aprice": 1499,
+      "price": 1124,
+      "discount": 25,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782571221/4_z8ywzq.jpg",
       "category": "Women",
       "rating": 4.6,
       "reviews": 17
     },
     {
-      "id": "be595dab-020e-48b9-ac92-108f51b9f0ce",
+      "id": 5,
       "name": "Bagru Print Chanderi Suit",
       "Base color": "The elegant cream / off-white base creates a soft, earthy backdrop that beautifully reflects the timeless charm of traditional Bagru hand block printing.",
+
       "Motifs": [
         "The body features fine vertical wavy stripe patterns that lend the saree a graceful, elongated, and elegant appearance.",
         "The pallu and lower section showcase intricate beige floral vine motifs on a rich rust-red background, adding depth, heritage, and artistic beauty."
       ],
+
       "Border Detailing": [
         "The vibrant rust-red border with golden zari-style woven detailing lends a festive and premium finish.",
         "The bold black geometric diamond borders and botanical leaf bands frame the saree beautifully, enhancing its authentic handcrafted appeal."
       ],
+
       "Contrast Play": "The elegant blend of cream, black, rust red, beige floral motifs, and subtle golden accents creates a timeless contrast that highlights every traditional Bagru pattern beautifully.",
-      "aprice": 1750,
-      "price": 1400,
-      "discount": 20,
+
+      "aprice": 1299,
+      "price": 899,
+      "discount": 30,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782571222/5_uzu1mo.jpg",
       "category": "Women",
-      "rating": 4.3,
+      "rating": 4.6,
       "reviews": 9
     },
     {
-      "id": "c8890fa4-a0fc-4475-8b14-f716b8f2c25b",
+      "id": 6,
       "name": "Bagru Print Chanderi Suit",
       "Base color": "The elegant cream / off-white base provides a soft, earthy canvas that beautifully reflects the timeless artistry of traditional Bagru hand block printing.",
+
       "Motifs": [
         "The body features fine vertical wavy stripe patterns that create a graceful, elongated, and contemporary traditional look.",
         "The pallu and lower section showcase repeating beige floral booti motifs on a rich rust-red background, adding depth, heritage, and artistic elegance."
       ],
+
       "Border Detailing": [
         "The vibrant rust-red border with golden zari-style woven detailing lends a festive and premium finish.",
         "The decorative black vine-inspired borders, geometric zigzag patterns, and layered striped accents beautifully frame the saree with an authentic handcrafted appeal."
       ],
+
       "Contrast Play": "The elegant combination of cream, black, rust red, beige floral bootis, and subtle golden accents creates a striking traditional contrast that highlights every handcrafted Bagru motif beautifully.",
-      "aprice": 1750,
-      "price": 1400,
-      "discount": 20,
+
+      "aprice": 1299,
+      "price": 899,
+      "discount": 30,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782571223/6_ptjypp.jpg",
       "category": "Women",
       "rating": 4.6,
       "reviews": 12
     },
     {
-      "id": "dc244a3e-16b7-4896-93f9-4615a7de1248",
+      "id": 7,
       "name": "Bagru Print Chanderi Suit",
       "Base color": "The elegant cream / off-white base creates a soft, earthy canvas that beautifully reflects the timeless charm of traditional Bagru hand block printing.",
+
       "Motifs": [
         "The body features delicate rust-red spiral and dotted booti patterns that create a light, graceful, and balanced appearance.",
         "The lower section showcases bold black floral and leaf-inspired block motifs along with small repeating bootis, adding depth and a rich handcrafted character."
       ],
+
       "Border Detailing": [
         "The vibrant rust-red border with golden zari-style woven detailing lends a festive and premium finish.",
         "The decorative black vine-inspired borders, botanical leaf patterns, and layered printed bands beautifully frame the saree with authentic Bagru craftsmanship."
       ],
+
       "Contrast Play": "The harmonious combination of cream, black, rust red, and subtle golden accents creates a timeless traditional contrast, allowing every handcrafted motif to stand out with elegance.",
-      "aprice": 1750,
-      "price": 1400,
-      "discount": 20,
+
+      "aprice": 1299,
+      "price": 899,
+      "discount": 30,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782571225/7_glfeph.jpg",
       "category": "Women",
-      "rating": 4.1,
+      "rating": 4.6,
       "reviews": 15
     },
     {
-      "id": "e31f9d2d-00f8-4b4a-9c94-a552dfc2e72c",
+      "id": 8,
       "name": "Bagru Print Chanderi Suit",
       "Base color": "The elegant cream / off-white base creates a soft, earthy canvas that beautifully highlights the timeless artistry of traditional Bagru hand block printing.",
+
       "Motifs": [
         "The body features delicate rust-red floral sunburst motifs paired with traditional geometric patterns, creating a graceful and balanced appearance.",
         "The pallu showcases majestic black paisley and peacock-inspired block prints with intricate floral detailing, adding richness, heritage, and artistic elegance."
       ],
+
       "Border Detailing": [
         "The rich black border with golden zari-style woven detailing lends a festive and premium finish.",
         "The layered geometric bands, ornamental black patterns, and earthy brown stripes beautifully frame the saree, enhancing its handcrafted Bagru appeal."
       ],
+
       "Contrast Play": "The elegant combination of cream, black, rust red, earthy brown, and subtle golden accents creates a striking traditional contrast that highlights the intricate peacock and paisley motifs beautifully.",
-      "aprice": 1750,
-      "price": 1400,
-      "discount": 20,
+
+      "aprice": 1299,
+      "price": 899,
+      "discount": 30,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782797748/IMG-20220518-WA0005_vvp7dr.jpg",
       "category": "Women",
-      "rating": 4.3,
+      "rating": 4.6,
       "reviews": 10
     },
     {
-      "id": "53b327e0-e1ed-40aa-a5a1-d332afe62a1d",
+      "id": 9,
       "name": "Bagru Print Chanderi Suit",
       "Base color": "The elegant cream / off-white base creates a soft, earthy canvas that beautifully showcases the timeless artistry of traditional Bagru hand block printing.",
+
       "Motifs": [
         "The body features fine vertical wavy stripe patterns that create a graceful and elongated appearance with a clean traditional aesthetic.",
         "The pallu and lower section display intricate white floral vine motifs on a mustard-gold background, highlighted by bold royal blue ornamental bands for a rich handcrafted look."
       ],
+
       "Border Detailing": [
         "The luxurious golden zari-style woven border lends the saree a festive and premium finish.",
         "The black geometric diamond borders, decorative printed bands, and royal blue ornamental accents beautifully frame the saree, enhancing its authentic Bagru craftsmanship."
       ],
+
       "Contrast Play": "The elegant blend of cream, black, mustard gold, royal blue, and shimmering golden accents creates a striking traditional contrast, making every handcrafted motif stand out beautifully.",
-      "aprice": 1750,
-      "price": 1400,
-      "discount": 20,
+
+      "aprice": 1299,
+      "price": 899,
+      "discount": 30,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782797749/IMG-20220518-WA0003_ijw4gk.jpg",
       "category": "Women",
-      "rating": 4.9,
+      "rating": 4.6,
       "reviews": 16
     },
+
     {
-      "id": "50d03df1-2a96-4d0e-ba77-f4952d16af74",
+      "id": 10,
       "name": "Bagru Print Chanderi Suit",
       "Base color": "The elegant cream / off-white base creates a soft, earthy canvas that beautifully reflects the timeless craftsmanship of traditional Bagru hand block printing.",
+
       "Motifs": [
         "The body features fine rust-red wavy stripe patterns that create a graceful and elongated visual appeal.",
         "The pallu and lower section showcase dense black floral booti motifs on a cream background, adding depth, traditional richness, and handcrafted elegance."
       ],
+
       "Border Detailing": [
         "The rich black border with golden zari-style woven detailing lends the saree a festive and premium finish.",
         "The geometric rust-red diamond borders, decorative printed bands, and subtle golden accents beautifully frame the saree with an authentic Bagru aesthetic."
       ],
+
       "Contrast Play": "The elegant blend of cream, black, rust red, and shimmering golden accents creates a striking traditional contrast, allowing the handcrafted motifs and borders to stand out beautifully.",
-      "aprice": 1750,
-      "price": 1400,
-      "discount": 20,
+
+      "aprice": 1299,
+      "price": 899,
+      "discount": 30,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782797748/IMG-20220518-WA0001_eznenh.jpg",
       "category": "Women",
-      "rating": 5.0,
+      "rating": 4.6,
       "reviews": 12
     },
     {
-      "id": "21179f40-b2b9-4b78-aef6-681453b2a1e1",
+      "id": 11,
       "name": "Bagru Print Chanderi Suit",
       "Base color": "The elegant cream / off-white base creates a soft, earthy canvas that beautifully showcases the timeless charm of traditional Bagru hand block printing.",
+
       "Motifs": [
         "The body features bold rust-red paisley-inspired block motifs with delicate dotted accents, creating a graceful and eye-catching traditional look.",
         "The pallu and lower section showcase dense black floral booti patterns on a deep black background, adding richness, depth, and handcrafted elegance."
       ],
+
       "Border Detailing": [
         "The rich black border with golden zari-style woven detailing lends the saree a festive and premium finish.",
         "The geometric rust-red diamond borders, bold zigzag patterns, and decorative printed bands beautifully frame the saree, enhancing its authentic Bagru craftsmanship."
       ],
+
       "Contrast Play": "The elegant blend of cream, black, rust red, and shimmering golden accents creates a striking traditional contrast, allowing the paisley motifs and floral bootis to stand out beautifully.",
-      "aprice": 1750,
-      "price": 1400,
-      "discount": 20,
+
+      "aprice": 1299,
+      "price": 899,
+      "discount": 30,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782797748/IMG-20220518-WA0002_dhvr8r.jpg",
       "category": "Women",
-      "rating": 4.4,
+      "rating": 4.6,
       "reviews": 13
     }
   ],
   "suits": [
     {
-      "id": "548c81eb-3141-4588-940c-5247bbf40f39",
-      "name": "Bagru Print Cotton Suit with Kota Doria Dupatta",
+      "id": 101,
+      "name": "Bagru Print Cotton Suit with Jorjhat Dupatta",
       "Base color": "The cream / off-white base gives a natural and organic feel — a signature element of authentic Bagru prints.",
       "Motifs": [
         "The small spiral and dotted booti patterns on the upper section create a soft, graceful texture",
@@ -246,713 +287,817 @@
         "The golden zari-style pattern enhances the richness and premium look."
       ],
       "Contrast Play": "The black and cream contrast is striking, making the patterns stand out beautifully even from a distance.",
-      "aprice": 2000,
-      "price": 1500,
-      "discount": 25,
+      "aprice": 1299,
+      "price": 899,
+      "discount": 30,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782568325/2_tv1yei.jpg",
       "rating": 4.6,
-      "reviews": 12,
       "category": "Women"
     },
     {
-      "id": "91096a5a-2a50-4efb-80a6-8d63ba25c69f",
-      "name": "Bagru Print Cotton Suit with Kota Doria Dupatta",
-      "Base color": "The vibrant rust-red cotton fabric is beautifully paired with a cream-toned Kota Doria dupatta featuring earthy block prints, creating a timeless Bagru-inspired ethnic look.",
+      "id": 102,
+      "name": "Bagru Print Cotton Suit with Jorjhat Dupatta",
+      "Base color": "The vibrant rust-red cotton fabric is beautifully paired with a cream-toned Jorjhat dupatta featuring earthy block prints, creating a timeless Bagru-inspired ethnic look.",
+
       "Motifs": [
         "The cotton suit is adorned with repeating beige paisley-inspired booti motifs that bring a graceful handcrafted appeal.",
-        "The lightweight Kota Doria dupatta features geometric floral block prints with layered traditional bands, adding depth and elegant visual texture."
+        "The lightweight Jorjhat dupatta features geometric floral block prints with layered traditional bands, adding depth and elegant visual texture."
       ],
+
       "Border Detailing": [
         "The suit is finished with a bold black floral border that enhances its classic Bagru character.",
-        "The Kota Doria dupatta is framed with intricate floral vine borders and earthy striped detailing, giving the ensemble a refined handcrafted finish."
+        "The Jorjhat dupatta is framed with intricate floral vine borders and earthy striped detailing, giving the ensemble a refined handcrafted finish."
       ],
-      "Contrast Play": "The rich combination of rust red, cream, black, and earthy brown creates a striking traditional contrast, while the airy Kota Doria dupatta adds effortless elegance and graceful flow.",
-      "aprice": 2000,
-      "price": 1500,
-      "discount": 25,
-      "reviews": 15,
+
+      "Contrast Play": "The rich combination of rust red, cream, black, and earthy brown creates a striking traditional contrast, while the airy Jorjhat dupatta adds effortless elegance and graceful flow.",
+
+      "aprice": 2499,
+      "price": 1899,
+      "discount": 24,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782568312/3_cbkxik.jpg",
       "category": "Women",
       "rating": 4.8
     },
     {
-      "id": "24dbeae1-f31c-465c-87f2-621f8a43b3c9",
-      "name": "Bagru Print Cotton Suit with Kota Doria Dupatta",
-      "Base color": "The elegant cream / off-white cotton fabric is beautifully paired with an earthy beige Kota Doria dupatta, creating a graceful ethnic ensemble inspired by traditional Bagru hand block printing.",
+      "id": 103,
+      "name": "Bagru Print Cotton Suit with Jorjhat Dupatta",
+      "Base color": "The elegant cream / off-white cotton fabric is beautifully paired with an earthy beige Jorjhat dupatta, creating a graceful ethnic ensemble inspired by traditional Bagru hand block printing.",
+
       "Motifs": [
         "The cotton suit features large mustard-yellow floral block motifs with delicate black vine detailing, offering a vibrant handcrafted appeal.",
-        "The lightweight Kota Doria dupatta showcases dotted block-print patterns and intricate floral paisley motifs, enriched with layered traditional borders for added elegance."
+        "The lightweight Jorjhat dupatta showcases dotted block-print patterns and intricate floral paisley motifs, enriched with layered traditional borders for added elegance."
       ],
+
       "Border Detailing": [
         "The suit is finished with a bold black geometric border that enhances its classic Bagru character.",
-        "The Kota Doria dupatta features ornate floral borders, geometric printed bands, and subtle golden edging, giving the ensemble a refined handcrafted finish."
+        "The Jorjhat dupatta features ornate floral borders, geometric printed bands, and subtle golden edging, giving the ensemble a refined handcrafted finish."
       ],
-      "Contrast Play": "The harmonious blend of cream, mustard yellow, black, earthy beige, and subtle golden accents creates a sophisticated traditional contrast, while the airy Kota Doria dupatta adds graceful movement and timeless elegance.",
-      "aprice": 2000,
-      "price": 1500,
-      "discount": 25,
-      "reviews": 10,
+
+      "Contrast Play": "The harmonious blend of cream, mustard yellow, black, earthy beige, and subtle golden accents creates a sophisticated traditional contrast, while the airy Jorjhat dupatta adds graceful movement and timeless elegance.",
+
+      "aprice": 999,
+      "price": 799,
+      "discount": 20,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782568295/20_jeltba.jpg",
       "category": "Women",
-      "rating": 4.2
+      "rating": 4.6
     },
     {
-      "id": "d961c006-b243-4341-97b9-8a66820f0305",
-      "name": "Bagru Print Cotton Suit with Kota Doria Dupatta",
-      "Base color": "The vibrant coral-red cotton fabric is beautifully complemented by a cream and earthy-toned Kota Doria dupatta, creating an elegant ethnic ensemble inspired by traditional Bagru hand block printing.",
+      "id": 104,
+      "name": "Bagru Print Cotton Suit with Jorjhat Dupatta",
+      "Base color": "The vibrant coral-red cotton fabric is beautifully complemented by a cream and earthy-toned Jorjhat dupatta, creating an elegant ethnic ensemble inspired by traditional Bagru hand block printing.",
+
       "Motifs": [
         "The cotton suit features large white floral block motifs connected with graceful leafy vines, giving the fabric a rich handcrafted appearance.",
-        "The lightweight Kota Doria dupatta showcases flowing wavy line patterns with intricate floral block-print borders, adding texture and timeless traditional elegance."
+        "The lightweight Jorjhat dupatta showcases flowing wavy line patterns with intricate floral block-print borders, adding texture and timeless traditional elegance."
       ],
+
       "Border Detailing": [
         "The suit is finished with a bold black floral border that enhances its authentic Bagru character.",
-        "The Kota Doria dupatta features layered floral borders, earthy horizontal bands, and subtle rust-red edging, creating a refined handcrafted finish."
+        "The Jorjhat dupatta features layered floral borders, earthy horizontal bands, and subtle rust-red edging, creating a refined handcrafted finish."
       ],
-      "Contrast Play": "The harmonious blend of coral red, cream, black, earthy beige, and subtle rust accents creates a striking traditional contrast, while the airy Kota Doria dupatta adds graceful movement and effortless elegance.",
-      "aprice": 2000,
-      "price": 1500,
+
+      "Contrast Play": "The harmonious blend of coral red, cream, black, earthy beige, and subtle rust accents creates a striking traditional contrast, while the airy Jorjhat dupatta adds graceful movement and effortless elegance.",
+
+      "aprice": 1499,
+      "price": 1124,
       "discount": 25,
-      "reviews": 14,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782568290/16_slyxut.jpg",
       "category": "Women",
-      "rating": 4.4
+      "rating": 4.6
     },
     {
-      "id": "a16acf99-a6c8-40f7-a881-c43e9a8855c5",
-      "name": "Bagru Print Cotton Suit with Kota Doria Dupatta",
-      "Base color": "The deep black cotton fabric is beautifully paired with a cream and blush-toned Kota Doria dupatta, creating a striking traditional ensemble inspired by authentic Bagru hand block printing.",
+      "id": 105,
+      "name": "Bagru Print Cotton Suit with Jorjhat Dupatta",
+      "Base color": "The deep black cotton fabric is beautifully paired with a cream and blush-toned Jorjhat dupatta, creating a striking traditional ensemble inspired by authentic Bagru hand block printing.",
+
       "Motifs": [
         "The cotton suit features repeating rust-red and beige paisley-inspired booti motifs that add elegance and a handcrafted ethnic charm.",
-        "The lightweight Kota Doria dupatta is adorned with floral block-print patterns, decorative circular motifs, and intricate traditional borders that enhance its graceful appeal."
+        "The lightweight Jorjhat dupatta is adorned with floral block-print patterns, decorative circular motifs, and intricate traditional borders that enhance its graceful appeal."
       ],
+
       "Border Detailing": [
         "The suit is finished with a bold rust-red floral border framed by black accents, giving it a classic Bagru finish.",
-        "The Kota Doria dupatta features ornate floral borders, layered earthy-toned printed bands, and a subtle black-gold edging that adds richness and sophistication."
+        "The Jorjhat dupatta features ornate floral borders, layered earthy-toned printed bands, and a subtle black-gold edging that adds richness and sophistication."
       ],
-      "Contrast Play": "The bold combination of black, cream, rust red, earthy beige, and subtle golden accents creates a timeless traditional contrast, while the soft Kota Doria dupatta adds fluidity and refined elegance to the ensemble.",
-      "aprice": 2000,
-      "price": 1500,
-      "discount": 25,
-      "reviews": 14,
+
+      "Contrast Play": "The bold combination of black, cream, rust red, earthy beige, and subtle golden accents creates a timeless traditional contrast, while the soft Jorjhat dupatta adds fluidity and refined elegance to the ensemble.",
+
+      "aprice": 1299,
+      "price": 899,
+      "discount": 30,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782568252/22_tucxyg.jpg",
       "category": "Women",
-      "rating": 4.3
+      "rating": 4.6
     },
     {
-      "id": "482115c8-056b-4f09-ab20-0dda4bb179e2",
-      "name": "Bagru Print Cotton Suit with Kota Doria Dupatta",
-      "Base color": "The elegant cream / off-white cotton fabric is beautifully complemented by an earthy beige Kota Doria dupatta, creating a graceful traditional ensemble inspired by authentic Bagru hand block printing.",
+      "id": 106,
+      "name": "Bagru Print Cotton Suit with Jorjhat Dupatta",
+      "Base color": "The elegant cream / off-white cotton fabric is beautifully complemented by an earthy beige Jorjhat dupatta, creating a graceful traditional ensemble inspired by authentic Bagru hand block printing.",
+
       "Motifs": [
         "The cotton suit features intricate mustard-yellow floral motifs with leafy vines spread across the fabric, offering a timeless handcrafted appeal.",
-        "The lightweight Kota Doria dupatta showcases delicate floral sunburst block prints, decorative botanical panels, and layered traditional borders that enhance its elegant ethnic charm."
+        "The lightweight Jorjhat dupatta showcases delicate floral sunburst block prints, decorative botanical panels, and layered traditional borders that enhance its elegant ethnic charm."
       ],
+
       "Border Detailing": [
         "The suit is finished with a bold black geometric border that beautifully highlights the traditional Bagru craftsmanship.",
-        "The Kota Doria dupatta features ornate floral borders, geometric printed bands, earthy botanical motifs, and subtle golden edging for a refined handcrafted finish."
+        "The Jorjhat dupatta features ornate floral borders, geometric printed bands, earthy botanical motifs, and subtle golden edging for a refined handcrafted finish."
       ],
-      "Contrast Play": "The harmonious blend of cream, mustard yellow, olive green, black, earthy beige, and subtle golden accents creates a sophisticated traditional contrast, while the airy Kota Doria dupatta adds graceful flow and timeless elegance.",
-      "aprice": 2000,
-      "price": 1500,
-      "discount": 25,
-      "reviews": 12,
+
+      "Contrast Play": "The harmonious blend of cream, mustard yellow, olive green, black, earthy beige, and subtle golden accents creates a sophisticated traditional contrast, while the airy Jorjhat dupatta adds graceful flow and timeless elegance.",
+
+      "aprice": 1199,
+      "price": 799,
+      "discount": 33,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782568161/11_tx2mv3.jpg",
       "category": "Women",
-      "rating": 4.8
+      "rating": 4.6
     },
     {
-      "id": "c2c1d332-a2ba-495a-8c2f-6057c3f4db70",
-      "name": "Bagru Print Cotton Suit with Kota Doria Dupatta",
-      "Base color": "The vibrant coral-red cotton fabric is beautifully complemented by a soft beige Kota Doria dupatta, creating an elegant traditional ensemble inspired by authentic Bagru hand block printing.",
+      "id": 107,
+      "name": "Bagru Print Cotton Suit with Jorjhat Dupatta",
+      "Base color": "The vibrant coral-red cotton fabric is beautifully complemented by a soft beige Jorjhat dupatta, creating an elegant traditional ensemble inspired by authentic Bagru hand block printing.",
+
       "Motifs": [
         "The cotton suit features intricate floral vine motifs in white and green, spreading gracefully across the coral-red base for a rich handcrafted appearance.",
-        "The lightweight Kota Doria dupatta showcases bold leafy vine patterns, botanical block prints, and decorative horizontal bands that add depth and timeless ethnic elegance."
+        "The lightweight Jorjhat dupatta showcases bold leafy vine patterns, botanical block prints, and decorative horizontal bands that add depth and timeless ethnic elegance."
       ],
+
       "Border Detailing": [
         "The suit is finished with a bold black floral border that beautifully highlights its classic Bagru craftsmanship.",
-        "The Kota Doria dupatta features ornate floral vine borders, earthy striped panels, botanical motifs, and subtle rust-red edging, giving the ensemble a refined handcrafted finish."
+        "The Jorjhat dupatta features ornate floral vine borders, earthy striped panels, botanical motifs, and subtle rust-red edging, giving the ensemble a refined handcrafted finish."
       ],
-      "Contrast Play": "The harmonious combination of coral red, cream, black, soft green, earthy beige, and subtle rust accents creates a striking traditional contrast, while the airy Kota Doria dupatta adds graceful flow and effortless elegance.",
-      "aprice": 2000,
-      "price": 1500,
-      "discount": 25,
-      "reviews": 12,
+
+      "Contrast Play": "The harmonious combination of coral red, cream, black, soft green, earthy beige, and subtle rust accents creates a striking traditional contrast, while the airy Jorjhat dupatta adds graceful flow and effortless elegance.",
+
+      "aprice": 1099,
+      "price": 749,
+      "discount": 32,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782568155/26_ocw2mv.jpg",
       "category": "Women",
-      "rating": 4.5
+      "rating": 4.6
     },
     {
-      "id": "38826b94-6a07-4708-b593-2c402aa84d9d",
-      "name": "Bagru Print Cotton Suit with Kota Doria Dupatta",
-      "Base color": "The warm mustard-yellow cotton fabric is beautifully paired with a cream and grey-toned Kota Doria dupatta, creating a graceful ethnic ensemble inspired by authentic Bagru hand block printing.",
+      "id": 108,
+      "name": "Bagru Print Cotton Suit with Jorjhat Dupatta",
+      "Base color": "The warm mustard-yellow cotton fabric is beautifully paired with a cream and grey-toned Jorjhat dupatta, creating a graceful ethnic ensemble inspired by authentic Bagru hand block printing.",
+
       "Motifs": [
         "The cotton suit features repeating white leaf-inspired block motifs that lend the fabric a clean, elegant, and handcrafted traditional appeal.",
-        "The lightweight Kota Doria dupatta is adorned with delicate floral vine block prints, complemented by layered striped panels in grey, mustard, and black for a refined ethnic look."
+        "The lightweight Jorjhat dupatta is adorned with delicate floral vine block prints, complemented by layered striped panels in grey, mustard, and black for a refined ethnic look."
       ],
+
       "Border Detailing": [
         "The suit is finished with a bold black floral border that beautifully enhances its classic Bagru craftsmanship.",
-        "The Kota Doria dupatta features ornate floral vine borders, subtle golden edging, and multi-tone striped bands that add richness and a premium handcrafted finish."
+        "The Jorjhat dupatta features ornate floral vine borders, subtle golden edging, and multi-tone striped bands that add richness and a premium handcrafted finish."
       ],
-      "Contrast Play": "The harmonious blend of mustard yellow, cream, black, grey, and subtle golden accents creates a sophisticated traditional contrast, while the airy Kota Doria dupatta adds graceful movement and timeless elegance.",
-      "aprice": 2000,
-      "price": 1500,
-      "discount": 25,
-      "reviews": 12,
+
+      "Contrast Play": "The harmonious blend of mustard yellow, cream, black, grey, and subtle golden accents creates a sophisticated traditional contrast, while the airy Jorjhat dupatta adds graceful movement and timeless elegance.",
+
+      "aprice": 1099,
+      "price": 749,
+      "discount": 32,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782568151/25_g28bs2.jpg",
       "category": "Women",
       "rating": 4.6
     },
     {
-      "id": "7a53286f-da6b-4d81-9d97-74b3a074dc5e",
-      "name": "Bagru Print Cotton Suit with Kota Doria Dupatta",
-      "Base color": "The soft cream cotton fabric is beautifully complemented by an earthy beige Kota Doria dupatta, creating an elegant ethnic ensemble inspired by traditional Bagru hand block printing.",
+      "id": 109,
+      "name": "Bagru Print Cotton Suit with Jorjhat Dupatta",
+      "Base color": "The soft cream cotton fabric is beautifully complemented by an earthy beige Jorjhat dupatta, creating an elegant ethnic ensemble inspired by traditional Bagru hand block printing.",
+
       "Motifs": [
         "The cotton suit features repeating rust-red floral booti motifs arranged in a neat all-over pattern, giving the fabric a graceful handcrafted appeal.",
-        "The lightweight Kota Doria dupatta showcases bold black abstract leaf-inspired block prints, delicate floral bands, and traditional patterned panels that add depth and timeless elegance."
+        "The lightweight Jorjhat dupatta showcases bold black abstract leaf-inspired block prints, delicate floral bands, and traditional patterned panels that add depth and timeless elegance."
       ],
+
       "Border Detailing": [
         "The suit is finished with a striking black ornamental border accented with a rust-red hem, enhancing its authentic Bagru craftsmanship.",
-        "The Kota Doria dupatta features intricate floral vine borders, layered printed bands, and subtle rust-red edging, creating a refined handcrafted finish."
+        "The Jorjhat dupatta features intricate floral vine borders, layered printed bands, and subtle rust-red edging, creating a refined handcrafted finish."
       ],
-      "Contrast Play": "The harmonious blend of cream, rust red, black, earthy beige, and subtle brown accents creates a sophisticated traditional contrast, while the airy Kota Doria dupatta adds graceful movement and effortless elegance.",
-      "aprice": 2000,
-      "price": 1500,
-      "discount": 25,
-      "reviews": 12,
+
+      "Contrast Play": "The harmonious blend of cream, rust red, black, earthy beige, and subtle brown accents creates a sophisticated traditional contrast, while the airy Jorjhat dupatta adds graceful movement and effortless elegance.",
+
+      "aprice": 1099,
+      "price": 749,
+      "discount": 32,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782568147/24_cikfnv.jpg",
       "category": "Women",
       "rating": 4.6
     },
     {
-      "id": "f5629c56-e43f-4cf7-b14d-51c76c7698e9",
-      "name": "Bagru Print Cotton Suit with Kota Doria Dupatta",
-      "Base color": "The rich black cotton fabric is beautifully complemented by a cream and earthy beige Kota Doria dupatta, creating a sophisticated ethnic ensemble inspired by traditional Bagru hand block printing.",
+      "id": 110,
+      "name": "Bagru Print Cotton Suit with Jorjhat Dupatta",
+      "Base color": "The rich black cotton fabric is beautifully complemented by a cream and earthy beige Jorjhat dupatta, creating a sophisticated ethnic ensemble inspired by traditional Bagru hand block printing.",
+
       "Motifs": [
         "The cotton suit features repeating mustard and white paisley-inspired wave motifs that create a bold handcrafted look with timeless traditional appeal.",
-        "The lightweight Kota Doria dupatta showcases delicate spiral block prints, geometric floral panels, and layered ornamental borders, adding elegance and artistic depth."
+        "The lightweight Jorjhat dupatta showcases delicate spiral block prints, geometric floral panels, and layered ornamental borders, adding elegance and artistic depth."
       ],
+
       "Border Detailing": [
         "The suit is finished with a bold black geometric border that enhances its authentic Bagru craftsmanship.",
-        "The Kota Doria dupatta features intricate geometric borders, floral block-print bands, subtle blue highlights, and golden edging, giving the ensemble a premium handcrafted finish."
+        "The Jorjhat dupatta features intricate geometric borders, floral block-print bands, subtle blue highlights, and golden edging, giving the ensemble a premium handcrafted finish."
       ],
-      "Contrast Play": "The striking blend of black, cream, mustard, soft blue, earthy beige, and subtle golden accents creates a rich traditional contrast, while the airy Kota Doria dupatta adds graceful movement and refined elegance.",
-      "aprice": 2000,
-      "price": 1500,
-      "discount": 25,
-      "reviews": 12,
+
+      "Contrast Play": "The striking blend of black, cream, mustard, soft blue, earthy beige, and subtle golden accents creates a rich traditional contrast, while the airy Jorjhat dupatta adds graceful movement and refined elegance.",
+
+      "aprice": 1099,
+      "price": 749,
+      "discount": 32,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782568142/23_uptd1d.jpg",
       "category": "Women",
-      "rating": 4.1
+      "rating": 4.6
     },
     {
-      "id": "e5a174b3-db2f-4d43-9da3-53c82b459154",
-      "name": "Bagru Print Cotton Suit with Kota Doria Dupatta",
-      "Base color": "The vibrant rust-red cotton fabric is beautifully paired with a cream and earthy-toned Kota Doria dupatta, creating a timeless ethnic ensemble inspired by traditional Bagru hand block printing.",
+      "id": 111,
+      "name": "Bagru Print Cotton Suit with Jorjhat Dupatta",
+      "Base color": "The vibrant rust-red cotton fabric is beautifully paired with a cream and earthy-toned Jorjhat dupatta, creating a timeless ethnic ensemble inspired by traditional Bagru hand block printing.",
+
       "Motifs": [
         "The cotton suit features repeating white floral booti motifs with delicate leafy detailing, giving the fabric a graceful handcrafted appeal.",
-        "The lightweight Kota Doria dupatta showcases elegant floral vine block prints, botanical panels, and layered striped patterns that add richness and traditional sophistication."
+        "The lightweight Jorjhat dupatta showcases elegant floral vine block prints, botanical panels, and layered striped patterns that add richness and traditional sophistication."
       ],
+
       "Border Detailing": [
         "The suit is finished with a bold black floral border that beautifully enhances its authentic Bagru craftsmanship.",
-        "The Kota Doria dupatta features intricate floral vine borders, earthy rust-toned striped panels, botanical motifs, and subtle rust-red edging for a premium handcrafted finish."
+        "The Jorjhat dupatta features intricate floral vine borders, earthy rust-toned striped panels, botanical motifs, and subtle rust-red edging for a premium handcrafted finish."
       ],
-      "Contrast Play": "The harmonious blend of rust red, cream, black, earthy beige, and subtle brown accents creates a striking traditional contrast, while the airy Kota Doria dupatta adds graceful movement and elegant drape.",
-      "aprice": 2000,
-      "price": 1500,
-      "discount": 25,
-      "reviews": 12,
+
+      "Contrast Play": "The harmonious blend of rust red, cream, black, earthy beige, and subtle brown accents creates a striking traditional contrast, while the airy Jorjhat dupatta adds graceful movement and elegant drape.",
+
+      "aprice": 1099,
+      "price": 749,
+      "discount": 32,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782568099/21_nqbxg0.jpg",
       "category": "Women",
       "rating": 4.6
     },
     {
-      "id": "783208e6-7b1e-46a1-b088-2727fec086ec",
-      "name": "Bagru Print Cotton Suit with Kota Doria Dupatta",
-      "Base color": "The classic black cotton fabric is beautifully paired with a cream and blush-toned Kota Doria dupatta, creating a graceful ethnic ensemble inspired by authentic Bagru hand block printing.",
+      "id": 112,
+      "name": "Bagru Print Cotton Suit with Jorjhat Dupatta",
+      "Base color": "The classic black cotton fabric is beautifully paired with a cream and blush-toned Jorjhat dupatta, creating a graceful ethnic ensemble inspired by authentic Bagru hand block printing.",
+
       "Motifs": [
         "The cotton suit features repeating white paisley-inspired booti motifs arranged across the black base, giving the fabric a timeless handcrafted appeal.",
-        "The lightweight Kota Doria dupatta showcases bold abstract leaf-inspired block prints, decorative floral panels, and traditional botanical motifs that add richness and elegant visual texture."
+        "The lightweight Jorjhat dupatta showcases bold abstract leaf-inspired block prints, decorative floral panels, and traditional botanical motifs that add richness and elegant visual texture."
       ],
+
       "Border Detailing": [
         "The suit is finished with a vibrant rust-red floral border framed with black accents, enhancing its authentic Bagru craftsmanship.",
-        "The Kota Doria dupatta features intricate floral vine borders, earthy striped bands, botanical motifs, and subtle black edging that provide a refined handcrafted finish."
+        "The Jorjhat dupatta features intricate floral vine borders, earthy striped bands, botanical motifs, and subtle black edging that provide a refined handcrafted finish."
       ],
-      "Contrast Play": "The striking combination of black, cream, rust red, earthy beige, and subtle brown accents creates a bold traditional contrast, while the lightweight Kota Doria dupatta adds graceful movement and timeless elegance.",
-      "aprice": 2000,
-      "price": 1500,
-      "discount": 25,
-      "reviews": 12,
+
+      "Contrast Play": "The striking combination of black, cream, rust red, earthy beige, and subtle brown accents creates a bold traditional contrast, while the lightweight Jorjhat dupatta adds graceful movement and timeless elegance.",
+
+      "aprice": 1099,
+      "price": 749,
+      "discount": 32,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782568091/6_uuix8c.jpg",
       "category": "Women",
-      "rating": 4.9
+      "rating": 4.6
     },
     {
-      "id": "9869983f-1d6d-44ac-9d2a-6ecf9d551548",
-      "name": "Bagru Print Cotton Suit with Kota Doria Dupatta",
-      "Base color": "The vibrant mustard-yellow cotton fabric is beautifully paired with a cream and golden-toned Kota Doria dupatta, creating a cheerful yet elegant ensemble inspired by traditional Bagru hand block printing.",
+      "id": 113,
+      "name": "Bagru Print Cotton Suit with Jorjhat Dupatta",
+      "Base color": "The vibrant mustard-yellow cotton fabric is beautifully paired with a cream and golden-toned Jorjhat dupatta, creating a cheerful yet elegant ensemble inspired by traditional Bagru hand block printing.",
+
       "Motifs": [
         "The cotton suit features intricate blue floral and paisley-inspired block motifs connected with delicate leafy vines, giving the fabric a rich handcrafted appeal.",
-        "The lightweight Kota Doria dupatta showcases elegant black leafy vine patterns, large floral block-print panels, and circular traditional motifs that add depth and timeless ethnic charm."
+        "The lightweight Jorjhat dupatta showcases elegant black leafy vine patterns, large floral block-print panels, and circular traditional motifs that add depth and timeless ethnic charm."
       ],
+
       "Border Detailing": [
         "The suit is finished with a bold black geometric border that beautifully enhances its authentic Bagru craftsmanship.",
-        "The Kota Doria dupatta features decorative vine borders, layered floral panels, circular printed bands, and subtle golden edging, giving the ensemble a refined handcrafted finish."
+        "The Jorjhat dupatta features decorative vine borders, layered floral panels, circular printed bands, and subtle golden edging, giving the ensemble a refined handcrafted finish."
       ],
-      "Contrast Play": "The harmonious blend of mustard yellow, cream, royal blue, black, and subtle golden accents creates a vibrant traditional contrast, while the airy Kota Doria dupatta adds graceful movement and effortless elegance.",
-      "aprice": 2000,
-      "price": 1500,
-      "discount": 25,
-      "reviews": 14,
+
+      "Contrast Play": "The harmonious blend of mustard yellow, cream, royal blue, black, and subtle golden accents creates a vibrant traditional contrast, while the airy Jorjhat dupatta adds graceful movement and effortless elegance.",
+
+      "aprice": 1099,
+      "price": 749,
+      "discount": 32,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782568090/19_lyc8yo.jpg",
       "category": "Women",
-      "rating": 5.0
+      "rating": 4.6
     },
     {
-      "id": "c864ffde-ca0f-4add-a755-288f88ec80e3",
-      "name": "Bagru Print Cotton Suit with Kota Doria Dupatta",
-      "Base color": "The earthy olive-green cotton fabric is beautifully paired with a cream and olive-toned Kota Doria dupatta, creating a graceful ethnic ensemble inspired by traditional Bagru hand block printing.",
+      "id": 114,
+      "name": "Bagru Print Cotton Suit with Jorjhat Dupatta",
+      "Base color": "The earthy olive-green cotton fabric is beautifully paired with a cream and olive-toned Jorjhat dupatta, creating a graceful ethnic ensemble inspired by traditional Bagru hand block printing.",
+
       "Motifs": [
         "The cotton suit features intricate mustard-yellow and white floral vine motifs that spread elegantly across the olive-green base, offering a rich handcrafted appeal.",
-        "The lightweight Kota Doria dupatta showcases delicate geometric floral block prints, traditional tree-inspired panels, and layered ornamental bands that add depth and timeless ethnic charm."
+        "The lightweight Jorjhat dupatta showcases delicate geometric floral block prints, traditional tree-inspired panels, and layered ornamental bands that add depth and timeless ethnic charm."
       ],
+
       "Border Detailing": [
         "The suit is finished with a bold black geometric border that beautifully enhances its authentic Bagru craftsmanship.",
-        "The Kota Doria dupatta features decorative geometric borders, intricate floral bands, tree-inspired motifs, and subtle golden edging, giving the ensemble a refined handcrafted finish."
+        "The Jorjhat dupatta features decorative geometric borders, intricate floral bands, tree-inspired motifs, and subtle golden edging, giving the ensemble a refined handcrafted finish."
       ],
-      "Contrast Play": "The harmonious blend of olive green, cream, mustard yellow, black, earthy beige, and subtle golden accents creates a sophisticated traditional contrast, while the airy Kota Doria dupatta adds graceful movement and elegant drape.",
-      "aprice": 2000,
-      "price": 1500,
-      "discount": 25,
-      "reviews": 14,
 
+      "Contrast Play": "The harmonious blend of olive green, cream, mustard yellow, black, earthy beige, and subtle golden accents creates a sophisticated traditional contrast, while the airy Jorjhat dupatta adds graceful movement and elegant drape.",
+
+      "aprice": 1099,
+      "price": 749,
+      "discount": 32,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782568085/18_p3gj1k.jpg",
       "category": "Women",
-      "rating": 4.8
+      "rating": 4.6
     },
     {
-      "id": "2c138563-4686-4d1c-9516-4362d21e2951",
-      "name": "Bagru Print Cotton Suit with Kota Doria Dupatta",
-      "Base color": "The elegant cream cotton fabric is beautifully paired with a soft beige Kota Doria dupatta, creating a timeless ethnic ensemble inspired by authentic Bagru hand block printing.",
+      "id": 115,
+      "name": "Bagru Print Cotton Suit with Jorjhat Dupatta",
+      "Base color": "The elegant cream cotton fabric is beautifully paired with a soft beige Jorjhat dupatta, creating a timeless ethnic ensemble inspired by authentic Bagru hand block printing.",
+
       "Motifs": [
         "The cotton suit features repeating rust-red floral booti motifs arranged across the cream base, offering a graceful handcrafted appeal with classic Bagru aesthetics.",
-        "The lightweight Kota Doria dupatta showcases flowing black leafy vine block prints, delicate floral bootis, and layered ornamental bands that add depth and refined traditional elegance."
+        "The lightweight Jorjhat dupatta showcases flowing black leafy vine block prints, delicate floral bootis, and layered ornamental bands that add depth and refined traditional elegance."
       ],
+
       "Border Detailing": [
         "The suit is finished with a bold black ornamental border and a subtle rust-red hem that beautifully enhances its authentic Bagru craftsmanship.",
-        "The Kota Doria dupatta features intricate floral vine borders, layered blue-grey printed bands, delicate floral booti panels, and soft rust-red edging for a premium handcrafted finish."
+        "The Jorjhat dupatta features intricate floral vine borders, layered blue-grey printed bands, delicate floral booti panels, and soft rust-red edging for a premium handcrafted finish."
       ],
-      "Contrast Play": "The harmonious combination of cream, rust red, black, soft blue-grey, earthy beige, and subtle brown accents creates a sophisticated traditional contrast, while the airy Kota Doria dupatta adds graceful movement and effortless elegance.",
-      "aprice": 2000,
-      "price": 1500,
-      "discount": 25,
-      "reviews": 8,
+
+      "Contrast Play": "The harmonious combination of cream, rust red, black, soft blue-grey, earthy beige, and subtle brown accents creates a sophisticated traditional contrast, while the airy Jorjhat dupatta adds graceful movement and effortless elegance.",
+
+      "aprice": 1099,
+      "price": 749,
+      "discount": 32,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782568078/17_sjlabt.jpg",
       "category": "Women",
-      "rating": 4.5
+      "rating": 4.6
     },
     {
-      "id": "150368ce-86b9-45e1-a5e2-7281eb806d4a",
-      "name": "Bagru Print Cotton Suit with Kota Doria Dupatta",
-      "Base color": "The vibrant sky-blue cotton fabric is beautifully paired with a cream and blue-toned Kota Doria dupatta, creating an elegant ethnic ensemble inspired by authentic Bagru hand block printing.",
+      "id": 116,
+      "name": "Bagru Print Cotton Suit with Jorjhat Dupatta",
+      "Base color": "The vibrant sky-blue cotton fabric is beautifully paired with a cream and blue-toned Jorjhat dupatta, creating an elegant ethnic ensemble inspired by authentic Bagru hand block printing.",
+
       "Motifs": [
         "The cotton suit features intricate white floral motifs with mustard accents and graceful leafy vines, offering a rich handcrafted appeal with timeless Bagru artistry.",
-        "The lightweight Kota Doria dupatta showcases delicate spiral block prints, tree-inspired botanical panels, and layered geometric borders that add depth and traditional elegance."
+        "The lightweight Jorjhat dupatta showcases delicate spiral block prints, tree-inspired botanical panels, and layered geometric borders that add depth and traditional elegance."
       ],
+
       "Border Detailing": [
         "The suit is finished with a bold black triangular geometric border that beautifully enhances its authentic Bagru craftsmanship.",
-        "The Kota Doria dupatta features decorative geometric borders, blue striped bands, botanical tree motifs, and subtle black edging, giving the ensemble a refined handcrafted finish."
+        "The Jorjhat dupatta features decorative geometric borders, blue striped bands, botanical tree motifs, and subtle black edging, giving the ensemble a refined handcrafted finish."
       ],
-      "Contrast Play": "The harmonious blend of sky blue, cream, black, mustard yellow, and soft blue-grey accents creates a refreshing traditional contrast, while the airy Kota Doria dupatta adds graceful movement and timeless elegance.",
-      "aprice": 2000,
-      "price": 1500,
-      "discount": 25,
-      "reviews": 12,
+
+      "Contrast Play": "The harmonious blend of sky blue, cream, black, mustard yellow, and soft blue-grey accents creates a refreshing traditional contrast, while the airy Jorjhat dupatta adds graceful movement and timeless elegance.",
+
+      "aprice": 1099,
+      "price": 749,
+      "discount": 32,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782568073/15_n81oyl.jpg",
       "category": "Women",
-      "rating": 4.4
+      "rating": 4.6
     },
     {
-      "id": "10ec04ce-42e6-4f33-bd27-2c1d2d224621",
-      "name": "Bagru Print Cotton Suit with Kota Doria Dupatta",
-      "Base color": "The classic black cotton fabric is beautifully paired with a cream and blush-toned Kota Doria dupatta, creating a graceful ethnic ensemble inspired by authentic Bagru hand block printing.",
+      "id": 117,
+      "name": "Bagru Print Cotton Suit with Jorjhat Dupatta",
+      "Base color": "The classic black cotton fabric is beautifully paired with a cream and blush-toned Jorjhat dupatta, creating a graceful ethnic ensemble inspired by authentic Bagru hand block printing.",
+
       "Motifs": [
         "The cotton suit features intricate white floral vine and paisley-inspired block motifs spread across the black base, giving the fabric a rich handcrafted appeal.",
-        "The lightweight Kota Doria dupatta showcases delicate floral sunburst block prints, lotus-inspired botanical panels, and layered traditional borders that add depth and timeless elegance."
+        "The lightweight Jorjhat dupatta showcases delicate floral sunburst block prints, lotus-inspired botanical panels, and layered traditional borders that add depth and timeless elegance."
       ],
+
       "Border Detailing": [
         "The suit is finished with a vibrant rust-red floral border framed with black accents, beautifully highlighting its authentic Bagru craftsmanship.",
-        "The Kota Doria dupatta features ornate floral vine borders, geometric patterned bands, lotus-inspired motifs, and subtle black edging, creating a refined handcrafted finish."
+        "The Jorjhat dupatta features ornate floral vine borders, geometric patterned bands, lotus-inspired motifs, and subtle black edging, creating a refined handcrafted finish."
       ],
-      "Contrast Play": "The elegant combination of black, cream, rust red, earthy beige, and subtle brown accents creates a striking traditional contrast, while the airy Kota Doria dupatta adds graceful movement and timeless sophistication.",
-      "aprice": 2000,
-      "price": 1500,
-      "discount": 25,
-      "reviews": 12,
+
+      "Contrast Play": "The elegant combination of black, cream, rust red, earthy beige, and subtle brown accents creates a striking traditional contrast, while the airy Jorjhat dupatta adds graceful movement and timeless sophistication.",
+
+      "aprice": 1099,
+      "price": 749,
+      "discount": 32,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782568073/1_cvvqfs.jpg",
       "category": "Women",
-      "rating": 4.3
+      "rating": 4.6
     },
     {
-      "id": "11c77bf9-143e-4af7-9f78-d3eb6093f266",
-      "name": "Bagru Print Cotton Suit with Kota Doria Dupatta",
-      "Base color": "The vibrant rust-red cotton fabric is beautifully complemented by a cream and earthy-toned Kota Doria dupatta, creating a timeless ethnic ensemble inspired by authentic Bagru hand block printing.",
+      "id": 118,
+      "name": "Bagru Print Cotton Suit with Jorjhat Dupatta",
+      "Base color": "The vibrant rust-red cotton fabric is beautifully complemented by a cream and earthy-toned Jorjhat dupatta, creating a timeless ethnic ensemble inspired by authentic Bagru hand block printing.",
+
       "Motifs": [
         "The cotton suit features repeating white floral booti motifs arranged across the rust-red base, offering a graceful handcrafted appeal with classic Bagru artistry.",
-        "The lightweight Kota Doria dupatta showcases fine vertical wavy stripe patterns, intricate floral panels, and decorative circular block motifs that add depth and traditional elegance."
+        "The lightweight Jorjhat dupatta showcases fine vertical wavy stripe patterns, intricate floral panels, and decorative circular block motifs that add depth and traditional elegance."
       ],
+
       "Border Detailing": [
         "The suit is finished with a bold black geometric diamond border that beautifully enhances its authentic Bagru craftsmanship.",
-        "The Kota Doria dupatta features geometric borders, blue floral panels, layered striped bands, and subtle rust-red edging, giving the ensemble a refined handcrafted finish."
+        "The Jorjhat dupatta features geometric borders, blue floral panels, layered striped bands, and subtle rust-red edging, giving the ensemble a refined handcrafted finish."
       ],
-      "Contrast Play": "The harmonious blend of rust red, cream, black, soft blue, earthy beige, and subtle brown accents creates a striking traditional contrast, while the airy Kota Doria dupatta adds graceful movement and timeless elegance.",
-      "aprice": 2000,
-      "price": 1500,
-      "discount": 25,
+
+      "Contrast Play": "The harmonious blend of rust red, cream, black, soft blue, earthy beige, and subtle brown accents creates a striking traditional contrast, while the airy Jorjhat dupatta adds graceful movement and timeless elegance.",
+
+      "aprice": 1099,
+      "price": 749,
+      "discount": 32,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782568067/14_uw0u3a.jpg",
       "category": "Women",
-      "rating": 4.8,
-      "reviews": 12
+      "rating": 4.6
     },
     {
-      "id": "98ceebc7-afcb-4dfc-a14a-6093fdd693e6",
-      "name": "Bagru Print Cotton Suit with Kota Doria Dupatta",
-      "Base color": "The elegant cream cotton fabric is beautifully complemented by a soft olive-green and beige Kota Doria dupatta, creating a graceful ethnic ensemble inspired by authentic Bagru hand block printing.",
+      "id": 119,
+      "name": "Bagru Print Cotton Suit with Jorjhat Dupatta",
+      "Base color": "The elegant cream cotton fabric is beautifully complemented by a soft olive-green and beige Jorjhat dupatta, creating a graceful ethnic ensemble inspired by authentic Bagru hand block printing.",
+
       "Motifs": [
         "The cotton suit features repeating olive-green paisley-inspired booti motifs arranged across the cream base, offering a timeless handcrafted appeal with classic Bagru artistry.",
-        "The lightweight Kota Doria dupatta showcases delicate leafy vine block prints, blue floral vine panels, and traditional botanical motifs that add depth and refined ethnic elegance."
+        "The lightweight Jorjhat dupatta showcases delicate leafy vine block prints, blue floral vine panels, and traditional botanical motifs that add depth and refined ethnic elegance."
       ],
+
       "Border Detailing": [
         "The suit is finished with a bold black geometric diamond border and an olive-green hem that beautifully enhance its authentic Bagru craftsmanship.",
-        "The Kota Doria dupatta features intricate geometric borders, blue floral vine panels, leafy booti motifs, and subtle olive-green edging, giving the ensemble a premium handcrafted finish."
+        "The Jorjhat dupatta features intricate geometric borders, blue floral vine panels, leafy booti motifs, and subtle olive-green edging, giving the ensemble a premium handcrafted finish."
       ],
-      "Contrast Play": "The harmonious blend of cream, olive green, black, soft blue, earthy beige, and subtle green accents creates a refreshing traditional contrast, while the airy Kota Doria dupatta adds graceful movement and timeless elegance.",
-      "aprice": 2000,
-      "price": 1500,
-      "discount": 25,
+
+      "Contrast Play": "The harmonious blend of cream, olive green, black, soft blue, earthy beige, and subtle green accents creates a refreshing traditional contrast, while the airy Jorjhat dupatta adds graceful movement and timeless elegance.",
+
+      "aprice": 1099,
+      "price": 749,
+      "discount": 32,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782568060/9_c5pyve.jpg",
       "category": "Women",
-      "rating": 4.4,
-      "reviews": 11
+      "rating": 4.6
     },
     {
-      "id": "9159b93a-801c-472e-af7b-027506e0bd42",
-      "name": "Bagru Print Cotton Suit with Kota Doria Dupatta",
-      "Base color": "The vibrant rust-red cotton suit is beautifully paired with a soft cream and earthy beige Kota Doria dupatta, creating a timeless ethnic combination inspired by traditional Bagru hand block printing.",
+      "id": 120,
+      "name": "Bagru Print Cotton Suit with Jorjhat Dupatta",
+      "Base color": "The vibrant rust-red cotton suit is beautifully paired with a soft cream and earthy beige Jorjhat dupatta, creating a timeless ethnic combination inspired by traditional Bagru hand block printing.",
+
       "Motifs": [
         "The cotton suit features repeating floral-inspired Bagru booti motifs across the rich rust-red base, offering a balanced handcrafted look with classic Rajasthani appeal.",
-        "The lightweight Kota Doria dupatta showcases flowing leafy vine block prints, ornamental paisley motifs, and intricate traditional patterns that add elegance and graceful movement."
+        "The lightweight Jorjhat dupatta showcases flowing leafy vine block prints, ornamental paisley motifs, and intricate traditional patterns that add elegance and graceful movement."
       ],
+
       "Border Detailing": [
         "The suit is finished with a bold black ornamental border highlighted by a fine white floral pattern, giving the outfit a refined handcrafted finish.",
-        "The Kota Doria dupatta features layered geometric borders, intricate floral bands, paisley panels, and soft rust edging that enhance its premium traditional character."
+        "The Jorjhat dupatta features layered geometric borders, intricate floral bands, paisley panels, and soft rust edging that enhance its premium traditional character."
       ],
-      "Contrast Play": "The striking blend of rust red, cream, black, and earthy beige creates a rich traditional contrast, while the airy Kota Doria dupatta adds softness and graceful elegance to the overall ensemble.",
-      "aprice": 2000,
-      "price": 1500,
-      "discount": 25,
+
+      "Contrast Play": "The striking blend of rust red, cream, black, and earthy beige creates a rich traditional contrast, while the airy Jorjhat dupatta adds softness and graceful elegance to the overall ensemble.",
+
+      "aprice": 1099,
+      "price": 749,
+      "discount": 32,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782568046/13_nnuowt.jpg",
-      "rating": 4.7,
-      "category": "Women",
-      "reviews": 12
+      "rating": 4.6,
+      "category": "Women"
     },
     {
-      "id": "93878882-c03a-40cc-891e-9124c11b4e15",
-      "name": "Bagru Print Cotton Suit with Kota Doria Dupatta",
-      "Base color": "The deep black cotton suit creates a bold and elegant foundation, beautifully complemented by a soft cream and rust-toned Kota Doria dupatta that reflects the timeless artistry of traditional Bagru hand block printing.",
+      "id": 121,
+      "name": "Bagru Print Cotton Suit with Jorjhat Dupatta",
+      "Base color": "The deep black cotton suit creates a bold and elegant foundation, beautifully complemented by a soft cream and rust-toned Jorjhat dupatta that reflects the timeless artistry of traditional Bagru hand block printing.",
+
       "Motifs": [
         "The cotton suit is adorned with repeating white leaf-inspired Bagru booti motifs, creating a clean, balanced design with classic handcrafted appeal.",
-        "The lightweight Kota Doria dupatta features intricate floral jaal patterns, stylized leaf motifs, and traditional geometric block prints, adding graceful texture and ethnic richness."
+        "The lightweight Jorjhat dupatta features intricate floral jaal patterns, stylized leaf motifs, and traditional geometric block prints, adding graceful texture and ethnic richness."
       ],
+
       "Border Detailing": [
         "The suit is finished with a rust-red geometric border accented by a fine black-and-white floral strip, enhancing its traditional handcrafted look.",
-        "The Kota Doria dupatta showcases layered geometric bands, leafy borders, tribal-inspired motifs, and subtle golden woven accents that give it a refined festive finish."
+        "The Jorjhat dupatta showcases layered geometric bands, leafy borders, tribal-inspired motifs, and subtle golden woven accents that give it a refined festive finish."
       ],
-      "Contrast Play": "The striking combination of deep black, cream, rust red, and earthy beige creates a bold traditional contrast, while the airy Kota Doria dupatta brings softness, elegance, and graceful movement to the complete ensemble.",
-      "aprice": 2000,
-      "price": 1500,
-      "discount": 25,
 
+      "Contrast Play": "The striking combination of deep black, cream, rust red, and earthy beige creates a bold traditional contrast, while the airy Jorjhat dupatta brings softness, elegance, and graceful movement to the complete ensemble.",
+
+      "aprice": 1099,
+      "price": 749,
+      "discount": 32,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782567977/8_fs0ye5.jpg",
-      "rating": 4.7,
-      "category": "Women",
-      "reviews": 12
+      "rating": 4.6,
+      "category": "Women"
     },
     {
-      "id": "d585c1b7-c18d-4014-9c26-2cefdfc0dfca",
-      "name": "Bagru Print Cotton Suit with Kota Doria Dupatta",
-      "Base color": "The vibrant rust-red cotton suit is paired with a soft cream and earthy beige Kota Doria dupatta, creating a graceful ethnic combination inspired by the timeless beauty of traditional Bagru hand block printing.",
+      "id": 122,
+      "name": "Bagru Print Cotton Suit with Jorjhat Dupatta",
+      "Base color": "The vibrant rust-red cotton suit is paired with a soft cream and earthy beige Jorjhat dupatta, creating a graceful ethnic combination inspired by the timeless beauty of traditional Bagru hand block printing.",
+
       "Motifs": [
         "The cotton suit features repeating floral leaf-inspired Bagru booti motifs across the rich rust-red base, giving it a lively handcrafted appeal with classic Rajasthani charm.",
-        "The lightweight Kota Doria dupatta is adorned with delicate floral vine block prints, ornamental paisley motifs, and finely detailed traditional patterns that add elegance and flowing sophistication."
+        "The lightweight Jorjhat dupatta is adorned with delicate floral vine block prints, ornamental paisley motifs, and finely detailed traditional patterns that add elegance and flowing sophistication."
       ],
+
       "Border Detailing": [
         "The suit is enhanced with a bold black ornamental border highlighted by intricate white floral detailing, creating a refined handcrafted finish.",
-        "The Kota Doria dupatta features decorative floral borders, layered geometric bands, paisley panels, and soft rust-toned edging that elevate its festive and premium traditional look."
+        "The Jorjhat dupatta features decorative floral borders, layered geometric bands, paisley panels, and soft rust-toned edging that elevate its festive and premium traditional look."
       ],
-      "Contrast Play": "The harmonious blend of rust red, cream, black, and earthy beige creates a rich traditional contrast, while the airy Kota Doria dupatta adds softness, texture, and graceful movement to the complete ensemble.",
-      "aprice": 2000,
-      "price": 1500,
-      "discount": 25,
-      "reviews": 16,
+
+      "Contrast Play": "The harmonious blend of rust red, cream, black, and earthy beige creates a rich traditional contrast, while the airy Jorjhat dupatta adds softness, texture, and graceful movement to the complete ensemble.",
+
+      "aprice": 1099,
+      "price": 749,
+      "discount": 32,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782567971/4_l4xwnn.jpg",
       "rating": 4.6,
       "category": "Women"
     },
     {
-      "id": "9e5b54f4-f3e5-4904-a6cd-668614086d11",
-      "name": "Bagru Print Cotton Suit with Kota Doria Dupatta",
-      "Base color": "The soft cream cotton suit offers a calm, earthy foundation that beautifully complements the natural elegance of traditional Bagru hand block printing, paired with a graceful cream and rust-toned Kota Doria dupatta.",
+      "id": 123,
+      "name": "Bagru Print Cotton Suit with Jorjhat Dupatta",
+      "Base color": "The soft cream cotton suit offers a calm, earthy foundation that beautifully complements the natural elegance of traditional Bagru hand block printing, paired with a graceful cream and rust-toned Jorjhat dupatta.",
+
       "Motifs": [
         "The cotton suit is adorned with repeating multicolored floral buti motifs in rust, mustard, and olive tones, creating a vibrant handcrafted look with timeless Rajasthani charm.",
-        "The lightweight Kota Doria dupatta features delicate floral rosette prints, circular ornamental borders, and traditional booti panels that lend graceful movement and rich ethnic appeal."
+        "The lightweight Jorjhat dupatta features delicate floral rosette prints, circular ornamental borders, and traditional booti panels that lend graceful movement and rich ethnic appeal."
       ],
+
       "Border Detailing": [
         "The suit is finished with a bold black ornamental border accented by fine white floral detailing, giving it a refined handcrafted finish.",
-        "The Kota Doria dupatta is enhanced with decorative circular borders, intricate floral bands, traditional booti panels, and soft rust edging that elevate its festive and premium appearance."
+        "The Jorjhat dupatta is enhanced with decorative circular borders, intricate floral bands, traditional booti panels, and soft rust edging that elevate its festive and premium appearance."
       ],
-      "Contrast Play": "The elegant blend of cream, black, rust red, mustard, and earthy beige creates a balanced traditional contrast, while the airy Kota Doria dupatta adds softness, texture, and flowing elegance to the complete ensemble.",
-      "aprice": 2000,
-      "price": 1500,
-      "discount": 25,
-      "reviews": 14,
+
+      "Contrast Play": "The elegant blend of cream, black, rust red, mustard, and earthy beige creates a balanced traditional contrast, while the airy Jorjhat dupatta adds softness, texture, and flowing elegance to the complete ensemble.",
+
+      "aprice": 1099,
+      "price": 749,
+      "discount": 32,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782567964/12_wxypxw.jpg",
-      "rating": 4.3,
+      "rating": 4.6,
       "category": "Women"
     },
     {
-      "id": "d69a8b6d-ba93-41e1-bf0a-a59ac4b13451",
-      "name": "Bagru Print Cotton Suit with Kota Doria Dupatta",
-      "Base color": "The vibrant rust-red cotton suit is beautifully complemented by a soft cream and earthy beige Kota Doria dupatta, reflecting the timeless elegance of traditional Bagru hand block printing.",
+      "id": 124,
+      "name": "Bagru Print Cotton Suit with Jorjhat Dupatta",
+      "Base color": "The vibrant rust-red cotton suit is beautifully complemented by a soft cream and earthy beige Jorjhat dupatta, reflecting the timeless elegance of traditional Bagru hand block printing.",
+
       "Motifs": [
         "The cotton suit features repeating leaf-inspired Bagru booti motifs across the rich rust-red base, creating a balanced handcrafted design with classic Rajasthani character.",
-        "The lightweight Kota Doria dupatta showcases flowing wavy line patterns framed by ornate floral borders and traditional striped panels, adding graceful texture and ethnic sophistication."
+        "The lightweight Jorjhat dupatta showcases flowing wavy line patterns framed by ornate floral borders and traditional striped panels, adding graceful texture and ethnic sophistication."
       ],
+
       "Border Detailing": [
         "The suit is finished with a bold black ornamental border enhanced by intricate white floral detailing, giving it a refined handcrafted appearance.",
-        "The Kota Doria dupatta features decorative floral vine borders, layered earthy striped bands, and soft rust edging that enhance its premium traditional appeal."
+        "The Jorjhat dupatta features decorative floral vine borders, layered earthy striped bands, and soft rust edging that enhance its premium traditional appeal."
       ],
-      "Contrast Play": "The harmonious combination of rust red, cream, black, and earthy beige creates a striking traditional contrast, while the airy Kota Doria dupatta adds softness, elegance, and fluid movement to the complete ensemble.",
-      "aprice": 2000,
-      "price": 1500,
-      "discount": 25,
-      "reviews" : 18,
+
+      "Contrast Play": "The harmonious combination of rust red, cream, black, and earthy beige creates a striking traditional contrast, while the airy Jorjhat dupatta adds softness, elegance, and fluid movement to the complete ensemble.",
+
+      "aprice": 1099,
+      "price": 749,
+      "discount": 32,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782567959/5_wqc4e3.jpg",
       "rating": 4.6,
       "category": "Women"
     },
     {
-      "id": "dd490e19-31ed-494f-8ef6-c0c727cbcfab",
-      "name": "Bagru Print Cotton Suit with Kota Doria Dupatta",
-      "Base color": "The rich rust-red cotton suit is paired with a soft cream and earthy beige Kota Doria dupatta, creating a graceful ethnic ensemble inspired by the timeless artistry of traditional Bagru hand block printing.",
+      "id": 125,
+      "name": "Bagru Print Cotton Suit with Jorjhat Dupatta",
+      "Base color": "The rich rust-red cotton suit is paired with a soft cream and earthy beige Jorjhat dupatta, creating a graceful ethnic ensemble inspired by the timeless artistry of traditional Bagru hand block printing.",
+
       "Motifs": [
         "The cotton suit features repeating floral-inspired Bagru booti motifs across the rust-red base, giving it a vibrant handcrafted appearance with classic Rajasthani charm.",
-        "The lightweight Kota Doria dupatta is adorned with flowing geometric wave patterns, traditional floral borders, and large paisley-inspired motifs that add elegance, texture, and artistic depth."
+        "The lightweight Jorjhat dupatta is adorned with flowing geometric wave patterns, traditional floral borders, and large paisley-inspired motifs that add elegance, texture, and artistic depth."
       ],
+
       "Border Detailing": [
         "The suit is finished with a bold black ornamental border highlighted by intricate white floral detailing, creating a refined handcrafted finish.",
-        "The Kota Doria dupatta features decorative floral borders, geometric bands, earthy mustard accents, and soft rust edging that enhance its premium traditional appeal."
+        "The Jorjhat dupatta features decorative floral borders, geometric bands, earthy mustard accents, and soft rust edging that enhance its premium traditional appeal."
       ],
-      "Contrast Play": "The harmonious blend of rust red, cream, black, earthy beige, and mustard tones creates a striking traditional contrast, while the airy Kota Doria dupatta adds softness, graceful movement, and timeless ethnic elegance.",
-      "aprice": 2000,
-      "price": 1500,
-      "discount": 25,
-      "reviews": 20,
+
+      "Contrast Play": "The harmonious blend of rust red, cream, black, earthy beige, and mustard tones creates a striking traditional contrast, while the airy Jorjhat dupatta adds softness, graceful movement, and timeless ethnic elegance.",
+
+      "aprice": 1099,
+      "price": 749,
+      "discount": 32,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782567955/7_zhetfi.jpg",
-      "rating": 4.2,
+      "rating": 4.6,
       "category": "Women"
     },
     {
-      "id": "45f8c4c6-ac9e-429e-a0c2-7e7c1ba97aa2",
-      "name": "Bagru Print Cotton Suit with Kota Doria Dupatta",
-      "Base color": "The soft cream cotton suit is beautifully paired with a cream, olive green, and indigo-accented Kota Doria dupatta, creating a graceful ethnic ensemble inspired by authentic Bagru hand block printing.",
+      "id": 126,
+      "name": "Bagru Print Cotton Suit with Jorjhat Dupatta",
+      "Base color": "The soft cream cotton suit is beautifully paired with a cream, olive green, and indigo-accented Jorjhat dupatta, creating a graceful ethnic ensemble inspired by authentic Bagru hand block printing.",
+
       "Motifs": [
         "The cotton suit features repeating olive green paisley-inspired Bagru booti motifs across the cream base, giving it a subtle handcrafted charm with timeless Rajasthani elegance.",
-        "The lightweight Kota Doria dupatta showcases intricate geometric block prints, delicate floral vine bands, and repeating leafy booti panels that add depth, texture, and traditional sophistication."
+        "The lightweight Jorjhat dupatta showcases intricate geometric block prints, delicate floral vine bands, and repeating leafy booti panels that add depth, texture, and traditional sophistication."
       ],
+
       "Border Detailing": [
         "The suit is finished with a bold black geometric border that enhances its handcrafted appeal and provides a refined ethnic finish.",
-        "The Kota Doria dupatta features geometric borders, indigo floral bands, olive leafy motifs, and a soft olive green edging that beautifully complements the overall design."
+        "The Jorjhat dupatta features geometric borders, indigo floral bands, olive leafy motifs, and a soft olive green edging that beautifully complements the overall design."
       ],
-      "Contrast Play": "The elegant combination of cream, olive green, black, earthy beige, and indigo blue creates a refreshing traditional contrast, while the airy Kota Doria dupatta adds softness, graceful movement, and timeless ethnic appeal.",
-      "aprice": 2000,
-      "price": 1500,
-      "discount": 25,
-      "reviews": 22,
+
+      "Contrast Play": "The elegant combination of cream, olive green, black, earthy beige, and indigo blue creates a refreshing traditional contrast, while the airy Jorjhat dupatta adds softness, graceful movement, and timeless ethnic appeal.",
+
+      "aprice": 1099,
+      "price": 749,
+      "discount": 32,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782567951/10_aloap0.jpg",
       "rating": 4.6,
       "category": "Women"
     },
     {
-      "id": "aeeccfff-f54a-40ee-98fa-4a1624a6becb",
-      "name": "Bagru Print Cotton Suit with Kota Doria Dupatta",
-      "Base color": "The rich rust-red cotton suit is beautifully paired with a soft cream and earthy beige Kota Doria dupatta, creating a timeless ethnic ensemble inspired by authentic Bagru hand block printing.",
+      "id": 127,
+      "name": "Bagru Print Cotton Suit with Jorjhat Dupatta",
+      "Base color": "The rich rust-red cotton suit is beautifully paired with a soft cream and earthy beige Jorjhat dupatta, creating a timeless ethnic ensemble inspired by authentic Bagru hand block printing.",
+
       "Motifs": [
         "The cotton suit features large paisley-inspired Bagru booti motifs arranged across the vibrant rust-red base, giving it a bold handcrafted appeal with classic Rajasthani elegance.",
-        "The lightweight Kota Doria dupatta showcases intricate floral vine block prints, ornamental paisley panels, and delicate traditional patterns that bring graceful texture and refined ethnic charm."
+        "The lightweight Jorjhat dupatta showcases intricate floral vine block prints, ornamental paisley panels, and delicate traditional patterns that bring graceful texture and refined ethnic charm."
       ],
+
       "Border Detailing": [
         "The suit is finished with a bold black ornamental border highlighted by fine white floral detailing, adding a refined handcrafted finish.",
-        "The Kota Doria dupatta features decorative floral borders, layered geometric bands, paisley-inspired panels, and soft rust edging that enhance its festive and premium traditional look."
+        "The Jorjhat dupatta features decorative floral borders, layered geometric bands, paisley-inspired panels, and soft rust edging that enhance its festive and premium traditional look."
       ],
-      "Contrast Play": "The harmonious combination of rust red, cream, black, and earthy beige creates a striking traditional contrast, while the airy Kota Doria dupatta adds softness, elegant movement, and timeless handcrafted beauty.",
-      "aprice": 2000,
-      "price": 1500,
-      "discount": 25,
-      "reviews": 24,
+
+      "Contrast Play": "The harmonious combination of rust red, cream, black, and earthy beige creates a striking traditional contrast, while the airy Jorjhat dupatta adds softness, elegant movement, and timeless handcrafted beauty.",
+
+      "aprice": 1299,
+      "price": 899,
+      "discount": 30,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784199190/201_xajdzu.jpg",
-      "rating": 4.7,
-      "category": "Women"
+      "rating": 4.6,
+      "category": "Women",
+      "reviews": 34
     },
     {
-      "id": "7a9ff569-af9e-4130-9c16-f18b4ab7bf26",
-      "name": "Bagru Print Cotton Suit with Kota Doria Dupatta",
-      "Base color": "The elegant olive-brown cotton suit is paired with a soft cream and earthy beige Kota Doria dupatta, creating a sophisticated ethnic ensemble inspired by authentic Bagru hand block printing.",
+      "id": 128,
+      "name": "Bagru Print Cotton Suit with Jorjhat Dupatta",
+      "Base color": "The elegant olive-brown cotton suit is paired with a soft cream and earthy beige Jorjhat dupatta, creating a sophisticated ethnic ensemble inspired by authentic Bagru hand block printing.",
+
       "Motifs": [
         "The cotton suit features large floral vine motifs with delicate leafy detailing in contrasting ivory, giving the fabric a graceful handcrafted appeal and timeless Rajasthani charm.",
-        "The lightweight Kota Doria dupatta showcases dotted block prints, ornamental floral borders, layered striped bands, and traditional leaf-inspired motifs that add texture and refined ethnic elegance."
+        "The lightweight Jorjhat dupatta showcases dotted block prints, ornamental floral borders, layered striped bands, and traditional leaf-inspired motifs that add texture and refined ethnic elegance."
       ],
+
       "Border Detailing": [
         "The suit is finished with a bold black ornamental border highlighted by intricate ivory floral detailing, creating a refined handcrafted finish.",
-        "The Kota Doria dupatta features decorative floral borders, earthy striped panels, traditional leafy motifs, and mustard-toned edging that enhance its premium festive appearance."
+        "The Jorjhat dupatta features decorative floral borders, earthy striped panels, traditional leafy motifs, and mustard-toned edging that enhance its premium festive appearance."
       ],
-      "Contrast Play": "The harmonious blend of olive brown, cream, black, ivory, and earthy mustard creates a rich traditional contrast, while the airy Kota Doria dupatta adds softness, graceful movement, and timeless handcrafted elegance.",
-      "aprice": 2000,
-      "price": 1500,
-      "discount": 25,
+
+      "Contrast Play": "The harmonious blend of olive brown, cream, black, ivory, and earthy mustard creates a rich traditional contrast, while the airy Jorjhat dupatta adds softness, graceful movement, and timeless handcrafted elegance.",
+
+      "aprice": 1299,
+      "price": 899,
+      "discount": 30,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784199189/202_p2ser5.jpg",
       "rating": 4.6,
       "category": "Women",
-      "reviews": 13
+      "reviews": 34
     },
     {
-      "id": "b4d603cc-31be-4eb5-93d5-7a355924547b",
-      "name": "Bagru Print Cotton Suit with Kota Doria Dupatta",
-      "Base color": "The elegant black cotton suit is paired with a soft cream and earthy rust-toned Kota Doria dupatta, creating a timeless ethnic ensemble inspired by authentic Bagru hand block printing.",
+      "id": 129,
+      "name": "Bagru Print Cotton Suit with Jorjhat Dupatta",
+      "Base color": "The elegant black cotton suit is paired with a soft cream and earthy rust-toned Jorjhat dupatta, creating a timeless ethnic ensemble inspired by authentic Bagru hand block printing.",
+
       "Motifs": [
         "The cotton suit features large paisley-inspired Bagru booti motifs in ivory, beautifully arranged across the deep black base for a bold handcrafted appeal with classic Rajasthani charm.",
-        "The lightweight Kota Doria dupatta showcases flowing vertical line patterns, intricate striped borders, and traditional paisley panels that add graceful texture and refined ethnic elegance."
+        "The lightweight Jorjhat dupatta showcases flowing vertical line patterns, intricate striped borders, and traditional paisley panels that add graceful texture and refined ethnic elegance."
       ],
+
       "Border Detailing": [
         "The suit is finished with a rust-red ornamental border highlighted by delicate white detailing, giving it a refined handcrafted finish.",
-        "The Kota Doria dupatta features layered striped bands, decorative paisley motifs, earthy rust accents, and a subtle black edging that enhance its premium festive appearance."
+        "The Jorjhat dupatta features layered striped bands, decorative paisley motifs, earthy rust accents, and a subtle black edging that enhance its premium festive appearance."
       ],
-      "Contrast Play": "The rich blend of black, ivory, cream, earthy beige, and rust red creates a striking traditional contrast, while the airy Kota Doria dupatta adds softness, graceful movement, and timeless handcrafted elegance.",
-      "aprice": 2000,
-      "price": 1500,
-      "discount": 25,
+
+      "Contrast Play": "The rich blend of black, ivory, cream, earthy beige, and rust red creates a striking traditional contrast, while the airy Jorjhat dupatta adds softness, graceful movement, and timeless handcrafted elegance.",
+
+      "aprice": 1299,
+      "price": 899,
+      "discount": 30,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784199192/203_glefqt.jpg",
-      "rating": 4.8,
+      "rating": 4.6,
       "category": "Women",
-      "reviews": 12
+      "reviews": 34
     },
     {
-      "id": "78e6a85a-ce3f-4f32-a837-65da52f9a335",
-      "name": "Bagru Print Cotton Suit with Kota Doria Dupatta",
-      "Base color": "The rich rust-red cotton suit is paired with a soft cream and earthy beige Kota Doria dupatta, creating a graceful ethnic ensemble that beautifully reflects the heritage of traditional Bagru hand block printing.",
+      "id": 130,
+      "name": "Bagru Print Cotton Suit with Jorjhat Dupatta",
+      "Base color": "The rich rust-red cotton suit is paired with a soft cream and earthy beige Jorjhat dupatta, creating a graceful ethnic ensemble that beautifully reflects the heritage of traditional Bagru hand block printing.",
+
       "Motifs": [
         "The cotton suit features elegant floral bud and vine motifs in ivory with mustard accents, creating a lively handcrafted design full of traditional Rajasthani charm.",
-        "The lightweight Kota Doria dupatta showcases delicate spiral block prints, geometric borders, and large paisley panels that add graceful movement, texture, and timeless ethnic elegance."
+        "The lightweight Jorjhat dupatta showcases delicate spiral block prints, geometric borders, and large paisley panels that add graceful movement, texture, and timeless ethnic elegance."
       ],
+
       "Border Detailing": [
         "The suit is finished with a bold black geometric border highlighted by fine ivory detailing, giving it a refined handcrafted appearance.",
-        "The Kota Doria dupatta features layered geometric bands, ornamental paisley motifs, earthy mustard accents, and soft rust edging that enhance its premium festive appeal."
+        "The Jorjhat dupatta features layered geometric bands, ornamental paisley motifs, earthy mustard accents, and soft rust edging that enhance its premium festive appeal."
       ],
-      "Contrast Play": "The harmonious combination of rust red, cream, black, earthy beige, and mustard tones creates a striking traditional contrast, while the airy Kota Doria dupatta adds softness, graceful flow, and elegant handcrafted beauty.",
-      "aprice": 2000,
-      "price": 1500,
-      "discount": 25,
+
+      "Contrast Play": "The harmonious combination of rust red, cream, black, earthy beige, and mustard tones creates a striking traditional contrast, while the airy Jorjhat dupatta adds softness, graceful flow, and elegant handcrafted beauty.",
+
+      "aprice": 1299,
+      "price": 899,
+      "discount": 30,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784199193/204_ogflrf.jpg",
-      "rating": 4.4,
+      "rating": 4.6,
       "category": "Women",
-      "reviews": 12
+      "reviews": 34
     },
     {
-      "id": "0d1a22cc-6ebe-4342-97e8-c75fc3e920d5",
-      "name": "Bagru Print Cotton Suit with Kota Doria Dupatta",
-      "Base color": "The soft cream cotton suit is beautifully complemented by a lightweight cream and earthy rust Kota Doria dupatta, creating a graceful traditional ensemble inspired by authentic Bagru hand block printing.",
+      "id": 131,
+      "name": "Bagru Print Cotton Suit with Jorjhat Dupatta",
+      "Base color": "The soft cream cotton suit is beautifully complemented by a lightweight cream and earthy rust Jorjhat dupatta, creating a graceful traditional ensemble inspired by authentic Bagru hand block printing.",
+
       "Motifs": [
         "The cotton suit features elegant red floral vine motifs intertwined with flowing scroll patterns, giving the fabric a rich handcrafted appeal and timeless ethnic charm.",
-        "The airy Kota Doria dupatta showcases delicate vertical wave patterns with geometric borders and traditional tree-inspired motifs, adding depth, movement, and refined elegance."
+        "The airy Jorjhat dupatta showcases delicate vertical wave patterns with geometric borders and traditional tree-inspired motifs, adding depth, movement, and refined elegance."
       ],
+
       "Border Detailing": [
         "The suit is finished with a bold black geometric border accented by rust-red edging, providing a clean handcrafted finish and striking definition.",
-        "The Kota Doria dupatta is enriched with layered woven-style stripes, geometric bands, and earthy rust borders that enhance its premium traditional look."
+        "The Jorjhat dupatta is enriched with layered woven-style stripes, geometric bands, and earthy rust borders that enhance its premium traditional look."
       ],
-      "Contrast Play": "The elegant combination of cream, rust red, black, and earthy beige creates a beautiful traditional contrast, while the lightweight Kota Doria dupatta adds graceful flow and sophisticated handcrafted appeal.",
-      "aprice": 2000,
-      "price": 1500,
-      "discount": 25,
+
+      "Contrast Play": "The elegant combination of cream, rust red, black, and earthy beige creates a beautiful traditional contrast, while the lightweight Jorjhat dupatta adds graceful flow and sophisticated handcrafted appeal.",
+
+      "aprice": 1299,
+      "price": 899,
+      "discount": 30,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784199192/205_sgmtkz.jpg",
-      "rating": 4.0,
+      "rating": 4.6,
       "category": "Women",
-      "reviews": 13
+      "reviews": 34
     },
     {
-      "id": "6d5b86df-6484-45bf-9da3-9934229eb699",
-      "name": "Bagru Print Cotton Suit with Kota Doria Dupatta",
-      "Base color": "The warm mustard yellow cotton suit creates a vibrant traditional look, beautifully paired with a lightweight cream and mustard Kota Doria dupatta that reflects the timeless elegance of authentic Bagru hand block printing.",
+      "id": 132,
+      "name": "Bagru Print Cotton Suit with Jorjhat Dupatta",
+      "Base color": "The warm mustard yellow cotton suit creates a vibrant traditional look, beautifully paired with a lightweight cream and mustard Jorjhat dupatta that reflects the timeless elegance of authentic Bagru hand block printing.",
+
       "Motifs": [
         "The cotton suit features bold blooming floral motifs intertwined with leafy vines in shades of red, white, and earthy brown, creating a rich handcrafted appearance with classic Bagru artistry.",
-        "The Kota Doria dupatta showcases delicate geometric floral patterns on the upper section, while the lower portion is adorned with traditional paisley motifs and layered decorative bands that add graceful depth and movement."
+        "The Jorjhat dupatta showcases delicate geometric floral patterns on the upper section, while the lower portion is adorned with traditional paisley motifs and layered decorative bands that add graceful depth and movement."
       ],
+
       "Border Detailing": [
         "The suit is finished with a striking black geometric border highlighted by mustard edging, giving the ensemble a refined handcrafted finish.",
-        "The Kota Doria dupatta features intricate woven-style borders with floral bands, paisley accents, and elegant black tassels that enhance its premium ethnic appeal."
+        "The Jorjhat dupatta features intricate woven-style borders with floral bands, paisley accents, and elegant black tassels that enhance its premium ethnic appeal."
       ],
-      "Contrast Play": "The vibrant blend of mustard yellow, cream, black, earthy brown, and deep red creates a bold traditional contrast, while the soft-flowing Kota Doria dupatta adds elegance, texture, and graceful sophistication.",
-      "aprice": 2000,
-      "price": 1500,
-      "discount": 25,
+
+      "Contrast Play": "The vibrant blend of mustard yellow, cream, black, earthy brown, and deep red creates a bold traditional contrast, while the soft-flowing Jorjhat dupatta adds elegance, texture, and graceful sophistication.",
+
+      "aprice": 1299,
+      "price": 899,
+      "discount": 30,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784199190/206_cnpizq.jpg",
-      "rating": 5.0,
+      "rating": 4.6,
       "category": "Women",
-      "reviews": 15
+      "reviews": 34
     },
     {
-      "id": "3e8bfbcc-875a-429a-a256-1510e6cafbce",
-      "name": "Bagru Print Cotton Suit with Kota Doria Dupatta",
-      "Base color": "The deep black cotton suit creates a bold and elegant foundation, beautifully complemented by a soft cream Kota Doria dupatta featuring earthy red and black traditional Bagru-inspired patterns.",
+      "id": 133,
+      "name": "Bagru Print Cotton Suit with Jorjhat Dupatta",
+      "Base color": "The deep black cotton suit creates a bold and elegant foundation, beautifully complemented by a soft cream Jorjhat dupatta featuring earthy red and black traditional Bagru-inspired patterns.",
+
       "Motifs": [
         "The cotton suit is adorned with repeating hand block floral buta motifs in off-white, creating a timeless ethnic appeal with striking visual balance.",
-        "The Kota Doria dupatta features delicate diamond lattice patterns across the body, while the lower section showcases classic paisley motifs and layered woven-style borders that add graceful traditional character."
+        "The Jorjhat dupatta features delicate diamond lattice patterns across the body, while the lower section showcases classic paisley motifs and layered woven-style borders that add graceful traditional character."
       ],
+
       "Border Detailing": [
         "The suit is finished with a rich rust-red and black floral border that enhances its handcrafted Bagru aesthetic.",
-        "The Kota Doria dupatta is enriched with intricate ornamental borders, horizontal woven bands, paisley panels, and soft black tassels that give the ensemble a premium ethnic finish."
+        "The Jorjhat dupatta is enriched with intricate ornamental borders, horizontal woven bands, paisley panels, and soft black tassels that give the ensemble a premium ethnic finish."
       ],
-      "Contrast Play": "The bold combination of black, cream, earthy red, and subtle brown tones creates a sophisticated traditional contrast, while the lightweight Kota Doria dupatta adds elegance, texture, and fluid movement to the complete ensemble.",
-      "aprice": 2000,
-      "price": 1500,
-      "discount": 25,
+
+      "Contrast Play": "The bold combination of black, cream, earthy red, and subtle brown tones creates a sophisticated traditional contrast, while the lightweight Jorjhat dupatta adds elegance, texture, and fluid movement to the complete ensemble.",
+
+      "aprice": 1299,
+      "price": 899,
+      "discount": 30,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784199186/207_puc8m9.jpg",
-      "rating": 4.3,
+      "rating": 4.6,
       "category": "Women",
-      "reviews": 14
+      "reviews": 34
     },
     {
-      "id": "d903d46f-e570-4202-9387-e1e5ccc202e9",
-      "name": "Bagru Print Cotton Suit with Kota Doria Dupatta",
-      "Base color": "The warm mustard brown cotton suit creates a rich earthy foundation, beautifully complemented by a lightweight cream Kota Doria dupatta accented with mustard, rust, and black traditional Bagru-inspired patterns.",
+      "id": 134,
+      "name": "Bagru Print Cotton Suit with Jorjhat Dupatta",
+      "Base color": "The warm mustard brown cotton suit creates a rich earthy foundation, beautifully complemented by a lightweight cream Jorjhat dupatta accented with mustard, rust, and black traditional Bagru-inspired patterns.",
+
       "Motifs": [
         "The cotton suit features large blooming floral motifs intertwined with delicate leafy vines in shades of mustard yellow, white, and earthy brown, giving the ensemble a graceful handcrafted appeal.",
-        "The Kota Doria dupatta showcases intricate floral vine patterns across the body, while the lower section is enriched with geometric bands, classic paisley motifs, and woven tribal-inspired detailing that enhance its traditional elegance."
+        "The Jorjhat dupatta showcases intricate floral vine patterns across the body, while the lower section is enriched with geometric bands, classic paisley motifs, and woven tribal-inspired detailing that enhance its traditional elegance."
       ],
+
       "Border Detailing": [
         "The suit is finished with a bold black floral border and mustard edging that adds definition and a premium handcrafted finish.",
-        "The Kota Doria dupatta is highlighted with woven geometric borders, decorative horizontal bands, rust paisley panels, and soft fringed tassels that elevate its ethnic sophistication."
+        "The Jorjhat dupatta is highlighted with woven geometric borders, decorative horizontal bands, rust paisley panels, and soft fringed tassels that elevate its ethnic sophistication."
       ],
-      "Contrast Play": "The harmonious blend of mustard brown, cream, black, white, and earthy rust creates a timeless traditional contrast, while the airy Kota Doria dupatta adds graceful movement and refined ethnic charm.",
-      "aprice": 2000,
-      "price": 1500,
-      "discount": 25,
+
+      "Contrast Play": "The harmonious blend of mustard brown, cream, black, white, and earthy rust creates a timeless traditional contrast, while the airy Jorjhat dupatta adds graceful movement and refined ethnic charm.",
+
+      "aprice": 1299,
+      "price": 899,
+      "discount": 30,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784199193/208_xncu1r.jpg",
       "rating": 4.6,
       "category": "Women",
-      "reviews": 13
+      "reviews": 34
     }
   ],
   "dupatta": [
     {
-      "id": "87d3fa83-d429-40f0-894b-022b2d22cf44",
+      "id": 201,
       "name": "Hand Block Printed Cotton Dupatta",
       "Base color": "The rich black base creates a timeless and elegant look, allowing the intricate hand block motifs to stand out beautifully.",
       "Motifs": [
@@ -964,9 +1109,9 @@
         "A geometric diamond-patterned border framed with fine black detailing enhances the overall handcrafted aesthetic."
       ],
       "Contrast Play": "The combination of a deep black base with rust red, beige, and ivory accents creates a bold yet elegant contrast, making the dupatta suitable for both festive and everyday ethnic wear.",
-      "aprice": 1000,
-      "price": 750,
-      "discount": 25,
+      "aprice": 899,
+      "price": 649,
+      "discount": 28,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782571834/10_ki8asj.jpg",
       "category": "Accessories",
       "fabric": "Pure Cotton",
@@ -976,7 +1121,7 @@
       "reviews": 13
     },
     {
-      "id": "6a511e44-f97f-44e9-a20c-1d3961de38f2",
+      "id": 202,
       "name": "Hand Block Printed Cotton Dupatta",
       "Base color": "The deep black base highlights the intricate hand block motifs, offering a refined and versatile ethnic look.",
       "Motifs": [
@@ -988,19 +1133,19 @@
         "Contrasting black border panels adorned with delicate white floral motifs enhance the handcrafted character of the design."
       ],
       "Contrast Play": "The striking blend of black, rust red, and ivory creates a bold traditional contrast, making the dupatta ideal for festive celebrations as well as everyday ethnic styling.",
-      "aprice": 1000,
-      "price": 750,
-      "discount": 25,
+      "aprice": 899,
+      "price": 649,
+      "discount": 28,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782571835/11_ahx627.jpg",
       "category": "Accessories",
       "fabric": "Pure Cotton",
       "length": "2.5 meters",
       "width": "36 inches",
-      "rating": 4.9,
+      "rating": 4.8,
       "reviews": 15
     },
     {
-      "id": "1ee7aa53-668b-41fa-a343-000fe56508ea",
+      "id": 203,
       "name": "Hand Block Printed Cotton Dupatta",
       "Base color": "The warm rust red base beautifully showcases traditional hand block artistry, giving the dupatta a rich and timeless ethnic appeal.",
       "Motifs": [
@@ -1012,19 +1157,19 @@
         "An intricately printed floral vine border frames the dupatta, enhancing its handcrafted elegance and visual balance."
       ],
       "Contrast Play": "The combination of rust red, black, and ivory creates a sophisticated contrast that makes the dupatta suitable for festive occasions as well as elegant everyday ethnic wear.",
-      "aprice": 1000,
-      "price": 750,
-      "discount": 25,
+      "aprice": 899,
+      "price": 649,
+      "discount": 28,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782571832/9_upgpkm.jpg",
       "category": "Accessories",
       "fabric": "Pure Cotton",
       "length": "2.5 meters",
       "width": "36 inches",
-      "rating": 4.7,
+      "rating": 4.8,
       "reviews": 11
     },
     {
-      "id": "e9136e67-ffeb-4bf6-ab6b-5d04fbb8d34a",
+      "id": 204,
       "name": "Hand Block Printed Cotton Dupatta",
       "Base color": "The warm rust red base beautifully highlights the intricate hand block print, offering a timeless ethnic appeal with elegant craftsmanship.",
       "Motifs": [
@@ -1036,9 +1181,9 @@
         "An elegant floral vine border combined with chevron-inspired detailing enhances the handcrafted character and creates a striking frame."
       ],
       "Contrast Play": "The blend of rust red, black, and ivory creates a sophisticated contrast that complements both festive occasions and elegant everyday ethnic styling.",
-      "aprice": 1000,
-      "price": 750,
-      "discount": 25,
+      "aprice": 899,
+      "price": 649,
+      "discount": 28,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782571831/8_ypbwto.jpg",
       "category": "Accessories",
       "fabric": "Pure Cotton",
@@ -1048,7 +1193,31 @@
       "reviews": 14
     },
     {
-      "id": "bce79db1-c9a2-4425-ace2-3f7d4d3b6472",
+      "id": 205,
+      "name": "Hand Block Printed Georgette Dupatta",
+      "Base color": "The elegant charcoal grey base is beautifully complemented by soft ivory detailing, giving the dupatta a refined and timeless handcrafted appeal.",
+      "Motifs": [
+        "Large traditional paisley motifs with intricate floral fillings are spread gracefully across the fabric, creating a rich ethnic aesthetic.",
+        "Delicate floral buta accents in earthy mustard and rust tones enhance the handcrafted character and add subtle visual depth."
+      ],
+      "Border Detailing": [
+        "The broad border features alternating floral block motifs and finely printed geometric stripes, offering a balanced traditional finish.",
+        "A slim floral vine border framed with deep charcoal edging enhances the handcrafted elegance, while the tasseled ends add an artisanal touch."
+      ],
+      "Contrast Play": "The harmonious combination of charcoal grey, ivory, muted rust, and mustard creates a sophisticated contrast that transitions effortlessly from everyday ethnic wear to festive occasions.",
+      "aprice": 899,
+      "price": 649,
+      "discount": 28,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782571830/4_hdia5h.jpg",
+      "category": "Accessories",
+      "fabric": "Pure Cotton",
+      "length": "2.5 meters",
+      "width": "36 inches",
+      "rating": 4.8,
+      "reviews": 10
+    },
+    {
+      "id": 206,
       "name": "Hand Block Printed Cotton Dupatta",
       "Base color": "The warm brick red base beautifully showcases the traditional hand block print, creating a vibrant yet timeless ethnic look.",
       "Motifs": [
@@ -1060,68 +1229,20 @@
         "A geometric wave-pattern border framed with contrasting black edging beautifully defines the dupatta and highlights its handcrafted detailing."
       ],
       "Contrast Play": "The striking combination of brick red, black, and ivory creates a refined traditional contrast, making the dupatta suitable for festive celebrations as well as everyday ethnic wear.",
-      "aprice": 1000,
-      "price": 750,
-      "discount": 25,
+      "aprice": 899,
+      "price": 649,
+      "discount": 28,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782571830/7_safzlb.jpg",
       "category": "Accessories",
       "fabric": "Pure Cotton",
       "length": "2.5 meters",
       "width": "36 inches",
-      "rating": 4.9,
+      "rating": 4.8,
       "reviews": 16
     },
     {
-      "id": "a913bfc6-2e5b-4c51-8b1c-13a029d19b96",
-      "name": "Hand Block Printed Cotton Dupatta",
-      "Base color": "The warm mustard beige base is beautifully adorned with intricate hand block prints, creating a rich and elegant traditional look.",
-      "Motifs": [
-        "Dense floral vine jaal motifs spread gracefully across the fabric, showcasing timeless handcrafted artistry.",
-        "Intricate paisley-inspired block prints add depth and classic ethnic charm to the overall design."
-      ],
-      "Border Detailing": [
-        "The broad black border features bold paisley motifs complemented by circular geometric patterns for a striking traditional finish.",
-        "A finely printed geometric border with mustard edging beautifully frames the dupatta, enhancing its handcrafted appeal."
-      ],
-      "Contrast Play": "The harmonious blend of mustard beige, black, ivory, and earthy tones creates a sophisticated ethnic contrast, making the dupatta ideal for festive occasions and elegant everyday styling.",
-      "aprice": 1000,
-      "price": 750,
-      "discount": 25,
-      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782571827/1_bqqv0e.jpg",
-      "category": "Accessories",
-      "fabric": "Kota Doria ",
-      "length": "2.5 meters",
-      "width": "36 inches",
-      "rating": 4.9,
-      "reviews": 13
-    },
-    {
-      "id": "c4459249-aa7d-4830-b7ee-9834de727dfc",
-      "name": "Hand Block  Kota Doria  Dupatta",
-      "Base color": "The elegant charcoal grey base is beautifully complemented by soft ivory detailing, giving the dupatta a refined and timeless handcrafted appeal.",
-      "Motifs": [
-        "Large traditional paisley motifs with intricate floral fillings are spread gracefully across the fabric, creating a rich ethnic aesthetic.",
-        "Delicate floral buta accents in earthy mustard and rust tones enhance the handcrafted character and add subtle visual depth."
-      ],
-      "Border Detailing": [
-        "The broad border features alternating floral block motifs and finely printed geometric stripes, offering a balanced traditional finish.",
-        "A slim floral vine border framed with deep charcoal edging enhances the handcrafted elegance, while the tasseled ends add an artisanal touch."
-      ],
-      "Contrast Play": "The harmonious combination of charcoal grey, ivory, muted rust, and mustard creates a sophisticated contrast that transitions effortlessly from everyday ethnic wear to festive occasions.",
-      "aprice": 1000,
-      "price": 850,
-      "discount": 15,
-      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782571830/4_hdia5h.jpg",
-      "category": "Accessories",
-      "fabric": "Pure Cotton",
-      "length": "2.5 meters",
-      "width": "36 inches",
-      "rating": 4.8,
-      "reviews": 10
-    },
-    {
-      "id": "7061ed19-c837-4ef8-9a5a-b0797f4f9c44",
-      "name": "Hand Block  Kota Doria  Dupatta",
+      "id": 207,
+      "name": "Hand Block Printed Georgette Dupatta",
       "Base color": "The soft blush pink base lends the dupatta a graceful and elegant appearance, beautifully highlighting its intricate hand block artistry.",
       "Motifs": [
         "Delicate floral buta motifs are evenly scattered across the fabric, creating a light and sophisticated handcrafted look.",
@@ -1132,20 +1253,20 @@
         "Intricate floral vine bands and handcrafted tasseled edges add an artisanal touch while beautifully framing the dupatta."
       ],
       "Contrast Play": "The harmonious blend of blush pink, charcoal grey, ivory, and earthy rust creates a soft yet striking contrast, making the dupatta perfect for both festive celebrations and elegant everyday ethnic wear.",
-      "aprice": 1000,
-      "price": 850,
-      "discount": 15,
+      "aprice": 899,
+      "price": 649,
+      "discount": 28,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782571829/6_wntxzd.jpg",
       "category": "Accessories",
       "fabric": "Pure Cotton",
       "length": "2.5 meters",
       "width": "36 inches",
-      "rating": 4.3,
+      "rating": 4.8,
       "reviews": 12
     },
     {
-      "id": "2a46f2f7-e783-45dc-a659-75f75f073202",
-      "name": "Hand Block  Kota Doria  Dupatta",
+      "id": 208,
+      "name": "Hand Block Printed Georgette Dupatta",
       "Base color": "The elegant charcoal grey base blends beautifully with soft blush pink accents, creating a graceful and lightweight ethnic look.",
       "Motifs": [
         "Intricate floral vine motifs spread across the fabric create a rich handcrafted appearance with timeless appeal.",
@@ -1156,20 +1277,20 @@
         "A slim golden piping along the edges and handcrafted tassels enhance the dupatta's elegant drape and premium look."
       ],
       "Contrast Play": "The combination of charcoal grey, blush pink, ivory, mustard, and rust creates a soft yet sophisticated contrast, making the dupatta ideal for festive gatherings and elegant everyday wear.",
-      "aprice": 1000,
-      "price": 850,
-      "discount": 15,
+      "aprice": 1199,
+      "price": 849,
+      "discount": 29,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782571828/3_twurkn.jpg",
       "category": "Accessories",
-      "fabric": "Kota Doria ",
+      "fabric": "Georgette",
       "length": "2.5 meters",
       "width": "36 inches",
-      "rating": 4.5,
+      "rating": 4.8,
       "reviews": 14
     },
     {
-      "id": "bb506845-65a3-4747-81a9-5835ede4a3f1",
-      "name": "Hand Block  Kota Doria  Dupatta",
+      "id": 209,
+      "name": "Hand Block Printed Georgette Dupatta",
       "Base color": "The soft ivory base is beautifully accented with warm mustard and grey tones, giving the dupatta an elegant and graceful handcrafted appeal.",
       "Motifs": [
         "Intricate all-over floral vine motifs create a delicate handcrafted pattern with timeless ethnic charm.",
@@ -1180,20 +1301,44 @@
         "Golden edging with handcrafted tassels beautifully frames the dupatta, adding a premium artisanal touch."
       ],
       "Contrast Play": "The combination of ivory, mustard, charcoal grey, soft blue, and gold creates a sophisticated contrast, making the dupatta suitable for festive occasions as well as elegant everyday wear.",
-      "aprice": 1000,
-      "price": 850,
-      "discount": 15,
+      "aprice": 1199,
+      "price": 849,
+      "discount": 29,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782571828/5_ogzkxo.jpg",
       "category": "Accessories",
-      "fabric": "Kota Doria ",
+      "fabric": "Georgette",
       "length": "2.5 meters",
       "width": "36 inches",
-      "rating": 4.4,
+      "rating": 4.8,
       "reviews": 9
     },
     {
-      "id": "edcc1475-e8f8-45b1-87d7-92994b712e56",
-      "name": "Hand Block  Kota Doria Dupatta",
+      "id": 210,
+      "name": "Hand Block Printed Georgette Dupatta",
+      "Base color": "The warm mustard beige base is beautifully adorned with intricate hand block prints, creating a rich and elegant traditional look.",
+      "Motifs": [
+        "Dense floral vine jaal motifs spread gracefully across the fabric, showcasing timeless handcrafted artistry.",
+        "Intricate paisley-inspired block prints add depth and classic ethnic charm to the overall design."
+      ],
+      "Border Detailing": [
+        "The broad black border features bold paisley motifs complemented by circular geometric patterns for a striking traditional finish.",
+        "A finely printed geometric border with mustard edging beautifully frames the dupatta, enhancing its handcrafted appeal."
+      ],
+      "Contrast Play": "The harmonious blend of mustard beige, black, ivory, and earthy tones creates a sophisticated ethnic contrast, making the dupatta ideal for festive occasions and elegant everyday styling.",
+      "aprice": 1199,
+      "price": 849,
+      "discount": 29,
+      "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782571827/1_bqqv0e.jpg",
+      "category": "Accessories",
+      "fabric": "Georgette",
+      "length": "2.5 meters",
+      "width": "36 inches",
+      "rating": 4.9,
+      "reviews": 13
+    },
+    {
+      "id": 211,
+      "name": "Hand Block Printed Chanderi Dupatta",
       "Base color": "The soft ivory base is beautifully complemented by blush pink and charcoal grey accents, giving the dupatta a graceful and elegant handcrafted appeal.",
       "Motifs": [
         "Delicate floral buta motifs in earthy mustard and rust tones are scattered across the fabric, creating a refined handcrafted look.",
@@ -1204,22 +1349,21 @@
         "A floral vine border with blush pink edging and handcrafted tassels enhances the artisanal appeal and beautifully frames the dupatta."
       ],
       "Contrast Play": "The blend of ivory, blush pink, charcoal grey, mustard, and rust creates a soft yet sophisticated contrast, making the dupatta perfect for festive occasions as well as elegant everyday ethnic wear.",
-      "aprice": 1000,
-      "price": 850,
-      "discount": 15,
+      "aprice": 1199,
+      "price": 849,
+      "discount": 29,
       "image": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782571826/2_loi7ga.jpg",
       "category": "Accessories",
-      "fabric": "Kota Doria ",
+      "fabric": "Georgette",
       "length": "2.5 meters",
       "width": "36 inches",
       "rating": 4.8,
       "reviews": 11
     }
   ],
-  
   "saree": [
     {
-      "id": "bfecf3e3-86ca-4cde-9023-bddcc61f75ba",
+      "id": 301,
       "name": "Bagru Printed Cotton Saree",
       "Base color": "The deep rust red base paired with black and ivory hand block prints creates a timeless ethnic look inspired by traditional Bagru craftsmanship.",
       "Motifs": [
@@ -1233,15 +1377,15 @@
         "The pallu border combines floral and striped traditional block print elements for a striking handcrafted appeal."
       ],
       "Contrast Play": "The rich rust red base contrasted with bold black and ivory block prints creates a classic heritage-inspired combination that is perfect for festive occasions and everyday ethnic elegance.",
-      "aprice": 1000,
-      "price": 700,
-      "discount": 30,
+      "aprice": 4999,
+      "price": 3749,
+      "discount": 25,
       "category": "Women",
       "fabric": "Cotton Silk",
       "length": "5.5 meters",
       "blouse": "Unstitched",
-      "rating": 4.9,
-      "reviews": 15,
+      "rating": 4.8,
+      "reviews": 14,
       "images": [
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782715141/bagru_print_6__cotton_set291_sowmyasri_front2_tassels__2023-8-25-18-24-21__2730X4096_qsedj5.jpg",
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782715143/bagru_print_6__cotton_set291_sowmyasri_side__2023-8-23-16-5-9__2730X4096_fqqok1.jpg",
@@ -1251,7 +1395,7 @@
       "mainImage": "https://res.cloudinary.com/dzyhjgtji/image/upload/f_auto,q_80/v1782715141/bagru_print_6__cotton_set291_sowmyasri_front2_tassels__2023-8-25-18-24-21__2730X4096_qsedj5.jpg"
     },
     {
-      "id": "df2ee48d-680b-43d5-9f58-948207777a8c",
+      "id": 302,
       "name": "Bagru Printed Cotton Saree",
       "Base color": "The soft ivory base highlighted with bold black block prints and deep rust red accents creates a refined handcrafted look inspired by traditional Bagru artistry.",
       "Motifs": [
@@ -1265,15 +1409,15 @@
         "The pallu border combines striped bands with floral motifs, adding depth and traditional character."
       ],
       "Contrast Play": "The elegant ivory base contrasted with black block prints and vibrant rust red borders creates a timeless ethnic combination that is perfect for festive gatherings and everyday traditional wear.",
-      "aprice": 1000,
-      "price": 700,
-      "discount": 30,
+      "aprice": 6999,
+      "price": 5249,
+      "discount": 25,
       "category": "Women",
       "fabric": "Cotton Silk",
       "length": "5.5 meters",
       "blouse": "With Blouse",
-      "rating": 4.2,
-      "reviews": 10,
+      "rating": 4.9,
+      "reviews": 11,
       "images": [
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784208103/bagru_print_saree_8__cotton_set291_sowmyasri_front2__2023-7-30-11-5-36__2730X4096_qdhwre.jpg",
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784208103/bagru_print_saree_8__cotton_set291_sowmyasri_side__2023-7-30-11-5-21__2730X4096_t7euvi.jpg",
@@ -1283,7 +1427,7 @@
       "mainImage": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784208103/bagru_print_saree_8__cotton_set291_sowmyasri_front2__2023-7-30-11-5-36__2730X4096_qdhwre.jpg"
     },
     {
-      "id": "09029b76-658b-4f84-b3bf-d20ec9ae224e",
+      "id": 303,
       "name": "Bagru Printed Cotton Saree",
       "Base color": "The rich brick red base is beautifully adorned with traditional Bagru-inspired block prints, creating a vibrant and timeless ethnic appeal.",
       "Motifs": [
@@ -1297,15 +1441,15 @@
         "A slim red edging completes the border, giving the saree a refined and elegant finish."
       ],
       "Contrast Play": "The vibrant brick red base paired with black, ivory, and beige detailing creates a bold yet balanced contrast, making the saree ideal for festive celebrations as well as elegant everyday wear.",
-      "aprice": 1000,
-      "price": 700,
-      "discount": 30,
+      "aprice": 3499,
+      "price": 2624,
+      "discount": 25,
       "category": "Women",
       "fabric": "Cotton Silk",
       "length": "5.5 meters",
       "blouse": "Unstitched",
       "rating": 4.8,
-      "reviews": 14,
+      "reviews": 12,
       "images": [
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784208389/bagru_print_saree_9__cotton_set291_sowmyasri_front2__2023-7-30-11-5-14__2730X4096_fmddzm.jpg",
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784208390/bagru_print_saree_9__cotton_set291_sowmyasri_side__2023-7-30-11-4-59__2730X4096_giadex.jpg",
@@ -1315,7 +1459,7 @@
       "mainImage": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784208389/bagru_print_saree_9__cotton_set291_sowmyasri_front2__2023-7-30-11-5-14__2730X4096_fmddzm.jpg"
     },
     {
-      "id": "05d13836-878e-496d-b7b4-e63419511d50",
+      "id": 304,
       "name": "Bagru Printed Cotton Saree",
       "Base color": "The elegant ivory base beautifully highlights the traditional Bagru hand block prints, creating a graceful and timeless ethnic look.",
       "Motifs": [
@@ -1329,15 +1473,15 @@
         "A slim rust brown edging completes the border, giving the saree a neat and elegant finish."
       ],
       "Contrast Play": "The soft ivory base paired with black, rust red, and earthy brown accents creates a balanced traditional contrast, making the saree ideal for festive occasions as well as sophisticated everyday ethnic wear.",
-      "aprice": 1000,
-      "price": 700,
-      "discount": 30,
+      "aprice": 3499,
+      "price": 2624,
+      "discount": 25,
       "category": "Women",
       "fabric": "Cotton Silk",
       "length": "5.5 meters",
       "blouse": "Unstitched",
-      "rating": 4.2,
-      "reviews": 10,
+      "rating": 4.8,
+      "reviews": 14,
       "images": [
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784208544/bagru_print_saree_10__cotton_set291_sowmyasri_front2__2023-7-30-11-4-51__2730X4096_hog2gc.jpg",
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784208545/bagru_print_saree_10__cotton_set291_sowmyasri_side__2023-7-30-11-4-34__2730X4096_rqblvz.jpg",
@@ -1347,8 +1491,8 @@
       "mainImage": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784208544/bagru_print_saree_10__cotton_set291_sowmyasri_front2__2023-7-30-11-4-51__2730X4096_hog2gc.jpg"
     },
     {
-      "id": "937002ca-9313-4b56-9a03-84a6af6fd62b",
-      "name": "Bagru Printed Cotton Saree",
+      "id": 305,
+      "name": "Patola Silk Saree",
       "Base color": "The warm mustard yellow base paired with ivory floral block prints creates an earthy and elegant handcrafted look with timeless ethnic appeal.",
       "Motifs": [
         "All-over leafy floral block print motifs create a graceful and flowing pattern across the saree.",
@@ -1361,15 +1505,15 @@
         "A subtle mustard edge neatly finishes the border while complementing the overall color palette."
       ],
       "Contrast Play": "The soft mustard yellow base contrasted with black, ivory, and vibrant blue accents creates a sophisticated ethnic combination suitable for festive gatherings and elegant everyday wear.",
-      "aprice": 1000,
-      "price": 700,
-      "discount": 30,
+      "aprice": 8999,
+      "price": 6749,
+      "discount": 25,
       "category": "Women",
-      "fabric": "Cotton Silk",
+      "fabric": "Patola Silk",
       "length": "5.5 meters",
       "blouse": "With Blouse",
-      "rating": 4.5,
-      "reviews": 10,
+      "rating": 4.8,
+      "reviews": 17,
       "images": [
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784209303/bagru_print_saree_11__cotton_set291_sowmyasri_front2_tassels__2023-8-2-15-36-7__2730X4096_o8ln8y.jpg",
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784209303/bagru_print_saree_11__cotton_set291_sowmyasri_side__2023-8-2-15-36-3__2730X4096_am8ksf.jpg",
@@ -1379,8 +1523,8 @@
       "mainImage": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784209303/bagru_print_saree_11__cotton_set291_sowmyasri_front2_tassels__2023-8-2-15-36-7__2730X4096_o8ln8y.jpg"
     },
     {
-      "id": "2fcf41bf-4dfc-4ade-849f-c0103a0a0311",
-      "name": "Bagru Printed Cotton Saree",
+      "id": 306,
+      "name": "Patola Silk Saree",
       "Base color": "The elegant ivory base highlighted with black paisley block prints and deep maroon accents creates a timeless handcrafted look inspired by traditional Bagru printing.",
       "Motifs": [
         "Classic paisley (kairi) motifs are repeated throughout the saree, creating a graceful and traditional all-over pattern.",
@@ -1393,15 +1537,15 @@
         "The pallu combines striped panels with floral medallions and traditional block print elements, creating a striking handcrafted appeal."
       ],
       "Contrast Play": "The soft ivory base contrasted with bold black paisley motifs and rich maroon borders creates a sophisticated ethnic combination that is ideal for festive occasions and elegant everyday wear.",
-      "aprice": 1000,
-      "price": 700,
-      "discount": 30,
+      "aprice": 8999,
+      "price": 6749,
+      "discount": 25,
       "category": "Women",
-      "fabric": "Cotton Silk",
+      "fabric": "Patola Silk",
       "length": "5.5 meters",
       "blouse": "With Blouse",
-      "rating": 4.3,
-      "reviews": 14,
+      "rating": 4.9,
+      "reviews": 9,
       "images": [
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784209418/bagru_print_saree_11__cotton_set291_sowmyasri_front2__2023-8-23-16-4-11__2730X4096_zexr4o.jpg",
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784209418/bagru_print_saree_11__cotton_set291_sowmyasri_side__2023-8-23-16-3-57__2730X4096_qjgycr.jpg",
@@ -1411,8 +1555,8 @@
       "mainImage": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784209418/bagru_print_saree_11__cotton_set291_sowmyasri_front2__2023-8-23-16-4-11__2730X4096_zexr4o.jpg"
     },
     {
-      "id": "862dc07b-62f3-43cc-bbf3-61acafe8827c",
-      "name": "Bagru Printed Cotton Saree",
+      "id": 307,
+      "name": "Patola Silk Saree",
       "Base color": "The rich maroon base adorned with ivory floral block prints creates a graceful handcrafted look inspired by traditional Bagru artistry.",
       "Motifs": [
         "Repeating floral buta motifs are spread uniformly across the saree, creating an elegant all-over pattern.",
@@ -1425,14 +1569,14 @@
         "The pallu combines striped bands with floral motifs and traditional block print accents, adding richness and visual balance."
       ],
       "Contrast Play": "The deep maroon base contrasted with ivory floral prints and bold black striped pallu creates a sophisticated ethnic combination that is perfect for festive occasions and elegant everyday wear.",
-      "aprice": 1000,
-      "price": 700,
-      "discount": 30,
+      "aprice": 8999,
+      "price": 6749,
+      "discount": 25,
       "category": "Women",
-      "fabric": "Cotton Silk",
+      "fabric": "Patola Silk",
       "length": "5.5 meters",
       "blouse": "With Blouse",
-      "rating": 4.7,
+      "rating": 4.9,
       "reviews": 13,
       "images": [
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784209499/bagru_print_saree_12__cotton_set291_sowmyasri_front2_tassels__2023-8-25-18-26-50__2730X4096_zxwzxr.jpg",
@@ -1443,8 +1587,8 @@
       "mainImage": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784209499/bagru_print_saree_12__cotton_set291_sowmyasri_front2_tassels__2023-8-25-18-26-50__2730X4096_zxwzxr.jpg"
     },
     {
-      "id": "8991ba48-b1f9-4af7-8dcc-6cdd4bb3fd71",
-      "name": "Bagru Printed Cotton Saree",
+      "id": 308,
+      "name": "Patola Silk Saree",
       "Base color": "The soft ivory base highlighted with mustard zigzag block prints and bold black accents creates a contemporary handcrafted look rooted in traditional Bagru printing.",
       "Motifs": [
         "Bold chevron (zigzag) block print patterns flow across the entire saree, creating a striking geometric appeal.",
@@ -1457,15 +1601,15 @@
         "A slim mustard edge neatly completes the border while complementing the overall handcrafted design."
       ],
       "Contrast Play": "The elegant ivory base contrasted with mustard geometric prints, bold black floral borders, and deep navy blue pallu accents creates a sophisticated ethnic combination suitable for festive occasions and graceful everyday wear.",
-      "aprice": 1000,
-      "price": 700,
-      "discount": 30,
+      "aprice": 8999,
+      "price": 6749,
+      "discount": 25,
       "category": "Women",
-      "fabric": "Cotton Silk",
+      "fabric": "Patola Silk",
       "length": "5.5 meters",
       "blouse": "With Blouse",
-      "rating": 4.2,
-      "reviews": 17,
+      "rating": 4.8,
+      "reviews": 16,
       "images": [
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784209577/bagru_print_saree_12__cotton_set291_sowmyasri_front2_tassels__2023-8-2-15-35-31__2730X4096_pwuwcn.jpg",
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784209578/bagru_print_saree_12__cotton_set291_sowmyasri_side__2023-8-2-15-35-25__2730X4096_z6aojr.jpg",
@@ -1475,8 +1619,8 @@
       "mainImage": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784209577/bagru_print_saree_12__cotton_set291_sowmyasri_front2_tassels__2023-8-2-15-35-31__2730X4096_pwuwcn.jpg"
     },
     {
-      "id": "d39b4175-9920-4efb-b54c-33c19a4dc394",
-      "name": "Bagru Printed Cotton Saree",
+      "id": 309,
+      "name": "Patola Silk Saree",
       "Base color": "The soft ivory base adorned with rust red floral block prints creates a graceful handcrafted look inspired by traditional Bagru printing.",
       "Motifs": [
         "Repeating floral buta motifs are spread evenly across the saree, giving it a balanced and elegant appearance.",
@@ -1489,15 +1633,15 @@
         "The pallu combines rust, ivory, and black striped sections with floral medallions, giving the saree a rich traditional finish."
       ],
       "Contrast Play": "The elegant ivory base contrasted with rust red floral motifs, bold black geometric borders, and earthy striped pallu creates a timeless ethnic combination suitable for festive occasions and graceful everyday wear.",
-      "aprice": 1000,
-      "price": 700,
-      "discount": 30,
+      "aprice": 8999,
+      "price": 6749,
+      "discount": 25,
       "category": "Women",
-      "fabric": "Cotton Silk",
+      "fabric": "Patola Silk",
       "length": "5.5 meters",
       "blouse": "With Blouse",
-      "rating": 4.2,
-      "reviews": 13,
+      "rating": 4.8,
+      "reviews": 12,
       "images": [
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784209703/bagru_print_saree_13__cotton_set291_sowmyasri_front2__2023-8-2-15-35-14__2730X4096_odjbft.jpg",
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784209704/bagru_print_saree_13__cotton_set291_sowmyasri_side__2023-8-2-15-34-49__2730X4096_gbukdo.jpg",
@@ -1507,8 +1651,8 @@
       "mainImage": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784209703/bagru_print_saree_13__cotton_set291_sowmyasri_front2__2023-8-2-15-35-14__2730X4096_odjbft.jpg"
     },
     {
-      "id": "65f11c55-d443-441c-a827-3dd1d9dea228",
-      "name": "Bagru Printed Cotton Saree",
+      "id": 310,
+      "name": "Patola Silk Saree",
       "Base color": "The deep black base adorned with ivory floral block prints creates a bold and timeless handcrafted look inspired by traditional Bagru artistry.",
       "Motifs": [
         "Repeating floral buta motifs are spread uniformly across the saree, creating a graceful and elegant all-over pattern.",
@@ -1521,15 +1665,15 @@
         "The pallu combines black, ivory, and rust striped sections with floral medallions, creating a rich traditional finish."
       ],
       "Contrast Play": "The striking black base contrasted with ivory floral motifs and rust red accents creates a sophisticated ethnic combination that is perfect for festive celebrations and elegant everyday wear.",
-      "aprice": 1000,
-      "price": 700,
-      "discount": 30,
+      "aprice": 8999,
+      "price": 6749,
+      "discount": 25,
       "category": "Women",
-      "fabric": "Cotton Silk",
+      "fabric": "Patola Silk",
       "length": "5.5 meters",
       "blouse": "With Blouse",
-      "rating": 4.1,
-      "reviews": 16,
+      "rating": 4.9,
+      "reviews": 15,
       "images": [
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784209787/bagru_print_saree_14__cotton_set291_sowmyasri_front2_tassels__2023-8-25-18-21-28__2730X4096_losqkg.jpg",
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784209788/bagru_print_saree_14__cotton_set291_sowmyasri_side__2023-8-25-18-21-16__2730X4096_eopzrc.jpg",
@@ -1539,8 +1683,8 @@
       "mainImage": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784209787/bagru_print_saree_14__cotton_set291_sowmyasri_front2_tassels__2023-8-25-18-21-28__2730X4096_losqkg.jpg"
     },
     {
-      "id": "f7c0d0bd-b5d6-43c3-87ab-5a56eebe7e6b",
-      "name": "Bagru Printed Cotton Saree",
+      "id": 311,
+      "name": "Patola Silk Saree",
       "Base color": "The deep black base highlighted with ivory floral block prints and rich rust red accents creates a bold handcrafted look inspired by traditional Bagru artistry.",
       "Motifs": [
         "Repeating floral buta motifs are arranged uniformly across the saree, creating a graceful all-over traditional pattern.",
@@ -1553,15 +1697,15 @@
         "The pallu combines mustard, rust red, black, and ivory striped sections with lotus-inspired motifs, creating a rich handcrafted finish."
       ],
       "Contrast Play": "The bold black base contrasted with ivory floral motifs, rust red borders, and mustard accents creates a sophisticated ethnic combination that is ideal for festive occasions and elegant everyday wear.",
-      "aprice": 1000,
-      "price": 700,
-      "discount": 30,
+      "aprice": 8999,
+      "price": 6749,
+      "discount": 25,
       "category": "Women",
-      "fabric": "Cotton Silk",
+      "fabric": "Patola Silk",
       "length": "5.5 meters",
       "blouse": "With Blouse",
-      "rating": 4.3,
-      "reviews": 16,
+      "rating": 4.9,
+      "reviews": 18,
       "images": [
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784209863/bagru_print_saree_14__cotton_set291_sowmyasri_front2_tassels__2023-8-25-18-29-51__2730X4096_sprx5r.jpg",
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784209864/bagru_print_saree_14__cotton_set291_sowmyasri_side__2023-8-23-16-1-17__2730X4096_r0mjrc.jpg",
@@ -1571,8 +1715,8 @@
       "mainImage": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784209863/bagru_print_saree_14__cotton_set291_sowmyasri_front2_tassels__2023-8-25-18-29-51__2730X4096_sprx5r.jpg"
     },
     {
-      "id": "6fa0b672-d2b5-45da-b33b-65c00c943a58",
-      "name": "Bagru Printed Cotton Saree",
+      "id": 312,
+      "name": "Patola Silk Saree",
       "Base color": "The warm mustard yellow base adorned with ivory floral block prints creates a graceful handcrafted look inspired by traditional Bagru artistry.",
       "Motifs": [
         "Repeating circular floral buta motifs are spread evenly across the saree, creating a balanced and elegant all-over pattern.",
@@ -1585,15 +1729,15 @@
         "The pallu combines navy blue, ivory, and mustard striped sections with traditional floral motifs, creating a rich handcrafted look."
       ],
       "Contrast Play": "The warm mustard yellow base contrasted with ivory floral motifs, bold black borders, and deep navy blue pallu accents creates a sophisticated ethnic combination suitable for festive occasions and elegant everyday wear.",
-      "aprice": 1000,
-      "price": 700,
-      "discount": 30,
+      "aprice": 8999,
+      "price": 6749,
+      "discount": 25,
       "category": "Women",
-      "fabric": "Cotton Silk",
+      "fabric": "Patola Silk",
       "length": "5.5 meters",
       "blouse": "With Blouse",
-      "rating": 4.4,
-      "reviews": 12,
+      "rating": 4.8,
+      "reviews": 10,
       "images": [
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784209933/bagru_print_saree_15__cotton_set291_sowmyasri_front2_tassels__2023-8-2-15-34-20__2730X4096_gtua9q.jpg",
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784209933/bagru_print_saree_15__cotton_set291_sowmyasri_side__2023-8-2-15-34-17__2730X4096_sxrfoz.jpg",
@@ -1603,8 +1747,8 @@
       "mainImage": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784209933/bagru_print_saree_15__cotton_set291_sowmyasri_front2_tassels__2023-8-2-15-34-20__2730X4096_gtua9q.jpg"
     },
     {
-      "id": "d6dad532-682c-42ae-a2b6-e8b034136df5",
-      "name": "Bagru Printed Cotton Saree",
+      "id": 313,
+      "name": "Patola Silk Saree",
       "Base color": "The elegant black base highlighted with ivory leafy block prints and subtle olive accents creates a sophisticated handcrafted look inspired by traditional Bagru artistry.",
       "Motifs": [
         "Repeating leafy vine motifs flow gracefully across the saree, creating a rich all-over botanical pattern.",
@@ -1617,15 +1761,15 @@
         "The pallu combines olive, black, and ivory striped sections with floral medallions, creating a rich handcrafted traditional look."
       ],
       "Contrast Play": "The deep black base contrasted with ivory leafy motifs and subtle olive green accents creates a graceful ethnic combination that is perfect for festive occasions and elegant everyday wear.",
-      "aprice": 1000,
-      "price": 700,
-      "discount": 30,
+      "aprice": 8999,
+      "price": 6749,
+      "discount": 25,
       "category": "Women",
-      "fabric": "Cotton Silk",
+      "fabric": "Patola Silk",
       "length": "5.5 meters",
       "blouse": "With Blouse",
-      "rating": 4.7,
-      "reviews": 9,
+      "rating": 4.9,
+      "reviews": 14,
       "images": [
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784210027/bagru_print_saree_15__cotton_set291_sowmyasri_front2_tassels__2023-8-25-18-30-16__2730X4096_xpt1t0.jpg",
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784210029/bagru_print_saree_15__cotton_set291_sowmyasri_side__2023-8-23-16-1-50__2730X4096_cryh3t.jpg",
@@ -1635,8 +1779,8 @@
       "mainImage": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784210027/bagru_print_saree_15__cotton_set291_sowmyasri_front2_tassels__2023-8-25-18-30-16__2730X4096_xpt1t0.jpg"
     },
     {
-      "id": "b956195b-8594-4679-9966-a6a74d9b8415",
-      "name": "Bagru Printed Cotton Saree",
+      "id": 314,
+      "name": "Patola Silk Saree",
       "Base color": "The rich rust red base adorned with ivory circular floral block prints creates a vibrant handcrafted look inspired by traditional Bagru artistry.",
       "Motifs": [
         "Repeating circular floral buta motifs are distributed evenly across the saree, creating a balanced and elegant all-over pattern.",
@@ -1649,15 +1793,15 @@
         "The pallu combines rust red, mustard, black, and ivory striped sections with traditional paisley motifs for a rich ethnic appearance."
       ],
       "Contrast Play": "The vibrant rust red base contrasted with ivory floral motifs, bold black borders, and earthy mustard accents creates a striking ethnic combination that is perfect for festive occasions and elegant everyday wear.",
-      "aprice": 1000,
-      "price": 700,
-      "discount": 30,
+      "aprice": 8999,
+      "price": 6749,
+      "discount": 25,
       "category": "Women",
-      "fabric": "Cotton Silk",
+      "fabric": "Patola Silk",
       "length": "5.5 meters",
       "blouse": "With Blouse",
       "rating": 4.9,
-      "reviews": 16,
+      "reviews": 17,
       "images": [
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784210104/bagru_print_saree_15__cotton_set291_sowmyasri_front2_tassels__2023-8-25-18-31-17__2730X4096_woxwoh.jpg",
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784210106/bagru_print_saree_15__cotton_set291_sowmyasri_side__2023-8-23-16-3-8__2730X4096_fffkse.jpg",
@@ -1667,8 +1811,8 @@
       "mainImage": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784210104/bagru_print_saree_15__cotton_set291_sowmyasri_front2_tassels__2023-8-25-18-31-17__2730X4096_woxwoh.jpg"
     },
     {
-      "id": "91135078-4b9e-45a1-8bf4-5eac0f9aebef",
-      "name": "Bagru Printed Cotton Saree",
+      "id": 315,
+      "name": "Patola Silk Saree",
       "Base color": "The soft ivory base adorned with delicate rust red floral block prints creates an elegant handcrafted look inspired by traditional Bagru artistry.",
       "Motifs": [
         "Tiny floral buti motifs are evenly repeated across the saree, creating a graceful and refined all-over pattern.",
@@ -1681,14 +1825,14 @@
         "The pallu combines rust red, ivory, and black striped sections with floral tree motifs, creating a rich handcrafted finish."
       ],
       "Contrast Play": "The elegant ivory base contrasted with rust red floral motifs, bold black accents, and traditional striped pallu creates a timeless ethnic combination suitable for festive occasions and graceful everyday wear.",
-      "aprice": 1000,
-      "price": 700,
-      "discount": 30,
+      "aprice": 8999,
+      "price": 6749,
+      "discount": 25,
       "category": "Women",
-      "fabric": "Cotton Silk",
+      "fabric": "Patola Silk",
       "length": "5.5 meters",
       "blouse": "With Blouse",
-      "rating": 4.9,
+      "rating": 4.8,
       "reviews": 11,
       "images": [
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784210200/bagru_print_saree_16__cotton_set291_sowmyasri_front2_tassels__2023-8-2-15-32-1__2730X4096_fcmyml.jpg",
@@ -1699,8 +1843,8 @@
       "mainImage": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784210200/bagru_print_saree_16__cotton_set291_sowmyasri_front2_tassels__2023-8-2-15-32-1__2730X4096_fcmyml.jpg"
     },
     {
-      "id": "45611012-0f1f-4298-a838-3a5d82fde7bf",
-      "name": "Bagru Printed Cotton Saree",
+      "id": 316,
+      "name": "Patola Silk Saree",
       "Base color": "The rich rust red base adorned with large ivory floral block prints creates a bold handcrafted look inspired by traditional Bagru artistry.",
       "Motifs": [
         "Large floral buta motifs are repeated uniformly across the saree, creating an elegant and eye-catching all-over pattern.",
@@ -1713,15 +1857,15 @@
         "The pallu combines rust red, mustard, black, and ivory striped sections with paisley motifs, creating a rich handcrafted traditional look."
       ],
       "Contrast Play": "The vibrant rust red base contrasted with bold ivory floral motifs, black borders, and earthy mustard accents creates a striking ethnic combination that is perfect for festive occasions and elegant everyday wear.",
-      "aprice": 1000,
-      "price": 700,
-      "discount": 30,
+      "aprice": 8999,
+      "price": 6749,
+      "discount": 25,
       "category": "Women",
-      "fabric": "Cotton Silk",
+      "fabric": "Patola Silk",
       "length": "5.5 meters",
       "blouse": "With Blouse",
-      "rating": 4.4,
-      "reviews": 14,
+      "rating": 4.9,
+      "reviews": 16,
       "images": [
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784210296/bagru_print_saree_17__cotton_set291_sowmyasri_front2__2023-8-2-15-34-10__2730X4096_aonuah.jpg",
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784210298/bagru_print_saree_17__cotton_set291_sowmyasri_side__2023-8-2-15-33-57__2730X4096_gczyp5.jpg",
@@ -1731,8 +1875,8 @@
       "mainImage": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784210296/bagru_print_saree_17__cotton_set291_sowmyasri_front2__2023-8-2-15-34-10__2730X4096_aonuah.jpg"
     },
     {
-      "id": "95c2f00d-a0f1-4858-85d1-4a9dc23eecd0",
-      "name": "Bagru Printed Cotton Saree",
+      "id": 317,
+      "name": "Patola Silk Saree",
       "Base color": "The warm mustard yellow base adorned with delicate ivory floral block prints creates a timeless handcrafted look inspired by traditional Bagru artistry.",
       "Motifs": [
         "Small floral buta motifs are repeated uniformly across the saree, creating a graceful and balanced all-over pattern.",
@@ -1745,15 +1889,15 @@
         "The pallu combines black, ivory, and mustard striped sections with floral bud motifs, creating a rich handcrafted traditional look."
       ],
       "Contrast Play": "The warm mustard yellow base contrasted with ivory floral motifs, bold black borders, and earthy striped pallu creates a sophisticated ethnic combination that is perfect for festive occasions and elegant everyday wear.",
-      "aprice": 1000,
-      "price": 700,
-      "discount": 30,
+      "aprice": 8999,
+      "price": 6749,
+      "discount": 25,
       "category": "Women",
-      "fabric": "Cotton Silk",
+      "fabric": "Patola Silk",
       "length": "5.5 meters",
       "blouse": "With Blouse",
-      "rating": 4.3,
-      "reviews": 14,
+      "rating": 4.8,
+      "reviews": 13,
       "images": [
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784210602/bagru_print_saree_19__cotton_set291_sowmyasri_front2__2023-8-2-15-32-43__2730X4096_duvjih.jpg",
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784210602/bagru_print_saree_19__cotton_set291_sowmyasri_side__2023-8-2-15-32-20__2730X4096_hj75hq.jpg",
@@ -1763,8 +1907,8 @@
       "mainImage": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784210602/bagru_print_saree_19__cotton_set291_sowmyasri_front2__2023-8-2-15-32-43__2730X4096_duvjih.jpg"
     },
     {
-      "id": "0b9ed147-b58d-45b5-843d-e9a42cb8e3c6",
-      "name": "Bagru Printed Cotton Saree",
+      "id": 318,
+      "name": "Patola Silk Saree",
       "Base color": "The vibrant rust red base adorned with delicate ivory floral block prints creates a rich handcrafted look inspired by traditional Bagru artistry.",
       "Motifs": [
         "Small floral buta motifs are repeated uniformly across the saree, creating a graceful and balanced all-over pattern.",
@@ -1777,15 +1921,15 @@
         "The pallu combines black, ivory, and rust red striped sections with paisley motifs, creating a rich handcrafted traditional look."
       ],
       "Contrast Play": "The vibrant rust red base contrasted with ivory floral motifs, bold black borders, and striped pallu accents creates a striking ethnic combination that is perfect for festive occasions and elegant everyday wear.",
-      "aprice": 1000,
-      "price": 700,
-      "discount": 30,
+      "aprice": 8999,
+      "price": 6749,
+      "discount": 25,
       "category": "Women",
-      "fabric": "Cotton Silk",
+      "fabric": "Patola Silk",
       "length": "5.5 meters",
       "blouse": "With Blouse",
-      "rating": 4.6,
-      "reviews": 18,
+      "rating": 4.9,
+      "reviews": 15,
       "images": [
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784210688/bagru_print_saree_l_2__cotton_set291_sowmyasri_front2__2023-8-23-16-7-24__2730X4096_ulwgi5.jpg",
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784210690/bagru_print_saree_l_2__cotton_set291_sowmyasri_side__2023-8-23-16-7-9__2730X4096_li8fag.jpg",
@@ -1795,8 +1939,8 @@
       "mainImage": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784210688/bagru_print_saree_l_2__cotton_set291_sowmyasri_front2__2023-8-23-16-7-24__2730X4096_ulwgi5.jpg"
     },
     {
-      "id": "14b30eb7-66ea-4552-bb84-ff577d67739e",
-      "name": "Bagru Printed Cotton Saree",
+      "id": 319,
+      "name": "Patola Silk Saree",
       "Base color": "The elegant black base adorned with ivory floral block prints creates a timeless handcrafted look inspired by traditional Bagru artistry.",
       "Motifs": [
         "Repeating oval floral buta motifs are arranged uniformly across the saree, creating a graceful all-over traditional pattern.",
@@ -1809,15 +1953,15 @@
         "The pallu combines rust red, mustard, black, and ivory striped sections with paisley motifs, creating a rich handcrafted traditional appearance."
       ],
       "Contrast Play": "The deep black base contrasted with ivory floral motifs, rust red borders, and earthy mustard accents creates a sophisticated ethnic combination that is perfect for festive occasions and elegant everyday wear.",
-      "aprice": 1000,
-      "price": 700,
-      "discount": 30,
+      "aprice": 8999,
+      "price": 6749,
+      "discount": 25,
       "category": "Women",
-      "fabric": "Cotton Silk",
+      "fabric": "Patola Silk",
       "length": "5.5 meters",
       "blouse": "With Blouse",
       "rating": 4.9,
-      "reviews": 13,
+      "reviews": 19,
       "images": [
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784210772/bagru_print_saree_l_4__cotton_set291_sowmyasri_front2_tassels__2023-8-25-18-28-59__2730X4096_v5be3h.jpg",
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784210774/bagru_print_saree_l_4__cotton_set291_sowmyasri_side__2023-8-25-18-28-54__2730X4096_dsazll.jpg",
@@ -1827,8 +1971,8 @@
       "mainImage": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784210772/bagru_print_saree_l_4__cotton_set291_sowmyasri_front2_tassels__2023-8-25-18-28-59__2730X4096_v5be3h.jpg"
     },
     {
-      "id": "2003b657-e7cb-492d-a863-33fce62ffcc8",
-      "name": "Bagru Printed Cotton Saree",
+      "id": 320,
+      "name": "Patola Silk Saree",
       "Base color": "The warm mustard yellow base adorned with delicate ivory floral block prints creates a timeless handcrafted look inspired by traditional Bagru artistry.",
       "Motifs": [
         "Small floral buta motifs are repeated evenly across the saree, creating a graceful and balanced all-over pattern.",
@@ -1841,15 +1985,15 @@
         "The pallu combines royal blue, mustard, black, and ivory striped sections with floral motifs, creating a rich handcrafted traditional appearance."
       ],
       "Contrast Play": "The warm mustard yellow base contrasted with ivory floral motifs, bold black borders, and vibrant royal blue pallu accents creates a sophisticated ethnic combination that is perfect for festive occasions and elegant everyday wear.",
-      "aprice": 1000,
-      "price": 700,
-      "discount": 30,
+      "aprice": 8999,
+      "price": 6749,
+      "discount": 25,
       "category": "Women",
-      "fabric": "Cotton Silk",
+      "fabric": "Patola Silk",
       "length": "5.5 meters",
       "blouse": "With Blouse",
-      "rating": 4.8,
-      "reviews": 18,
+      "rating": 4.9,
+      "reviews": 12,
       "images": [
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784210846/bagru_print_saree_l_3__cotton_set291_sowmyasri_front2__2023-8-23-16-7-0__2730X4096_n6ldzw.jpg",
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784210847/bagru_print_saree_l_3__cotton_set291_sowmyasri_side__2023-8-25-18-29-20__2730X4096_rzwfom.jpg",
@@ -1859,8 +2003,8 @@
       "mainImage": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784210846/bagru_print_saree_l_3__cotton_set291_sowmyasri_front2__2023-8-23-16-7-0__2730X4096_n6ldzw.jpg"
     },
     {
-      "id": "cd738e34-5bef-44b6-94f7-9094c0b70f55",
-      "name": "Bagru Printed Cotton Saree",
+      "id": 321,
+      "name": "Patola Silk Saree",
       "Base color": "The rich rust red base adorned with elegant ivory floral block prints creates a timeless handcrafted look inspired by traditional Bagru artistry.",
       "Motifs": [
         "Large blooming floral vines spread gracefully across the saree, creating a rich all-over botanical pattern.",
@@ -1873,15 +2017,15 @@
         "The pallu combines rust red, brown, black, and ivory striped sections with swan motifs and geometric patterns, creating a rich traditional finish."
       ],
       "Contrast Play": "The vibrant rust red base contrasted with elegant ivory floral motifs, bold black accents, and earthy striped pallu details creates a graceful ethnic combination perfect for festive occasions and elegant everyday wear.",
-      "aprice": 1000,
-      "price": 700,
-      "discount": 30,
+      "aprice": 8999,
+      "price": 6749,
+      "discount": 25,
       "category": "Women",
-      "fabric": "Cotton Silk",
+      "fabric": "Patola Silk",
       "length": "5.5 meters",
       "blouse": "With Blouse",
       "rating": 4.9,
-      "reviews": 11,
+      "reviews": 18,
       "images": [
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784210938/bagru_saree_6___cotton_set291_sowmyasri_front2__2023-7-30-11-6-20__2730X4096_thxpve.jpg",
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784210940/bagru_saree_6___cotton_set291_sowmyasri_side__2023-7-30-11-6-7__2730X4096_f3tcfk.jpg",
@@ -1891,8 +2035,8 @@
       "mainImage": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784210938/bagru_saree_6___cotton_set291_sowmyasri_front2__2023-7-30-11-6-20__2730X4096_thxpve.jpg"
     },
     {
-      "id": "d7218d35-021c-4ca1-b4c8-ae9e3917fe03",
-      "name": "Bagru Printed Cotton Saree",
+      "id": 322,
+      "name": "Patola Silk Saree",
       "Base color": "The warm mustard yellow base adorned with elegant ivory floral block prints creates a timeless handcrafted look inspired by traditional Bagru artistry.",
       "Motifs": [
         "Repeating floral buta motifs are evenly distributed across the saree, creating a graceful and balanced all-over pattern.",
@@ -1905,15 +2049,15 @@
         "The pallu combines royal blue, mustard, black, and ivory striped sections with floral medallions and chevron motifs, creating a rich handcrafted appearance."
       ],
       "Contrast Play": "The warm mustard yellow base contrasted with ivory floral motifs, bold black borders, and vibrant royal blue pallu accents creates a sophisticated ethnic combination that is perfect for festive occasions and elegant everyday wear.",
-      "aprice": 1000,
-      "price": 700,
-      "discount": 30,
+      "aprice": 8999,
+      "price": 6749,
+      "discount": 25,
       "category": "Women",
-      "fabric": "Cotton Silk",
+      "fabric": "Patola Silk",
       "length": "5.5 meters",
       "blouse": "With Blouse",
-      "rating": 4.2,
-      "reviews": 17,
+      "rating": 4.9,
+      "reviews": 14,
       "images": [
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784211058/Bagu_print_saree_7__cotton_set291_sowmyasri_front2__2023-7-30-11-5-58__2730X4096_nmzr9c.jpg",
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784211059/Bagu_print_saree_7__cotton_set291_sowmyasri_side__2023-7-30-11-5-44__2730X4096_bmduqq.jpg",
@@ -1922,8 +2066,8 @@
       "mainImage": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784211058/Bagu_print_saree_7__cotton_set291_sowmyasri_front2__2023-7-30-11-5-58__2730X4096_nmzr9c.jpg"
     },
     {
-      "id": "607f5e36-fef6-41aa-abc3-7084010b2b4d",
-      "name": "Bagru Printed Cotton Saree",
+      "id": 323,
+      "name": "Patola Silk Saree",
       "Base color": "The elegant black base adorned with intricate ivory floral block prints creates a timeless handcrafted look inspired by traditional Bagru artistry.",
       "Motifs": [
         "Repeating floral medallion motifs are spread uniformly across the saree, creating a graceful and balanced all-over pattern.",
@@ -1936,14 +2080,14 @@
         "The pallu combines rust red, mustard, black, and ivory striped sections with paisley motifs, creating a rich handcrafted traditional appearance."
       ],
       "Contrast Play": "The deep black base contrasted with ivory floral motifs, rust red borders, and earthy mustard accents creates a sophisticated ethnic combination that is perfect for festive occasions and elegant everyday wear.",
-      "aprice": 1000,
-      "price": 700,
-      "discount": 30,
+      "aprice": 8999,
+      "price": 6749,
+      "discount": 25,
       "category": "Women",
-      "fabric": "Cotton Silk",
+      "fabric": "Patola Silk",
       "length": "5.5 meters",
       "blouse": "With Blouse",
-      "rating": 4.1,
+      "rating": 4.9,
       "reviews": 17,
       "images": [
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784211163/bagru_print_9__cotton_set291_sowmyasri_front2__2023-8-23-16-5-2__2730X4096_rvswdu.jpg",
@@ -1954,8 +2098,8 @@
       "mainImage": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784211163/bagru_print_9__cotton_set291_sowmyasri_front2__2023-8-23-16-5-2__2730X4096_rvswdu.jpg"
     },
     {
-      "id": "75dd9f5c-15f4-4d8c-af5a-aa6421cf2f3e",
-      "name": "Bagru Printed Cotton Saree",
+      "id": 324,
+      "name": "Patola Silk Saree",
       "Base color": "The soft ivory base highlighted with rust red and black chevron block prints creates a contemporary handcrafted look inspired by traditional Bagru artistry.",
       "Motifs": [
         "Bold zigzag (chevron) block print patterns flow uniformly across the saree, creating a striking geometric appearance.",
@@ -1968,15 +2112,15 @@
         "The pallu combines rust red, brown, black, and ivory striped sections with floral medallions and chevron motifs, creating a distinctive traditional finish."
       ],
       "Contrast Play": "The elegant ivory base contrasted with rust red and black chevron prints, bold floral borders, and richly patterned pallu creates a sophisticated ethnic combination perfect for festive occasions and elegant everyday wear.",
-      "aprice": 1000,
-      "price": 700,
-      "discount": 30,
+      "aprice": 8999,
+      "price": 6749,
+      "discount": 25,
       "category": "Women",
-      "fabric": "Cotton Silk",
+      "fabric": "Patola Silk",
       "length": "5.5 meters",
       "blouse": "With Blouse",
-      "rating": 4.1,
-      "reviews": 13,
+      "rating": 4.9,
+      "reviews": 16,
       "images": [
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784211347/bagru_print_10__cotton_set291_sowmyasri_front2_tassels__2023-8-25-18-25-35__2730X4096_mark9b.jpg",
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784211350/bagru_print_10__cotton_set291_sowmyasri_side__2023-8-25-18-25-27__2730X4096_c6fa7i.jpg",
@@ -1986,8 +2130,8 @@
       "mainImage": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784211347/bagru_print_10__cotton_set291_sowmyasri_front2_tassels__2023-8-25-18-25-35__2730X4096_mark9b.jpg"
     },
     {
-      "id": "9819ef46-68b3-4b08-bf9a-2934088060bf",
-      "name": "Bagru Printed Cotton Saree",
+      "id": 325,
+      "name": "Patola Silk Saree",
       "Base color": "The elegant black base adorned with intricate ivory floral vine block prints creates a timeless handcrafted look inspired by traditional Bagru artistry.",
       "Motifs": [
         "Graceful floral vine motifs flow continuously across the saree, creating a rich botanical pattern with a handcrafted appeal.",
@@ -2000,15 +2144,15 @@
         "The pallu combines mustard yellow, black, and ivory striped sections with floral medallions, creating a striking traditional look."
       ],
       "Contrast Play": "The deep black base contrasted with ivory floral vines, earthy mustard accents, and intricately patterned borders creates a graceful ethnic combination perfect for festive occasions and elegant everyday wear.",
-      "aprice": 1000,
-      "price": 700,
-      "discount": 30,
+      "aprice": 8999,
+      "price": 6749,
+      "discount": 25,
       "category": "Women",
-      "fabric": "Cotton Silk",
+      "fabric": "Patola Silk",
       "length": "5.5 meters",
       "blouse": "With Blouse",
-      "rating": 4.4,
-      "reviews": 9,
+      "rating": 4.9,
+      "reviews": 15,
       "images": [
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784211419/bagru_print_16__cotton_set291_sowmyasri_front2__2023-8-23-16-2-30__2730X4096_lmbpbl.jpg",
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784211422/bagru_print_16__cotton_set291_sowmyasri_side__2023-8-23-16-2-15__2730X4096_phxbzv.jpg",
@@ -2018,8 +2162,8 @@
       "mainImage": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784211419/bagru_print_16__cotton_set291_sowmyasri_front2__2023-8-23-16-2-30__2730X4096_lmbpbl.jpg"
     },
     {
-      "id": "8ab80c27-d4d8-4bdb-9c4c-7e5999c2314c",
-      "name": "Bagru Printed Cotton Saree",
+      "id": 326,
+      "name": "Patola Silk Saree",
       "Base color": "The soft ivory base accented with olive green paisley block prints creates a graceful handcrafted look inspired by traditional Bagru artistry.",
       "Motifs": [
         "Elegant paisley (ambi) motifs are spread uniformly across the saree, giving it a timeless ethnic appeal.",
@@ -2032,15 +2176,15 @@
         "The pallu combines mustard yellow, black, olive green, and ivory striped sections with floral medallions, creating a bold traditional contrast."
       ],
       "Contrast Play": "The elegant ivory base contrasted with olive green paisley motifs, bold black borders, and earthy mustard accents creates a sophisticated ethnic combination perfect for festive occasions and graceful everyday wear.",
-      "aprice": 1000,
-      "price": 700,
-      "discount": 30,
+      "aprice": 8999,
+      "price": 6749,
+      "discount": 25,
       "category": "Women",
-      "fabric": "Cotton Silk",
+      "fabric": "Patola Silk",
       "length": "5.5 meters",
       "blouse": "With Blouse",
-      "rating": 4.5,
-      "reviews": 9,
+      "rating": 4.9,
+      "reviews": 13,
       "images": [
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784211493/bagru_print_l_1___cotton_set291_sowmyasri_front2__2023-8-23-16-7-51__2730X4096_migvcq.jpg",
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784211495/bagru_print_l_1___cotton_set291_sowmyasri_side__2023-8-23-16-7-37__2730X4096_jjideh.jpg",
@@ -2050,8 +2194,8 @@
       "mainImage": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784211493/bagru_print_l_1___cotton_set291_sowmyasri_front2__2023-8-23-16-7-51__2730X4096_migvcq.jpg"
     },
     {
-      "id": "23dbaf13-b7cc-4ea6-963a-df66f8d96c3b",
-      "name": "Bagru Printed Cotton Saree",
+      "id": 327,
+      "name": "Patola Silk Saree",
       "Base color": "The rich rust red base adorned with elegant ivory floral buta block prints creates a timeless handcrafted look inspired by traditional Bagru artistry.",
       "Motifs": [
         "Repeating floral buta motifs are evenly spread across the saree, creating a graceful all-over handcrafted pattern.",
@@ -2064,15 +2208,15 @@
         "The pallu combines rust orange, black, ivory, and earthy striped sections with floral tree motifs, creating a bold traditional appearance."
       ],
       "Contrast Play": "The rich rust red base contrasted with ivory floral buta motifs, bold black borders, and earthy rust accents creates a sophisticated ethnic combination that is perfect for festive occasions and elegant everyday wear.",
-      "aprice": 1000,
-      "price": 700,
-      "discount": 30,
+      "aprice": 8999,
+      "price": 6749,
+      "discount": 25,
       "category": "Women",
-      "fabric": "Cotton Silk",
+      "fabric": "Patola Silk",
       "length": "5.5 meters",
       "blouse": "With Blouse",
-      "rating": 4.6,
-      "reviews": 11,
+      "rating": 4.9,
+      "reviews": 19,
       "images": [
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784211582/bagru_print_l_4__cotton_set291_sowmyasri_front2__2023-8-23-16-6-32__2730X4096_talfcg.jpg",
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784211584/bagru_print_l_4__cotton_set291_sowmyasri_side__2023-8-25-18-27-59__2730X4096_gwpk5n.jpg",
@@ -2082,8 +2226,8 @@
       "mainImage": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784211582/bagru_print_l_4__cotton_set291_sowmyasri_front2__2023-8-23-16-6-32__2730X4096_talfcg.jpg"
     },
     {
-      "id": "6ae76648-53de-42f2-8328-e3c7ecfb974e",
-      "name": "Bagru Printed Cotton Saree",
+      "id": 328,
+      "name": "Patola Silk Saree",
       "Base color": "The soft ivory base adorned with delicate rust red floral buta block prints creates a graceful handcrafted look inspired by traditional Bagru artistry.",
       "Motifs": [
         "Tiny floral buta motifs are repeated uniformly across the saree, creating a refined and elegant all-over handcrafted pattern.",
@@ -2096,15 +2240,15 @@
         "The pallu combines rust red, mustard, black, and ivory striped sections with floral tree and paisley motifs, creating a bold traditional appearance."
       ],
       "Contrast Play": "The elegant ivory base contrasted with delicate rust floral motifs, bold black borders, and earthy rust and mustard pallu accents creates a timeless ethnic combination perfect for festive occasions and graceful everyday wear.",
-      "aprice": 1000,
-      "price": 700,
-      "discount": 30,
+      "aprice": 8999,
+      "price": 6749,
+      "discount": 25,
       "category": "Women",
-      "fabric": "Cotton Silk",
+      "fabric": "Patola Silk",
       "length": "5.5 meters",
       "blouse": "With Blouse",
-      "rating": 4.0,
-      "reviews": 12,
+      "rating": 4.9,
+      "reviews": 18,
       "images": [
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784211672/bagru_print_l_6__cotton_set291_sowmyasri_front2__2023-8-23-16-5-43__2730X4096_nkmqlo.jpg",
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784211674/bagru_print_l_6__cotton_set291_sowmyasri_side__2023-8-23-16-5-29__2730X4096_rpzbbf.jpg",
@@ -2114,8 +2258,8 @@
       "mainImage": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784211672/bagru_print_l_6__cotton_set291_sowmyasri_front2__2023-8-23-16-5-43__2730X4096_nkmqlo.jpg"
     },
     {
-      "id": "631ac2f8-aa84-40aa-aca5-890629c3af7a",
-      "name": "Bagru Printed Cotton Saree",
+      "id": 329,
+      "name": "Patola Silk Saree",
       "Base color": "The classic black base adorned with tiny ivory floral block prints creates a timeless handcrafted look inspired by traditional Bagru artistry.",
       "Motifs": [
         "Small floral buti motifs are repeated uniformly across the saree, creating a delicate and elegant all-over handcrafted pattern.",
@@ -2128,15 +2272,15 @@
         "The pallu combines coral red, mustard, black, and ivory striped sections with circular medallions and floral motifs, creating a bold traditional appearance."
       ],
       "Contrast Play": "The deep black base contrasted with delicate ivory buti motifs, vibrant coral red borders, and mustard-accented pallu creates a graceful ethnic combination perfect for festive occasions and elegant everyday wear.",
-      "aprice": 1000,
-      "price": 700,
-      "discount": 30,
+      "aprice": 8999,
+      "price": 6749,
+      "discount": 25,
       "category": "Women",
-      "fabric": "Cotton Silk",
+      "fabric": "Patola Silk",
       "length": "5.5 meters",
       "blouse": "With Blouse",
-      "rating": 4.2,
-      "reviews": 13,
+      "rating": 4.9,
+      "reviews": 16,
       "images": [
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784211760/bagru_print_saree_1__cotton_set291_sowmyasri_front2__2023-7-30-11-8-2__2730X4096_ojnq7j.jpg",
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784211763/bagru_print_saree_1__cotton_set291_sowmyasri_side__2023-7-30-11-7-48__2730X4096_cagzry.jpg",
@@ -2146,8 +2290,8 @@
       "mainImage": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784211760/bagru_print_saree_1__cotton_set291_sowmyasri_front2__2023-7-30-11-8-2__2730X4096_ojnq7j.jpg"
     },
     {
-      "id": "41d4dec3-a249-4ff1-91df-05f48241d67b",
-      "name": "Bagru Printed Cotton Saree",
+      "id": 330,
+      "name": "Patola Silk Saree",
       "Base color": "The classic black base adorned with tiny ivory geometric block prints creates a timeless handcrafted look inspired by traditional Bagru artistry.",
       "Motifs": [
         "Small geometric floral buti motifs are repeated uniformly across the saree, creating a neat and elegant all-over handcrafted pattern.",
@@ -2160,15 +2304,15 @@
         "The pallu combines rust red, mustard, black, and ivory striped sections with floral medallions and geometric motifs, creating a distinctive traditional appearance."
       ],
       "Contrast Play": "The deep black base contrasted with ivory geometric motifs, bold triangular borders, and earthy rust and mustard accents creates a striking ethnic combination perfect for festive occasions and elegant everyday wear.",
-      "aprice": 1000,
-      "price": 700,
-      "discount": 30,
+      "aprice": 8999,
+      "price": 6749,
+      "discount": 25,
       "category": "Women",
-      "fabric": "Cotton Silk",
+      "fabric": "Patola Silk",
       "length": "5.5 meters",
       "blouse": "With Blouse",
-      "rating": 4.8,
-      "reviews": 14,
+      "rating": 4.9,
+      "reviews": 11,
       "images": [
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784211834/bagru_print_saree_2__cotton_set291_sowmyasri_front2__2023-7-30-11-7-41__2730X4096_psbbyb.jpg",
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784211836/bagru_print_saree_2__cotton_set291_sowmyasri_side__2023-7-30-11-7-27__2730X4096_dii1cp.jpg",
@@ -2178,8 +2322,8 @@
       "mainImage": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784211834/bagru_print_saree_2__cotton_set291_sowmyasri_front2__2023-7-30-11-7-41__2730X4096_psbbyb.jpg"
     },
     {
-      "id": "b4788d32-b091-4573-9b5c-7fbc9b248e10",
-      "name": "Bagru Printed Cotton Saree",
+      "id": 331,
+      "name": "Patola Silk Saree",
       "Base color": "The elegant ivory base adorned with tiny rust red floral block prints creates a timeless handcrafted look inspired by traditional Bagru artistry.",
       "Motifs": [
         "Delicate floral buti motifs are repeated uniformly across the saree, creating a graceful and balanced all-over handcrafted pattern.",
@@ -2192,15 +2336,15 @@
         "The pallu combines rust red, black, ivory, and earthy striped sections with paisley motifs, creating a bold traditional appearance."
       ],
       "Contrast Play": "The soft ivory base contrasted with delicate rust floral motifs, bold black borders, and richly patterned pallu accents creates a sophisticated ethnic combination perfect for festive occasions and elegant everyday wear.",
-      "aprice": 1000,
-      "price": 700,
-      "discount": 30,
+      "aprice": 8999,
+      "price": 6749,
+      "discount": 25,
       "category": "Women",
-      "fabric": "Cotton Silk",
+      "fabric": "Patola Silk",
       "length": "5.5 meters",
       "blouse": "With Blouse",
-      "rating": 4.0,
-      "reviews": 17,
+      "rating": 4.9,
+      "reviews": 14,
       "images": [
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784211917/bagru_print_saree_3__cotton_set291_sowmyasri_front2__2023-7-30-11-7-21__2730X4096_mfzc4v.jpg",
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784211919/bagru_print_saree_3__cotton_set291_sowmyasri_side__2023-7-30-11-7-9__2730X4096_jefuzm.jpg",
@@ -2210,8 +2354,8 @@
       "mainImage": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784211917/bagru_print_saree_3__cotton_set291_sowmyasri_front2__2023-7-30-11-7-21__2730X4096_mfzc4v.jpg"
     },
     {
-      "id": "d58dff46-5d65-4e3b-9c8d-55116be370ce",
-      "name": "Bagru Printed Cotton Saree",
+      "id": 332,
+      "name": "Patola Silk Saree",
       "Base color": "The soft ivory base is beautifully adorned with fine black floral buti block prints, creating an elegant handcrafted look rooted in traditional Bagru artistry.",
       "Motifs": [
         "Tiny floral buti motifs are uniformly spread across the saree, giving it a graceful and minimal handcrafted appeal.",
@@ -2224,15 +2368,15 @@
         "The richly patterned pallu combines earthy mustard, black, ivory, and rust red tones with floral and striped detailing for added visual depth."
       ],
       "Contrast Play": "The subtle ivory base contrasts beautifully with black floral butis, rust red ornamental borders, and the earthy striped pallu, resulting in a timeless ethnic look with understated elegance.",
-      "aprice": 1000,
-      "price": 700,
-      "discount": 30,
+      "aprice": 8999,
+      "price": 6749,
+      "discount": 25,
       "category": "Women",
-      "fabric": "Cotton Silk",
+      "fabric": "Patola Silk",
       "length": "5.5 meters",
       "blouse": "With Blouse",
-      "rating": 4.8,
-      "reviews": 9,
+      "rating": 4.9,
+      "reviews": 18,
       "images": [
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784212045/bagru_print_saree_4__cotton_set291_sowmyasri_front2__2023-7-30-11-7-2__2730X4096_cdmjp0.jpg",
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784212047/bagru_print_saree_4__cotton_set291_sowmyasri_side__2023-7-30-11-6-50__2730X4096_wyk8tc.jpg",
@@ -2242,8 +2386,8 @@
       "mainImage": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784212045/bagru_print_saree_4__cotton_set291_sowmyasri_front2__2023-7-30-11-7-2__2730X4096_cdmjp0.jpg"
     },
     {
-      "id": "08527337-1fc1-4c78-a92e-b41b6247e359",
-      "name": "Bagru Printed Cotton Saree",
+      "id": 333,
+      "name": "Patola Silk Saree",
       "Base color": "The rich black base is beautifully adorned with ivory leaf block prints, creating a bold yet timeless handcrafted look inspired by traditional Bagru artistry.",
       "Motifs": [
         "Repeating leaf-shaped buti motifs are spread uniformly across the saree, lending it a graceful and elegant appearance.",
@@ -2256,15 +2400,15 @@
         "The richly decorated pallu combines striped bands, floral motifs, and traditional Bagru elements for added visual appeal."
       ],
       "Contrast Play": "The deep black base contrasts elegantly with ivory leaf motifs, while the soft rust pink border and earthy pallu create a refined traditional look with handcrafted character.",
-      "aprice": 1000,
-      "price": 700,
-      "discount": 30,
+      "aprice": 8999,
+      "price": 6749,
+      "discount": 25,
       "category": "Women",
-      "fabric": "Cotton Silk",
+      "fabric": "Patola Silk",
       "length": "5.5 meters",
       "blouse": "With Blouse",
-      "rating": 4.3,
-      "reviews": 15,
+      "rating": 4.9,
+      "reviews": 18,
       "images": [
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784212154/bagru_print_saree_5__cotton_set291_sowmyasri_front2__2023-7-30-11-6-42__2730X4096_izzjjh.jpg",
         "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784212156/bagru_print_saree_5__cotton_set291_sowmyasri_side__2023-7-30-11-6-28__2730X4096_uovxae.jpg",
@@ -2274,5 +2418,4 @@
       "mainImage": "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784212154/bagru_print_saree_5__cotton_set291_sowmyasri_front2__2023-7-30-11-6-42__2730X4096_izzjjh.jpg"
     }
   ]
-
 }

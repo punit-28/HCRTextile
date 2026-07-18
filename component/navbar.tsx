@@ -23,7 +23,6 @@ import {
   CurrencyCode,
 } from "@/app/context/CurrencyContext";
 import { useSession, signOut } from "next-auth/react";
-import { useRouter } from "next/navigation";
 
 const links = [
   { name: "Home", href: "/" },
@@ -36,7 +35,6 @@ const links = [
 
 export default function Navbar() {
   const { data: session, status } = useSession();
-  const router = useRouter();
 
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -44,6 +42,7 @@ export default function Navbar() {
   const [isMobileCurrencyOpen, setIsMobileCurrencyOpen] = useState(false);
   const [isRefreshing, setIsRefreshing] = useState(false);
   const [isProfileOpen, setIsProfileOpen] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
   const currencyRef = useRef<HTMLDivElement>(null);
   const profileRef = useRef<HTMLDivElement>(null);
 
@@ -57,6 +56,11 @@ export default function Navbar() {
     refreshRates,
     isOffline,
   } = useCurrency();
+
+  // Fix hydration by setting mounted state
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   // Close dropdowns on outside click
   useEffect(() => {
@@ -144,7 +148,6 @@ export default function Navbar() {
 
   const isAuthenticated = status === "authenticated";
   const isLoadingSession = status === "loading";
-
   return (
     <>
       <header
@@ -162,9 +165,7 @@ export default function Navbar() {
                 <Image
                   src="/Nav_Logo.png"
                   alt="HCR Textile"
-                  
                   fill
-                  // priority
                   className="object-contain"
                   sizes="(max-width:640px) 112px, (max-width:768px) 160px, 208px"
                 />
@@ -180,7 +181,7 @@ export default function Navbar() {
                   className="relative text-[14px] xl:text-[15px] font-medium text-[#2C1810] hover:text-[#8B6B3D] transition-colors duration-300 group py-2 tracking-wide"
                 >
                   {item.name}
-                  <span className="absolute inset-x-0 -bottom-0 h-[2px] bg-gradient-to-r from-[#C49B5C] to-[#8B6B3D] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                  <span className="absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-[#C49B5C] to-[#8B6B3D] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
                 </Link>
               ))}
             </nav>
@@ -333,9 +334,11 @@ export default function Navbar() {
                       </div>
                       <div className="flex items-center gap-2">
                         <span className="text-[10px] text-gray-400">
-                          {isLoading
-                            ? "Loading..."
-                            : `Updated ${getTimeAgo(lastUpdated)}`}
+                          {!isMounted 
+                            ? "Loading..." 
+                            : isLoading 
+                              ? "Updating..." 
+                              : `Updated ${getTimeAgo(lastUpdated)}`}
                         </span>
                         <button
                           title="Refresh Rates"
@@ -548,14 +551,6 @@ export default function Navbar() {
                     <LayoutDashboard size={18} className="text-[#8B6B3D]" />
                     Dashboard
                   </Link>
-                  {/* <Link
-                    href="/profile"
-                    onClick={() => setOpen(false)}
-                    className="flex items-center gap-3 w-full px-3 py-3 rounded-xl hover:bg-[#f0e8dc] transition-colors text-[15px] font-medium text-[#2C1810] hover:text-[#8B6B3D]"
-                  >
-                    <UserCircle size={18} className="text-[#8B6B3D]" />
-                    My Profile
-                  </Link> */}
                   <button
                     onClick={handleSignOut}
                     className="flex items-center gap-3 w-full px-3 py-3 rounded-xl hover:bg-red-50 transition-colors text-[15px] font-medium text-red-600"
@@ -594,7 +589,7 @@ export default function Navbar() {
 
             <div className="h-px bg-[#d4c5a9]/40 mx-3 my-1" />
 
-            {/* Currency Section - Same as before */}
+            {/* Currency Section - Fixed hydration */}
             <div className="my-3">
               <p className="text-[10px] font-semibold text-[#C49B5C] uppercase tracking-widest px-3 mb-2">
                 Currency
@@ -603,9 +598,11 @@ export default function Navbar() {
                 <div className="flex items-center gap-2">
                   <Globe size={16} className="text-[#C49B5C]" />
                   <span className="text-sm text-[#2C1810]">
-                    {isLoading
-                      ? "Updating..."
-                      : `Updated ${getTimeAgo(lastUpdated)}`}
+                    {!isMounted 
+                      ? "Loading..." 
+                      : isLoading 
+                        ? "Updating..." 
+                        : `Updated ${getTimeAgo(lastUpdated)}`}
                   </span>
                   {isOffline && <WifiOff size={13} className="text-red-500" />}
                 </div>

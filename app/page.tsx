@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect, useCallback, useMemo, memo } from "react";
-import { motion } from "framer-motion";
+import { useState, useEffect,  useMemo, memo, useRef } from "react";
+import { motion, type Variants } from "framer-motion";
 import {
   ArrowRight,
   Star,
@@ -11,6 +11,7 @@ import {
   RefreshCw,
   Heart,
   ShoppingBag,
+  type LucideIcon,
 } from "lucide-react";
 import CurrencyPrice from "../component/CurrencyPrice";
 import { useCurrency } from "@/app/context/CurrencyContext";
@@ -23,7 +24,8 @@ const ANIMATION_DURATION = 0.6;
 const slides = [
   {
     id: 1,
-    image: "https://res.cloudinary.com/dzyhjgtji/image/upload/v1783058410/hero_1_n33olr.png",
+    image:
+      "https://res.cloudinary.com/dzyhjgtji/image/upload/v1783058410/hero_1_n33olr.png",
     title: "Hand Block Printed Sarees",
     subtitle: "Pure Cotton · Heritage Craft",
     description:
@@ -33,7 +35,8 @@ const slides = [
   },
   {
     id: 2,
-    image: "https://res.cloudinary.com/dzyhjgtji/image/upload/v1783058409/hero_2_razm9t.png",
+    image:
+      "https://res.cloudinary.com/dzyhjgtji/image/upload/v1783058409/hero_2_razm9t.png",
     title: "Elegant Suits Collection",
     subtitle: "Traditional Meets Modern",
     description:
@@ -43,7 +46,8 @@ const slides = [
   },
   {
     id: 3,
-    image: "https://res.cloudinary.com/dzyhjgtji/image/upload/v1783058409/hero_3_fnmfef.png",
+    image:
+      "https://res.cloudinary.com/dzyhjgtji/image/upload/v1783058409/hero_3_fnmfef.png",
     title: "Festive Special",
     subtitle: "Limited Edition",
     description:
@@ -56,49 +60,53 @@ const slides = [
 const featuredProducts = [
   {
     id: 1,
-    name: "Banarasi Silk Saree",
-    slug: "saree/333",
-    price: 4999,
-    originalPrice: 6999,
-    rating: 4.8,
-    reviews: 124,
-    image: "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784286583/ChatGPT_Image_Jul_17_2026_04_39_10_PM_l1utq7.png",
+    name: "Bagru Printed Cotton Saree",
+    slug: "saree/08527337-1fc1-4c78-a92e-b41b6247e359",
+    price: 700,
+    originalPrice: 1000,
+    rating: 4.3,
+    reviews: 15,
+    image:
+      "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784286583/ChatGPT_Image_Jul_17_2026_04_39_10_PM_l1utq7.png",
     isNew: true,
     isFeatured: true,
   },
   {
     id: 2,
-    name: "Chanderi Silk Saree",
-    slug: "saree/315",
-    price: 3999,
-    originalPrice: 5499,
+    name: "Bagru Printed Cotton Saree",
+    slug: "saree/91135078-4b9e-45a1-8bf4-5eac0f9aebef",
+    price: 700,
+    originalPrice: 1000,
     rating: 4.9,
-    reviews: 156,
-    image: "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784286243/ChatGPT_Image_Jul_17_2026_04_33_42_PM_frun30.png",
+    reviews: 11,
+    image:
+      "https://res.cloudinary.com/dzyhjgtji/image/upload/v1784286243/ChatGPT_Image_Jul_17_2026_04_33_42_PM_frun30.png",
     isNew: true,
     isFeatured: true,
   },
   {
     id: 3,
     name: "Hand Block Cotton Suit",
-    slug: "product/119",
-    price: 2499,
-    originalPrice: 3499,
-    rating: 4.6,
-    reviews: 89,
-    image: "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782568060/9_c5pyve.jpg",
+    slug: "product/98ceebc7-afcb-4dfc-a14a-6093fdd693e6",
+    price: 1500,
+    originalPrice: 2000,
+    rating: 4.4,
+    reviews: 11,
+    image:
+      "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782568060/9_c5pyve.jpg",
     isNew: false,
     isFeatured: true,
   },
   {
     id: 4,
-    name: "Embroidered Suit Set",
-    slug: "product/5",
-    price: 3299,
-    originalPrice: 4299,
-    rating: 4.7,
-    reviews: 67,
-    image: "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782571222/5_uzu1mo.jpg",
+    name: "Bagru Printed Chanderi Suit",
+    slug: "product/be595dab-020e-48b9-ac92-108f51b9f0ce",
+    price: 1400,
+    originalPrice: 1750,
+    rating: 4.3,
+    reviews: 9,
+    image:
+      "https://res.cloudinary.com/dzyhjgtji/image/upload/v1782571222/5_uzu1mo.jpg",
     isNew: false,
     isFeatured: true,
   },
@@ -107,25 +115,29 @@ const featuredProducts = [
 const categories = [
   {
     name: "Sarees",
-    image: "https://res.cloudinary.com/dzyhjgtji/image/upload/v1783058419/Saree_f9atdj.png",
-    count: "100+ Designs",
+    image:
+      "https://res.cloudinary.com/dzyhjgtji/image/upload/v1783058419/Saree_f9atdj.png",
+    count: "50+ Designs",
     link: "/saree",
   },
   {
     name: "Suits",
-    image: "https://res.cloudinary.com/dzyhjgtji/image/upload/v1783058413/Suit_m13oth.png",
+    image:
+      "https://res.cloudinary.com/dzyhjgtji/image/upload/v1783058413/Suit_m13oth.png",
     count: "50+ Designs",
     link: "/suit",
   },
   {
     name: "Dupattas",
-    image: "https://res.cloudinary.com/dzyhjgtji/image/upload/v1783058410/duptta_pltzsr.png",
+    image:
+      "https://res.cloudinary.com/dzyhjgtji/image/upload/v1783058410/duptta_pltzsr.png",
     count: "10+ Designs",
     link: "/dupatta",
   },
   {
     name: "Kurtis",
-    image: "https://res.cloudinary.com/dzyhjgtji/image/upload/v1783058412/kurties_fhi9ue.png",
+    image:
+      "https://res.cloudinary.com/dzyhjgtji/image/upload/v1783058412/kurties_fhi9ue.png",
     count: "10+ Designs",
     link: "/kurti",
   },
@@ -139,7 +151,8 @@ const testimonials = [
     rating: 5,
     comment:
       "Absolutely love the quality! The hand block printing is exquisite and the fabric is so comfortable.",
-    image: "https://res.cloudinary.com/dzyhjgtji/image/upload/v1783058402/priya_lqvuma.jpg",
+    image:
+      "https://res.cloudinary.com/dzyhjgtji/image/upload/v1783058402/priya_lqvuma.jpg",
   },
   {
     id: 2,
@@ -148,7 +161,8 @@ const testimonials = [
     rating: 5,
     comment:
       "HCR Textile is my go-to for traditional wear. Their collection is unique and the customer service is excellent.",
-    image: "https://res.cloudinary.com/dzyhjgtji/image/upload/v1783058404/reddy_q1kj4b.jpg",
+    image:
+      "https://res.cloudinary.com/dzyhjgtji/image/upload/v1783058404/reddy_q1kj4b.jpg",
   },
   {
     id: 3,
@@ -157,20 +171,25 @@ const testimonials = [
     rating: 5,
     comment:
       "Purchased these for my wife, and she was really happy with the quality and elegant designs. Excellent collection!",
-    image: "https://res.cloudinary.com/dzyhjgtji/image/upload/v1783058410/rajesh_chbk5a.png",
+    image:
+      "https://res.cloudinary.com/dzyhjgtji/image/upload/v1783058410/rajesh_chbk5a.png",
   },
 ];
 
-// Animation variants
-const fadeInUp = {
+// Animation variants - modified to use once: true
+const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: ANIMATION_DURATION, ease: "easeOut" } }
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: ANIMATION_DURATION, ease: [0.22, 1, 0.36, 1] },
+  },
 };
 
-const fadeIn = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { duration: 0.5 } }
-};
+// const fadeIn = {
+//   hidden: { opacity: 0 },
+//   visible: { opacity: 1, transition: { duration: 0.5 } },
+// };
 
 const staggerContainer = {
   hidden: { opacity: 0 },
@@ -178,13 +197,20 @@ const staggerContainer = {
     opacity: 1,
     transition: {
       staggerChildren: 0.12,
-      delayChildren: 0.1
-    }
-  }
+      delayChildren: 0.1,
+    },
+  },
 };
 
 // Memoized Components
-const FeatureItem = memo(({ icon: Icon, title, desc, index }: any) => (
+type FeatureItemProps = {
+  icon: LucideIcon;
+  title: string;
+  desc: string;
+  index: number;
+};
+
+const FeatureItem = memo(({ icon: Icon, title, desc }: FeatureItemProps) => (
   <motion.div
     variants={fadeInUp}
     whileHover={{ y: -5, transition: { duration: 0.2 } }}
@@ -195,7 +221,10 @@ const FeatureItem = memo(({ icon: Icon, title, desc, index }: any) => (
       transition={{ duration: 0.5 }}
       className="p-2 md:p-3 bg-[#f8f3ea] rounded-full group-hover:bg-[#C49B5C]/10 transition-colors"
     >
-      <Icon className="text-[#8B6B3D] group-hover:scale-110 transition-transform" size={20} />
+      <Icon
+        className="text-[#8B6B3D] group-hover:scale-110 transition-transform"
+        size={20}
+      />
     </motion.div>
     <div>
       <p className="font-semibold text-[#2C1810] text-xs md:text-sm">{title}</p>
@@ -204,9 +233,30 @@ const FeatureItem = memo(({ icon: Icon, title, desc, index }: any) => (
   </motion.div>
 ));
 
-FeatureItem.displayName = 'FeatureItem';
+FeatureItem.displayName = "FeatureItem";
 
-const CategoryCard = memo(({ category }: { category: any }) => (
+type Category = {
+  name: string;
+  image: string;
+  count: string;
+  link: string;
+};
+
+type Product = {
+  id: number;
+  name: string;
+  slug: string;
+  price: number;
+  originalPrice: number;
+  rating: number;
+  reviews: number;
+  image: string;
+  isNew: boolean;
+  isFeatured: boolean;
+};
+
+
+const CategoryCard = memo(({ category }: { category: Category }) => (
   <motion.div
     variants={fadeInUp}
     whileHover={{ y: -10, transition: { duration: 0.3 } }}
@@ -229,7 +279,7 @@ const CategoryCard = memo(({ category }: { category: any }) => (
           loading="lazy"
         />
       </motion.div>
-      
+
       {/* Content always visible - no hover animation */}
       <div className="absolute bottom-0 left-0 right-0 p-3 md:p-4 bg-gradient-to-t from-black/70 to-transparent">
         <h3 className="text-sm md:text-xl font-bold text-white">
@@ -241,10 +291,12 @@ const CategoryCard = memo(({ category }: { category: any }) => (
   </motion.div>
 ));
 
-CategoryCard.displayName = 'CategoryCard';
+CategoryCard.displayName = "CategoryCard";
 
-const ProductCard = memo(({ product }: { product: any }) => {
-  const discount = Math.round((1 - product.price / product.originalPrice) * 100);
+const ProductCard = memo(({ product }: { product: Product }) => {
+  const discount = Math.round(
+    (1 - product.price / product.originalPrice) * 100,
+  );
 
   return (
     <motion.div
@@ -278,7 +330,7 @@ const ProductCard = memo(({ product }: { product: any }) => {
               New
             </motion.span>
           )}
-          
+
           <motion.button
             whileHover={{ scale: 1.15 }}
             whileTap={{ scale: 0.9 }}
@@ -290,9 +342,12 @@ const ProductCard = memo(({ product }: { product: any }) => {
             className="absolute top-2 right-2 md:top-3 md:right-3 p-1.5 md:p-2 bg-white/90 hover:bg-white rounded-full shadow-lg transition-all"
             aria-label="Add to wishlist"
           >
-            <Heart className="text-[#2C1810] hover:text-red-500 transition-colors" size={16} />
+            <Heart
+              className="text-[#2C1810] hover:text-red-500 transition-colors"
+              size={16}
+            />
           </motion.button>
-          
+
           <motion.button
             initial={{ opacity: 0, y: 20 }}
             whileHover={{ opacity: 1, y: 0 }}
@@ -324,7 +379,7 @@ const ProductCard = memo(({ product }: { product: any }) => {
             {product.name}
           </motion.h3>
         </Link>
-        
+
         <div className="flex items-center gap-1 md:gap-2 mb-1 md:mb-2">
           <div className="flex items-center">
             <Star className="fill-[#C49B5C] text-[#C49B5C]" size={12} />
@@ -336,17 +391,17 @@ const ProductCard = memo(({ product }: { product: any }) => {
             ({product.reviews})
           </span>
         </div>
-        
+
         <div className="flex items-center gap-1 md:gap-2 flex-wrap">
-          <CurrencyPrice 
-            priceINR={product.price} 
+          <CurrencyPrice
+            priceINR={product.price}
             className="text-sm md:text-lg font-bold text-[#2C1810]"
             size="sm"
           />
-          <CurrencyPrice 
-            priceINR={product.originalPrice} 
+          <CurrencyPrice
+            priceINR={product.originalPrice}
             className="text-[10px] md:text-sm text-gray-400 line-through"
-            size="xs"
+            size="sm"
           />
           <motion.span
             initial={{ opacity: 0, scale: 0.8 }}
@@ -363,15 +418,15 @@ const ProductCard = memo(({ product }: { product: any }) => {
   );
 });
 
-ProductCard.displayName = 'ProductCard';
+ProductCard.displayName = "ProductCard";
 
-const TestimonialCard = memo(({ testimonial }: { testimonial: any }) => (
+const TestimonialCard = memo(({ testimonial }: { testimonial: (typeof testimonials)[number] }) => (
   <motion.div
     variants={fadeInUp}
-    whileHover={{ 
-      y: -5, 
+    whileHover={{
+      y: -5,
       boxShadow: "0 20px 40px -12px rgba(0,0,0,0.15)",
-      transition: { duration: 0.3 }
+      transition: { duration: 0.3 },
     }}
     className="bg-white p-4 md:p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
   >
@@ -428,12 +483,15 @@ const TestimonialCard = memo(({ testimonial }: { testimonial: any }) => (
   </motion.div>
 ));
 
-TestimonialCard.displayName = 'TestimonialCard';
+TestimonialCard.displayName = "TestimonialCard";
 
 // Main Component
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const { isLoading: currencyLoading } = useCurrency();
+
+  // Ref to track if animations have been triggered
+  const hasAnimated = useRef(false);
 
   // Auto-slide carousel with cleanup
   useEffect(() => {
@@ -445,12 +503,15 @@ export default function Home() {
   }, []);
 
   // Memoized features data
-  const features = useMemo(() => [
-    { icon: Truck, title: "Free Shipping", desc: "On orders above ₹999" },
-    { icon: RefreshCw, title: "Easy Returns", desc: "7-day return policy" },
-    { icon: Shield, title: "Authentic Quality", desc: "100% handcrafted" },
-    { icon: Heart, title: "Satisfaction", desc: "Happy customers" }
-  ], []);
+  const features = useMemo(
+    () => [
+      { icon: Truck, title: "Free Shipping", desc: "On orders above ₹999" },
+      { icon: RefreshCw, title: "Easy Returns", desc: "7-day return policy" },
+      { icon: Shield, title: "Authentic Quality", desc: "100% handcrafted" },
+      { icon: Heart, title: "Satisfaction", desc: "Happy customers" },
+    ],
+    [],
+  );
 
   return (
     <main className="min-h-screen bg-[#faf6ef]">
@@ -475,7 +536,7 @@ export default function Home() {
                   sizes="100vw"
                   quality={85}
                   style={{
-                    objectPosition: 'center',
+                    objectPosition: "center",
                   }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-black/45 via-black/20 to-transparent md:from-black/45 md:via-black/20 md:to-transparent" />
@@ -513,7 +574,10 @@ export default function Home() {
                         className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-[#C49B5C] to-[#8B6B3D] text-white font-semibold rounded-full hover:shadow-xl transition-all duration-300 hover:scale-105 group text-sm sm:text-base"
                       >
                         {slide.cta}
-                        <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
+                        <ArrowRight
+                          className="group-hover:translate-x-1 transition-transform"
+                          size={20}
+                        />
                       </Link>
                     </>
                   )}
@@ -563,7 +627,7 @@ export default function Home() {
       <motion.section
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-50px" }}
+        viewport={{ once: true }}
         transition={{ duration: 0.6 }}
         className="py-6 md:py-8 bg-white border-y border-[#d4c5a9]/30"
       >
@@ -586,7 +650,7 @@ export default function Home() {
       <motion.section
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        viewport={{ once: true, margin: "-100px" }}
+        viewport={{ once: true }}
         transition={{ duration: 0.6 }}
         className="py-12 md:py-20"
       >
@@ -647,18 +711,20 @@ export default function Home() {
               <h2 className="text-2xl md:text-4xl font-bold text-[#2C1810] mb-1 md:mb-2">
                 Featured Collection
               </h2>
-              <p className="text-sm md:text-base text-gray-600">Handpicked just for you</p>
+              <p className="text-sm md:text-base text-gray-600">
+                Handpicked just for you
+              </p>
             </div>
-            <motion.div
-              whileHover={{ x: 5 }}
-              transition={{ duration: 0.2 }}
-            >
+            <motion.div whileHover={{ x: 5 }} transition={{ duration: 0.2 }}>
               <Link
                 href="/saree"
                 className="text-[#8B6B3D] hover:text-[#C49B5C] font-semibold flex items-center gap-1 group text-sm md:text-base"
               >
                 View All
-                <ArrowRight className="group-hover:translate-x-1 transition-transform" size={18} />
+                <ArrowRight
+                  className="group-hover:translate-x-1 transition-transform"
+                  size={18}
+                />
               </Link>
             </motion.div>
           </motion.div>
@@ -696,7 +762,9 @@ export default function Home() {
             <h2 className="text-2xl md:text-4xl font-bold text-[#2C1810] mb-2 md:mb-3">
               What Our Customers Say
             </h2>
-            <p className="text-sm md:text-base text-gray-600">Real reviews from real people</p>
+            <p className="text-sm md:text-base text-gray-600">
+              Real reviews from real people
+            </p>
             <motion.div
               initial={{ width: 0 }}
               whileInView={{ width: "5rem" }}
