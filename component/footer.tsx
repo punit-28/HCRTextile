@@ -21,7 +21,7 @@ const Footer = () => {
           <div className="hidden lg:flex lg:flex-col lg:items-start">
             <Link href="/" className="mb-3 inline-block">
               <Image
-                src="/logo.png"
+                src="/Logo.png"
                 alt="HCR Textile Logo"
                 width={240}
                 height={90}
