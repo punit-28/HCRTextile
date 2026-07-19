@@ -406,7 +406,7 @@ export default function SuitPage() {
                 <span className="font-serif italic">Cotton Suit</span>
                 <span className="hidden sm:inline"> with</span>
                 <br className="block sm:hidden" />
-                <span className="block sm:inline sm:ml-2">Georgette Dupatta</span>
+                <span className="block sm:inline sm:ml-2">Kota Doria Dupatta</span>
               </h2>
 
               <p className="text-[10px] sm:text-base md:text-lg text-gray-500 mt-0.5 sm:mt-2 md:mt-3 hidden sm:block">
