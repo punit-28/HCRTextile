@@ -184,7 +184,7 @@ const renderProductGrid = (
                     <CurrencyPrice
                       priceINR={suit.aprice}
                       className="text-[6px] sm:text-sm text-gray-400 line-through"
-                      size="xs"
+                      size="sm"
                     />
                     <span className="text-[6px] sm:text-xs text-green-600 font-semibold">
                       {Math.round(
