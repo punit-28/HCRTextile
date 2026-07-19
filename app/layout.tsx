@@ -46,19 +46,17 @@ export const metadata: Metadata = {
     "Rajasthani heritage clothing",
     "dosaya hand block prints",
   ],
-
-  // Open Graph (Social Media)
   openGraph: {
     title: "HCR Textile - Authentic Bagru Hand Block Printed Ethnic Wear",
     description:
       "Explore our collection of handcrafted Bagru printed sarees, suits & dupattas. Pure cotton, natural dyes, traditional Rajasthani artistry.",
     type: "website",
-    url: "https://hcrtextile.com",
+    url: "https://hcrtextile.in",
     siteName: "HCR Textile",
     locale: "en_IN",
     images: [
       {
-        url: "https://res.cloudinary.com/dzyhjgtji/image/upload/v1783058410/hero_1_n33olr.png",
+        url: "https://res.cloudinary.in/dzyhjgtji/image/upload/v1783058410/hero_1_n33olr.png",
         width: 1200,
         height: 630,
         alt: "HCR Textile - Bagru Hand Block Printed Collection",
@@ -73,7 +71,7 @@ export const metadata: Metadata = {
     description:
       "Handcrafted Bagru printed sarees, suits & dupattas. Pure cotton, traditional Rajasthani block printing. Heritage textile since 2024.",
     images: [
-      "https://res.cloudinary.com/dzyhjgtji/image/upload/v1783058410/hero_1_n33olr.png",
+      "https://res.cloudinary.in/dzyhjgtji/image/upload/v1783058410/hero_1_n33olr.png",
     ],
     creator: "@hcrtextile",
     site: "@hcrtextile",
@@ -82,7 +80,7 @@ export const metadata: Metadata = {
   // Additional Meta
   applicationName: "HCR Textile",
   generator: "Next.js",
-  authors: [{ name: "HCR Textile", url: "https://hcrtextile.com" }],
+  authors: [{ name: "HCR Textile", url: "https://hcrtextile.in" }],
   creator: "HCR Textile",
   publisher: "HCR Textile",
   formatDetection: {
@@ -110,10 +108,10 @@ export const metadata: Metadata = {
 
   // Canonical URL
   alternates: {
-    canonical: "https://hcrtextile.com",
+    canonical: "https://hcrtextile.in",
     languages: {
-      "en-US": "https://hcrtextile.com/en",
-      "hi-IN": "https://hcrtextile.com/hi",
+      "en-US": "https://hcrtextile.in/en",
+      "hi-IN": "https://hcrtextile.in/hi",
     },
   },
 

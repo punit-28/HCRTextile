@@ -13,8 +13,6 @@ import {
   RefreshCw,
   WifiOff,
   LogOut,
-  Settings,
-  UserCircle,
   LayoutDashboard,
 } from "lucide-react";
 import {
@@ -35,7 +33,6 @@ const links = [
 
 export default function Navbar() {
   const { data: session, status } = useSession();
-
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isCurrencyOpen, setIsCurrencyOpen] = useState(false);
@@ -148,6 +145,12 @@ export default function Navbar() {
 
   const isAuthenticated = status === "authenticated";
   const isLoadingSession = status === "loading";
+
+  // Create a placeholder for server-side rendering
+  const currencyDisplay = isMounted ? `${symbol} ${currency}` : "₹ INR";
+  const currencySymbol = isMounted ? symbol : "₹";
+  const currencyCode = isMounted ? currency : "INR";
+
   return (
     <>
       <header
@@ -168,6 +171,7 @@ export default function Navbar() {
                   fill
                   className="object-contain"
                   sizes="(max-width:640px) 112px, (max-width:768px) 160px, 208px"
+                  priority
                 />
               </div>
             </Link>
@@ -181,7 +185,7 @@ export default function Navbar() {
                   className="relative text-[14px] xl:text-[15px] font-medium text-[#2C1810] hover:text-[#8B6B3D] transition-colors duration-300 group py-2 tracking-wide"
                 >
                   {item.name}
-                  <span className="absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-[#C49B5C] to-[#8B6B3D] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                  <span className="absolute inset-x-0 -bottom-0 h-[2px] bg-gradient-to-r from-[#C49B5C] to-[#8B6B3D] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
                 </Link>
               ))}
             </nav>
@@ -213,7 +217,7 @@ export default function Navbar() {
                 </span>
               </button>
 
-              {/* Profile / Account - Updated */}
+              {/* Profile / Account */}
               <div className="relative" ref={profileRef}>
                 {isLoadingSession ? (
                   <div className="w-9 h-9 rounded-full bg-[#f0e8dc] animate-pulse"></div>
@@ -281,7 +285,7 @@ export default function Navbar() {
                               />
                               <span>Dashboard</span>
                             </Link>
-                            
+
                             <div className="h-px bg-[#d4c5a9]/30 mx-3 my-2"></div>
                             <button
                               onClick={handleSignOut}
@@ -306,17 +310,17 @@ export default function Navbar() {
                 )}
               </div>
 
-              {/* Currency Dropdown */}
+              {/* Currency Dropdown - FIXED HYDRATION */}
               <div className="relative" ref={currencyRef}>
                 <button
                   onClick={() => setIsCurrencyOpen(!isCurrencyOpen)}
                   className="flex items-center gap-1.5 text-sm font-medium text-[#2C1810] hover:text-[#8B6B3D] transition px-3 py-1.5 hover:bg-[#f0e8dc] rounded-full"
                 >
                   <Globe size={15} />
-                  <span>
-                    {symbol} {currency}
+                  <span suppressHydrationWarning>
+                    {currencyDisplay}
                   </span>
-                  {isOffline && <WifiOff size={13} className="text-red-500" />}
+                  {isMounted && isOffline && <WifiOff size={13} className="text-red-500" />}
                   <ChevronDown
                     size={13}
                     className={`transition-transform duration-300 ${isCurrencyOpen ? "rotate-180" : ""}`}
@@ -334,10 +338,10 @@ export default function Navbar() {
                       </div>
                       <div className="flex items-center gap-2">
                         <span className="text-[10px] text-gray-400">
-                          {!isMounted 
-                            ? "Loading..." 
-                            : isLoading 
-                              ? "Updating..." 
+                          {!isMounted
+                            ? "Loading..."
+                            : isLoading
+                              ? "Updating..."
                               : `Updated ${getTimeAgo(lastUpdated)}`}
                         </span>
                         <button
@@ -353,7 +357,7 @@ export default function Navbar() {
                         </button>
                       </div>
                     </div>
-                    {isOffline && (
+                    {isMounted && isOffline && (
                       <p className="text-[10px] text-red-500 px-4 py-1.5 flex items-center gap-1 bg-red-50 border-b border-red-100">
                         <WifiOff size={10} /> Using cached rates
                       </p>
@@ -458,6 +462,7 @@ export default function Navbar() {
                 fill
                 className="object-contain"
                 sizes="112px"
+                priority
               />
             </div>
             <button
@@ -470,7 +475,7 @@ export default function Navbar() {
 
           {/* Scrollable Content */}
           <div className="flex-1 overflow-y-auto py-3 px-3">
-            {/* Mobile Profile Section - Updated */}
+            {/* Mobile Profile Section */}
             {isLoadingSession ? (
               <div className="px-3 py-4 animate-pulse">
                 <div className="flex items-center gap-3">
@@ -535,7 +540,7 @@ export default function Navbar() {
 
             <div className="h-px bg-[#d4c5a9]/40 mx-3 my-1" />
 
-            {/* Account & Wishlist - Updated for authenticated users */}
+            {/* Account & Wishlist */}
             <div className="my-3">
               <p className="text-[10px] font-semibold text-[#C49B5C] uppercase tracking-widest px-3 mb-2">
                 Account
@@ -589,7 +594,7 @@ export default function Navbar() {
 
             <div className="h-px bg-[#d4c5a9]/40 mx-3 my-1" />
 
-            {/* Currency Section - Fixed hydration */}
+            {/* Currency Section - FIXED HYDRATION */}
             <div className="my-3">
               <p className="text-[10px] font-semibold text-[#C49B5C] uppercase tracking-widest px-3 mb-2">
                 Currency
@@ -597,14 +602,10 @@ export default function Navbar() {
               <div className="mx-3 mb-2 flex items-center justify-between px-3 py-2.5 bg-[#f8f3ea] rounded-xl border border-[#d4c5a9]/30">
                 <div className="flex items-center gap-2">
                   <Globe size={16} className="text-[#C49B5C]" />
-                  <span className="text-sm text-[#2C1810]">
-                    {!isMounted 
-                      ? "Loading..." 
-                      : isLoading 
-                        ? "Updating..." 
-                        : `Updated ${getTimeAgo(lastUpdated)}`}
+                  <span className="text-sm text-[#2C1810]" suppressHydrationWarning>
+                    {isMounted ? `Updated ${getTimeAgo(lastUpdated)}` : "Loading..."}
                   </span>
-                  {isOffline && <WifiOff size={13} className="text-red-500" />}
+                  {isMounted && isOffline && <WifiOff size={13} className="text-red-500" />}
                 </div>
                 <button
                   onClick={handleRefreshRates}
@@ -624,15 +625,15 @@ export default function Navbar() {
                 className="flex items-center justify-between w-full px-3 py-3 mx-0 rounded-xl hover:bg-[#f0e8dc] transition-colors text-[15px] font-medium text-[#2C1810]"
               >
                 <div className="flex items-center gap-3">
-                  <span className="text-xl text-[#C49B5C]">
-                    {CURRENCIES[currency]?.symbol}
+                  <span className="text-xl text-[#C49B5C]" suppressHydrationWarning>
+                    {currencySymbol}
                   </span>
                   <div className="flex flex-col items-start leading-tight">
-                    <span className="text-sm font-semibold text-[#2C1810]">
-                      {currency}
+                    <span className="text-sm font-semibold text-[#2C1810]" suppressHydrationWarning>
+                      {currencyCode}
                     </span>
-                    <span className="text-[11px] text-gray-400">
-                      {CURRENCIES[currency]?.name}
+                    <span className="text-[11px] text-gray-400" suppressHydrationWarning>
+                      {CURRENCIES[currency]?.name || "Indian Rupee"}
                     </span>
                   </div>
                 </div>
@@ -674,7 +675,6 @@ export default function Navbar() {
               )}
             </div>
           </div>
-
         </div>
       </div>
     </>

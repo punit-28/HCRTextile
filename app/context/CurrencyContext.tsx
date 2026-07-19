@@ -68,7 +68,7 @@ const API_ENDPOINTS = [
   },
 ];
 
-// Fallback rates with more accurate values
+// More accurate fallback rates (updated periodically)
 const FALLBACK_RATES: ExchangeRates = {
   INR: 1,
   USD: 0.012,
@@ -93,6 +93,7 @@ export function CurrencyProvider({ children }: { children: ReactNode }) {
     return savedCurrency && savedCurrency in CURRENCIES ? savedCurrency : 'INR';
   });
   
+  // Initialize from cache
   const initialCache = useMemo(() => {
     const cachedRates = Cookies.get('exchange_rates');
     const cachedTime = Cookies.get('rates_updated');
@@ -127,11 +128,14 @@ export function CurrencyProvider({ children }: { children: ReactNode }) {
   const [isLoading, setIsLoading] = useState(initialCache.initialIsLoading);
   const [isOffline, setIsOffline] = useState(false);
   const [lastUpdated, setLastUpdated] = useState<Date | null>(initialCache.initialLastUpdated);
+  
   const retryCountRef = useRef(0);
   const abortControllerRef = useRef<AbortController | null>(null);
   const ratesRef = useRef<ExchangeRates | null>(initialCache.initialRates);
   const isOfflineRef = useRef(isOffline);
+  const fetchInProgressRef = useRef(false);
 
+  // Update refs
   useEffect(() => {
     ratesRef.current = rates;
   }, [rates]);
@@ -142,6 +146,11 @@ export function CurrencyProvider({ children }: { children: ReactNode }) {
 
   // Fetch rates with retry logic
   const fetchRates = useCallback(async (): Promise<void> => {
+    // Prevent concurrent fetches
+    if (fetchInProgressRef.current) {
+      return;
+    }
+
     // Cancel any ongoing request
     if (abortControllerRef.current) {
       abortControllerRef.current.abort();
@@ -149,7 +158,7 @@ export function CurrencyProvider({ children }: { children: ReactNode }) {
 
     const controller = new AbortController();
     abortControllerRef.current = controller;
-    
+    fetchInProgressRef.current = true;
     setIsLoading(true);
 
     try {
@@ -203,6 +212,7 @@ export function CurrencyProvider({ children }: { children: ReactNode }) {
             });
 
             setIsLoading(false);
+            fetchInProgressRef.current = false;
             return; // Success
           }
         } catch (error) {
@@ -236,14 +246,15 @@ export function CurrencyProvider({ children }: { children: ReactNode }) {
         sameSite: 'strict',
       });
 
-      // Retry logic
+      // Retry logic with exponential backoff
       if (retryCountRef.current < MAX_RETRIES) {
         retryCountRef.current++;
+        const delay = RETRY_DELAY * Math.pow(2, retryCountRef.current - 1);
         setTimeout(() => {
           if (!isOfflineRef.current) {
             fetchRates();
           }
-        }, RETRY_DELAY * retryCountRef.current);
+        }, delay);
       }
     } catch (error) {
       if (error instanceof Error && error.name === 'AbortError') {
@@ -260,6 +271,7 @@ export function CurrencyProvider({ children }: { children: ReactNode }) {
       }
     } finally {
       setIsLoading(false);
+      fetchInProgressRef.current = false;
       abortControllerRef.current = null;
     }
   }, []);
@@ -271,7 +283,7 @@ export function CurrencyProvider({ children }: { children: ReactNode }) {
     }
 
     const interval = setInterval(() => {
-      if (!isOfflineRef.current) {
+      if (!isOfflineRef.current && !fetchInProgressRef.current) {
         fetchRates();
       }
     }, CACHE_DURATION);
@@ -311,7 +323,7 @@ export function CurrencyProvider({ children }: { children: ReactNode }) {
     }
   }, []);
 
-  // Get converted value (number)
+  // Get converted value (number) - memoized with useMemo
   const getConvertedValue = useCallback((priceINR: number): number => {
     if (!priceINR || isNaN(priceINR) || priceINR < 0) return 0;
     if (!rates) return priceINR; // Return INR if rates not loaded
@@ -360,7 +372,7 @@ export function CurrencyProvider({ children }: { children: ReactNode }) {
     return formatPrice(converted);
   }, [getConvertedValue, formatPrice]);
 
-  // Memoized context value
+  // Memoized context value with stable references
   const value = useMemo(() => ({
     currency,
     setCurrency,
@@ -411,4 +423,14 @@ export function formatPriceStatic(amount: number, currencyCode: CurrencyCode = '
   } catch {
     return `${config.symbol}${amount.toFixed(config.decimal || 2)}`;
   }
+}
+
+// Performance optimization: Create a hook for currency display
+export function useCurrencyDisplay(amount: number, options?: { currencyCode?: CurrencyCode; format?: boolean; decimals?: number }) {
+  const { currency: contextCurrency, convertPrice, formatPrice } = useCurrency();
+  const { currencyCode = contextCurrency, format = true, decimals } = options || {};
+
+  return useMemo(() => {
+    return convertPrice(amount, { format, decimals });
+  }, [amount, currencyCode, format, decimals, convertPrice]);
 }
