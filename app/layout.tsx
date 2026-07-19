@@ -7,6 +7,7 @@ import Navbar from "../component/navbar";
 import Footer from "../component/footer";
 import Providers from "./providers";
 const inter = Inter({ subsets: ["latin"] });
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
   // Basic Meta
@@ -103,7 +104,7 @@ export const metadata: Metadata = {
   },
 
   verification: {
-    google: "your-google-verification-code",
+    google: "yZESaQ3DvwQJDEoQ_a8m9Oa3uXkfb89XJHYzhF1Fdfo",
   },
 
   // Canonical URL
@@ -163,6 +164,7 @@ export default function RootLayout({
           </CurrencyProvider>
         </Providers>
       </body>
+      <GoogleAnalytics gaId="G-4NKRD7B3RT" />
     </html>
   );
 }
