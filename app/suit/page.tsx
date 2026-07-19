@@ -176,7 +176,7 @@ const renderProductGrid = (
                 <CurrencyPrice
                   priceINR={suit.price || suit.aprice || 0}
                   className="text-[10px] sm:text-xl font-bold text-[#2C1810]"
-                  size="xs"
+                  size="sm"
                 />
 
                 {suit.aprice && suit.aprice > (suit.price || 0) && (
